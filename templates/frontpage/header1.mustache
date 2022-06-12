@@ -1,0 +1,75 @@
+
+<div id="navbarhy">
+    <nav class="navbar header-area {{{frontpagenavlightdark}}} bg-hynavbar navbar-expand header-wrapper moodle-has-zindex" aria-label="{{#str}}sitemenubar, admin{{/str}}">
+        <a href="{{{ config.wwwroot }}}" class="navbar-brand aabtn {{# output.should_display_navbar_logo }}has-logo{{/ output.should_display_navbar_logo }}
+                {{^ output.should_display_navbar_logo }}
+                    d-none d-sm-inline
+                {{/ output.should_display_navbar_logo }}
+                    ">
+                {{#output.get_compact_logo_url}}   
+                    <span class="logo d-none d-md-inline">
+                        <img src="{{output.get_compact_logo_url}}" alt="{{sitename}}">
+                    </span>
+                {{/output.get_compact_logo_url}}    
+                {{^output.get_compact_logo_url}}
+                    <span class="site-name d-none d-md-inline p-3">{{{ sitename }}}</span>
+                {{/output.get_compact_logo_url}}   
+        </a>
+        <div class="navbar-nav d-none d-md-flex">
+            <!-- page_heading_menu -->
+            {{{ output.page_heading_menu }}}
+            <div class="navbar-nav mr-auto">
+                {{{frontpagenavlink}}}
+            </div>
+        </div>
+        <div class= "d-md-none d-lg-none d-xl-none">
+            <div class="dropdown hydropdown">
+                <a class="btn">
+                {{#pix}}i/menubars{{/pix}}  
+                </a>
+                <div class="hynavbar-nav hydropdown-content dropright">
+                    {{{frontpagenavlink-m}}}
+                </div>
+            </div>
+        </div>
+        <div class="navbar-nav ml-auto">
+            {{{ output.search_box }}}
+            {{{ output.render_lang_menu }}}
+        </div>
+        <ul class="nav navbar-nav usernav">
+            <!-- user_menu -->
+            <li class="nav-item align-items-center pl-2">
+                {{{ output.user_menu }}}
+            </li>
+        </ul>
+    </nav>
+</div>
+<style>
+#navbarhy {
+    background-color: #555;
+    z-index : 999;
+}
+.stickyhy {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.stickyhy {
+    padding-top: 0px;
+}
+.navbar-light a { 
+    color: #160505 !important;
+}  
+</style>
+{{#js}}
+    window.onscroll = function() {myFunction()};
+    var navbar = document.getElementById("navbarhy");
+    var sticky = navbar.offsetTop;
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("stickyhy")
+        } else {
+            navbar.classList.remove("stickyhy");
+        }
+    }
+{{/js}}

@@ -1,0 +1,21 @@
+{{#block02enabled}}
+<div class="blockbgwhite">
+    <div class="container">
+        <div class="row">
+            {{#block02}}
+            <div class="{{{count}}}">
+                <div class="single-icon-box" style= "background-image: url({{{image}}});" >
+                    <div class="icon-box-content">
+                        <h6 class="iconbox-content-heading"><i>{{#pix}}{{icon}}{{/pix}}</i> {{{title}}}  </h6>
+                        <div class="iconbox-content-body">
+                            <p>{{{caption}}}</p>
+                            <a class="hybtn hybtn-inline read-more-btn" href="{{{buttonurl}}}"><i class="fa fa-plus-square"></i> {{{button}}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/block02}}
+        </div>
+    </div>
+</div>
+{{/block02enabled}}

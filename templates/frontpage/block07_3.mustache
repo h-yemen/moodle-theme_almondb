@@ -1,0 +1,28 @@
+<div class="block07desing3 container">
+    <div class="row">  
+        {{#block07}}
+        <div class="col-md-4 col-lg-3 col-sm-12 mb-4">
+            <div class="card h-100">
+                <div class="course-project" style= "background-image: url({{{imgurl}}});">
+                    {{#block07priceshow}}
+                        <div class="enrol">
+                            {{cost}} {{currency}}
+                        </div>
+                    {{/block07priceshow}}
+                    <div class="course-inner text-center">
+                        <h5><a href="{{categorylink}}" class="text-decoration-none">{{categoryName}}</a></h5>
+                    </div>     
+                </div> 
+                <div class="card-body">
+                    <h5 class="card-title post-heading"><a href="{{courselink}}" class="text-decoration-none">
+                        {{#block07shortname}}{{shortname}}{{/block07shortname}}
+                        {{#block07fullname}}{{fullname}}{{/block07fullname}}
+                    </a></h5>
+                    <p class="card-text">{{#shortentext}} 200, {{{summary}}} {{/shortentext}}</p>
+                </div>
+            </div>
+        </div> 
+        {{/block07}}
+        
+    </div> 
+</div>
