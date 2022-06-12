@@ -1,9 +1,9 @@
-Theme Almondb
-==================
-easy setup
-easy customization
+Theme Almondb <br>
+==================<br>
+easy setup<br>
+easy customization<br>
 
-unlimited color
-40+ customizable blocks
-Hame page slider
-Info page plugin
+unlimited color<br>
+40+ customizable blocks<br>
+Hame page slider<br>
+Info page plugin<br>
