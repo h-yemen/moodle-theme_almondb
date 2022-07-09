@@ -15,10 +15,10 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * A one column layout for the almondb theme.
  *
  * @package   theme_almondb
- * @copyright 2016 Damyon Wiese
+ * @copyright 2022 ThemesAlmond  - http://themesalmond.com
+ * @author    ThemesAlmond - Developer Team
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

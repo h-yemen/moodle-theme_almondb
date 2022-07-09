@@ -13,6 +13,14 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+/**
+ * Parent theme: boost
+ *
+ * @package   theme_almondb
+ * @copyright 2022 ThemesAlmond  - http://themesalmond.com
+ * @author    ThemesAlmond - Developer Team
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
 namespace theme_almondb\output;
 
@@ -22,13 +30,7 @@ use stdClass;
 use get_string;
 
 defined('MOODLE_INTERNAL') || die;
-/**
- * Renderers to align Moodle's HTML with that expected by Bootstrap
- *
- * @package    theme_boost
- * @copyright  2012 Bas Brands, www.basbrands.nl
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
+
 class core_renderer extends \core_renderer {
     /**
      * See if this is the first view of the current cm in the session if it has fake blocks.
