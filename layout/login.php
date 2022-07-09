@@ -14,15 +14,16 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-defined('MOODLE_INTERNAL') || die();
-
-/*
- * A login page layout for the almondb theme.
+/**
+ *
  * @package   theme_almondb
- * @copyright 2016 Damyon Wiese
+ * @copyright 2022 ThemesAlmond  - http://themesalmond.com
+ * @author    ThemesAlmond - Developer Team
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+
+defined('MOODLE_INTERNAL') || die();
 $bodyattributes = $OUTPUT->body_attributes();
 
 $templatecontext = [

@@ -15,10 +15,13 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
+ *
  * @package   theme_almondb
- * @copyright 2021 Huseyin Yemen
+ * @copyright 2022 ThemesAlmond  - http://themesalmond.com
+ * @author    ThemesAlmond - Developer Team
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
 defined('MOODLE_INTERNAL') || die();
 /**
  * @return url
@@ -240,7 +243,13 @@ function theme_almondb_frontpageblock07() {
         $templatecontext['block07fullname'] = 1;
     }
     require_once( $CFG->libdir . '/filelib.php' );
-    $courses = get_courses('all', 'c.timemodified DESC');
+    //$courses = get_courses('all', 'c.timemodified DESC');
+    $count = $theme->settings->block07count + 1;
+    $sql = "SELECT  c.id, c.fullname, c.shortname, c.summary, c.timemodified, c.category";
+    $sql = $sql." FROM {course} c";
+    $sql = $sql." ORDER BY c.timemodified DESC";
+    $sql = $sql." LIMIT ". $count;
+    $courses = $DB->get_records_sql($sql);
     foreach ($courses as $id => $course) {
         $category = $DB->get_record('course_categories', array('id' => $course->category));
         if (!empty($category)) {
@@ -255,7 +264,6 @@ function theme_almondb_frontpageblock07() {
     $sql = $sql." WHERE en.courseid = :courseid and en.status = 0 and en.cost != 'NULL'";
     $sql = $sql." GROUP BY en.courseid";
     $templatecontext['block07priceshow'] = $theme->settings->block07priceshow;
-    $count = $theme->settings->block07count;
     foreach ($allcourses as $id => $course) {
         $templatecontext['block07'][$j]['fullname'] = $course->fullname;
         $templatecontext['block07'][$j]['shortname'] = $course->shortname;
@@ -287,8 +295,8 @@ function theme_almondb_frontpageblock07() {
                 $templatecontext['block07'][$j]['userpicture'] = $OUTPUT->user_picture($teacher);
             }
         }
-        $j = $j + 1;
-        if ($count == $j ) {
+        $j++; 
+        if ($j > $count) {
             break;
         }
     };

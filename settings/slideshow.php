@@ -13,12 +13,14 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+/**
+ *
+ * @package   theme_almondb
+ * @copyright 2022 ThemesAlmond  - http://themesalmond.com
+ * @author    ThemesAlmond - Developer Team
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
-/*
-* @package   theme_almondb
-* @copyright 2021 Huseyin Yemen
-* @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
-*/
 defined('MOODLE_INTERNAL') || die();
 $page = new admin_settingpage('theme_almondb_slide', get_string('slideshow', 'theme_almondb'));
 $page->add(new admin_setting_heading('theme_almondb_slideshow', get_string('slideshowheading', 'theme_almondb'),

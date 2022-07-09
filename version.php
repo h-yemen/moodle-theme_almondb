@@ -15,17 +15,16 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * almondb.
  *
- * @package    theme_almondb
- * @copyright  2016 Frédéric Massart
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   theme_almondb
+ * @copyright 2022 ThemesAlmond  - http://themesalmond.com
+ * @author    ThemesAlmond - Developer Team
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2021083000;
-$plugin->requires  = 2021051700;
-$plugin->release = '3.11.05'; // This version's release version.
+$plugin->version   = 2022071000;
+$plugin->requires  = 2022041200;
 $plugin->component = 'theme_almondb';
-$plugin->maturity = MATURITY_STABLE;
