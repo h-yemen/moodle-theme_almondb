@@ -45,26 +45,6 @@ function theme_almondb_frontpagecolor() {
     $templatecontext['colorsetup'] = $theme->settings->frontpagecolor;
     if (empty($theme->settings->sitecolor)) {
         $templatecontext['sitecolor'] = $theme->settings->frontpagecolor;
-        switch ($theme->settings->frontpagecolor) {
-            case 1:
-                $templatecontext['sitecolor'] = get_string('sitecolor-1', 'theme_almondb');
-                break;
-            case 2:
-                $templatecontext['sitecolor'] = get_string('sitecolor-2', 'theme_almondb');
-                break;
-            case 3:
-                $templatecontext['sitecolor'] = get_string('sitecolor-3', 'theme_almondb');
-                break;
-            case 4:
-                $templatecontext['sitecolor'] = get_string('sitecolor-4', 'theme_almondb');
-                break;
-            case 5:
-                $templatecontext['sitecolor'] = get_string('sitecolor-5', 'theme_almondb');
-                break;
-            case 6:
-                $templatecontext['sitecolor'] = get_string('sitecolor-6', 'theme_almondb');
-            break;
-        }
     } else {
         $templatecontext['sitecolor'] = $theme->settings->sitecolor;
     }

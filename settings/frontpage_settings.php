@@ -85,11 +85,15 @@ $page->add($setting);
 $name = 'theme_almondb/frontpagecolor';
 $title = get_string('frontpagecolor', 'theme_almondb');
 $description = get_string('frontpagecolordesc', 'theme_almondb');
-$default = 1;
-$options = array();
-for ($i = 1; $i < 7; $i++) {
-    $options[$i] = $i;
-}
+$default = '#4272d7';
+$options = array(
+    '#4272d7' => '1',
+    '#f98012' => '2',
+    '#fa4251' => '3',
+    '#c45e28' => '4',
+    '#63c76a' => '5',
+    '#024E64' => '6',
+);
 $setting = new admin_setting_configselect($name, $title, $description, $default, $options);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
