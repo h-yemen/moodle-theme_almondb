@@ -54,6 +54,28 @@ $description = get_string('block07countdesc', 'theme_almondb');
 $default = get_string('block07countdefault', 'theme_almondb');
 $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_TEXT, '2');
 $page->add($setting);
+// Block 07 teacher role.
+$options = array();
+$role = $DB->get_records('role');
+foreach ($role as $roles) {
+     $options[$roles->id] = $roles->shortname;
+}
+$name = 'theme_almondb/block07teacherrole';
+$title = get_string('block07teacherrole', 'theme_almondb');
+$description = get_string('block07teacherroledesc', 'theme_almondb');
+$default = 'editingteacher';
+$setting = new admin_setting_configselect($name, $title, $description, $default, $options);
+$setting->set_updatedcallback('theme_reset_all_caches');
+$page->add($setting);
+// Block 07 student role.
+$name = 'theme_almondb/block07studentrole';
+$title = get_string('block07studentrole', 'theme_almondb');
+$description = get_string('block07studentroledesc', 'theme_almondb');
+$default = 'student';
+$setting = new admin_setting_configselect($name, $title, $description, $default, $options);
+$setting->set_updatedcallback('theme_reset_all_caches');
+$page->add($setting);
+
 // Teacher enabled/disabled .
 $name = 'theme_almondb/block07teacherenabled';
 $title = get_string('block07teacherenabled', 'theme_almondb');

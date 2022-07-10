@@ -283,10 +283,12 @@ function theme_almondb_frontpageblock07() {
             };
         }
         $context = context_course::instance($id);
-        $role = $DB->get_field('role', 'id', array('shortname' => 'student'));
+        //$role = $DB->get_field('role', 'id', array('shortname' => 'student'));
+        $role = $theme->settings->block07studentrole;
         $students = get_role_users($role, $context);
         $templatecontext['block07'][$j]['studentscount'] = count($students);
-        $role = $DB->get_field('role', 'id', array('shortname' => 'editingteacher'));
+        //$role = $DB->get_field('role', 'id', array('shortname' => 'editingteacher'));
+        $role = $theme->settings->block07teacherrole;
         $teachers = get_role_users($role, $context);
         if (!empty($theme->settings->block07teacherenabled)) {
             foreach ($teachers as $id => $teacher) {
