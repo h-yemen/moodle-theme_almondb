@@ -243,7 +243,7 @@ function theme_almondb_frontpageblock07() {
         $templatecontext['block07fullname'] = 1;
     }
     require_once( $CFG->libdir . '/filelib.php' );
-    //$courses = get_courses('all', 'c.timemodified DESC');
+    // $courses = get_courses('all', 'c.timemodified DESC');
     $count = $theme->settings->block07count + 1;
     $sql = "SELECT  c.id, c.fullname, c.shortname, c.summary, c.timemodified, c.category";
     $sql = $sql." FROM {course} c";
@@ -262,7 +262,6 @@ function theme_almondb_frontpageblock07() {
     $sql = "SELECT  en.courseid, en.cost, en.currency";
     $sql = $sql." FROM {enrol} en";
     $sql = $sql." WHERE en.courseid = :courseid and en.status = 0 and en.cost != 'NULL'";
-    $sql = $sql." GROUP BY en.courseid";
     $templatecontext['block07priceshow'] = $theme->settings->block07priceshow;
     foreach ($allcourses as $id => $course) {
         $templatecontext['block07'][$j]['fullname'] = $course->fullname;
@@ -317,12 +316,10 @@ function theme_almondb_frontpageblock08() {
     $templatecontext['block08header'] = $theme->settings->block08header;
     $templatecontext['block08caption'] = $theme->settings->block08caption;
     $teacherrole = $theme->settings->block08showrole;
-    $sql = "SELECT  ra.userid, ra.roleid, us.*";
+    $sql = "SELECT  ra.userid, ra.roleid";
     $sql = $sql." FROM {role_assignments} ra";
-    $sql = $sql." JOIN {user} us ON ra.userid = us.id";
     $sql = $sql." JOIN {context} ctx on ra.contextid = ctx.id";
     $sql = $sql." WHERE ra.roleid = :roleid";
-    $sql = $sql." GROUP BY ra.userid";
     $sql = $sql." ORDER BY ra.sortorder ASC";
     $sql = $sql." LIMIT ". $count;
     // And ctx.contextlevel = '50'?
@@ -335,16 +332,16 @@ function theme_almondb_frontpageblock08() {
         $coursecount = 0;
         $studentscount = 0;
         foreach ($roleassignments as $roleassignment) {
-            $templatecontext['block08'][$j]['teachername'] = $roleassignment->firstname." ".$roleassignment->lastname;
             $templatecontext['block08'][$j]['showdescription'] = $theme->settings->block08description;
-            $templatecontext['block08'][$j]['description'] = $roleassignment->description;
-            $roleassignment->imagealt = "teacher";
             if ($user = $DB->get_record('user', array('id' => $roleassignment->userid))) {
+                $user->imagealt = "teacher";
+                $templatecontext['block08'][$j]['teachername'] = $user->firstname." ".$user->lastname;
+                $templatecontext['block08'][$j]['description'] = $user->description;
                 $templatecontext['block08'][$j]['userpicture'] =
                     $OUTPUT->user_picture($user, array('class' => '', 'size' => '250'));
                 $templatecontext['block08'][$j]['userURL'] =
                     new moodle_url('/user/profile.php', array('id' => $roleassignment->userid ));
-                $userpicture = new user_picture($roleassignment);
+                $userpicture = new user_picture($user);
                 $userpicture->size = 512;
                 $url = $userpicture->get_url($PAGE)->out(false);
                 $templatecontext['block08'][$j]['userpictureURL'] = $url;
