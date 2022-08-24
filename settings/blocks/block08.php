@@ -73,6 +73,19 @@ foreach ($role as $roles) {
 $setting = new admin_setting_configselect($name, $title, $description, $default, $options);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
+// Block 08 select student role.
+$name = 'theme_almondb/block08studentrole';
+$title = get_string('block08studentrole', 'theme_almondb');
+$description = get_string('block08studentroledesc', 'theme_almondb');
+$default = 'editingteacher';
+$options = array();
+$role = $DB->get_records('role');
+foreach ($role as $roles) {
+     $options[$roles->id] = $roles->shortname;
+}
+$setting = new admin_setting_configselect($name, $title, $description, $default, $options);
+$setting->set_updatedcallback('theme_reset_all_caches');
+$page->add($setting);
 // Block 08 count text.
 $name = 'theme_almondb/block08count';
 $title = get_string('block08count', 'theme_almondb');

@@ -14,26 +14,7 @@
     You should have received a copy of the GNU General Public License
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
-{{!
-    @template theme_almondb/navbar
-    This template renders the top navbar.
-    Example context (json):
-    {
-        "output": {
-            "should_display_navbar_logo": true,
-            "get_compact_logo_url": ,
-            "custom_menu": "<li>..</li>",
-            "page_heading_menu": "<li>..</li>",
-            "search_box": "<div><input type='text'></div>",
-            "navbar_plugin_output": "<div class='dropdown'>Messaging</div>",
-            "user_menu": "<div class='dropdown'>John Doe</div>"
-        },
-        "config": {
-            "wwwroot": "#"
-        },
-        "sitename": "Moodle Site"
-    }
-}}
+
 <nav class="navbar header-area navbar-static-top {{{frontpagenavlightdark}}} bg-hynavbar navbar-expand 
     fixed-top header-wrapper moodle-has-zindex" aria-label="{{#str}}sitemenubar, admin{{/str}}">
     <a href="{{{ config.wwwroot }}}" class="navbar-brand aabtn {{# output.should_display_navbar_logo }}has-logo
