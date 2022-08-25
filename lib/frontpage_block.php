@@ -22,7 +22,6 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
 /**
  * @return url
  */
@@ -243,7 +242,6 @@ function theme_almondb_frontpageblock07() {
         $templatecontext['block07fullname'] = 1;
     }
     require_once( $CFG->libdir . '/filelib.php' );
-    // $courses = get_courses('all', 'c.timemodified DESC');
     $count = $theme->settings->block07count + 1;
     $sql = "SELECT  c.id, c.fullname, c.shortname, c.summary, c.timemodified, c.category";
     $sql = $sql." FROM {course} c";
@@ -294,7 +292,7 @@ function theme_almondb_frontpageblock07() {
                 $templatecontext['block07'][$j]['userpicture'] = $OUTPUT->user_picture($teacher);
             }
         }
-        $j++; 
+        $j++;
         if ($j > $count) {
             break;
         }

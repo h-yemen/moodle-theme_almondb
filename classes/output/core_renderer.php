@@ -29,8 +29,6 @@ use html_writer;
 use stdClass;
 use get_string;
 
-defined('MOODLE_INTERNAL') || die;
-
 class core_renderer extends \core_renderer {
     /**
      * See if this is the first view of the current cm in the session if it has fake blocks.
