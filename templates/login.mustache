@@ -65,12 +65,7 @@
                 position[i].className = 'container-fluid pt-5 mt-0 pagelayout-login-page';
             }
         }
-        /*
-        var position = document.querySelectorAll('.login-wrapper');
-        for (var i=0; i<position.length; i++) {
-            position[i].className = 'login-wrapper {{loginposition}}';
-        }
-        */
+
         var position = '{{loginposition}}';
         document.getElementsByClassName('login-wrapper')[0].style.setProperty("justify-content", position, "important");
     }
