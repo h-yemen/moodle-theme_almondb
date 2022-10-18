@@ -316,7 +316,7 @@ function theme_almondb_frontpageblock08() {
     $sql = $sql." FROM {role_assignments} ra";
     $sql = $sql." JOIN {context} ctx on ra.contextid = ctx.id";
     $sql = $sql." WHERE ra.roleid = :roleid";
-    $sql = $sql." ORDER BY ra.sortorder ASC";
+    $sql = $sql." GROUP by ra.userid, ra.roleid";
     $sql = $sql." LIMIT ". $count;
     // And ctx.contextlevel = '50'?
     if (!empty($theme->settings->block08total)) {

@@ -190,7 +190,7 @@ Pages
 Courses
 -All courses|/course/
 -Course search|/course/search.php|_blank
-Documentation|https://moodle.themesalmondb.com|_blank';
+Documentation|https://doc.themesalmond.com/|_blank';
 
 // Frontpage choice HTML.
 $string['frontpageheading'] = '* '.'Front Page Choice';
