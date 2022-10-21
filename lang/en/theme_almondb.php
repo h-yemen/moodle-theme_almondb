@@ -159,7 +159,7 @@ $string['almondbpagefootersimple'] = 'Page footer';
 $string['almondbpagefootersimpledesc'] = 'Add footer to info page';
 // Button settings.
 $string['button'] = 'Button';
-$string['buttonlink'] = 'https://moodle.org/';
+$string['buttonlink'] = 'https://themesalmond.com/';
 // Theme almondb settings !DO NOT DELETE !DO NOT CHANGE.
 $string['divdiv'] = '</div></div></div>';
 $string['div'] = '</div>';
@@ -566,7 +566,7 @@ $string['block20col2header'] = 'Block 20 col 2 header';
 $string['block20col2headerdesc'] = 'Block 20 column 2 enter header';
 $string['block20col2link'] = 'Block 20 col 2 link';
 $string['block20col2linkdesc'] = 'Block 20 col 2 link area';
-$string['block20col2linkdefault'] = 'About Us|https://moodle.org
+$string['block20col2linkdefault'] = 'About Us|https://themesalmond.com
                                     Our Story|https://moodle.org/support
                                     Terms & Condition|https://moodle.org/development
                                     Privacy Policy|http://docs.moodle.org|Moodle Docs
@@ -576,7 +576,7 @@ $string['block20col3header'] = 'Block 20 col 3 header';
 $string['block20col3headerdesc'] = 'Block 20 column 3 enter header';
 $string['block20col3link'] = 'Block 20 col 3 link';
 $string['block20col3linkdesc'] = 'Block 20 col 3 link area';
-$string['block20col3linkdefault'] = 'About Us|https://moodle.org
+$string['block20col3linkdefault'] = 'About Us|https://themesalmond.com
                                     Our Story|https://moodle.org/support
                                     Terms & Condition|https://moodle.org/development
                                     Privacy Policy|http://docs.moodle.org|Moodle Docs
@@ -600,7 +600,7 @@ $string['block20socialdefault'] = '<ul>
 $string['block20copyright'] = 'Block 20 Copyright';
 $string['block20copyrightdesc'] = 'Block 20 Copyright';
 $string['block20copyrightdefault'] = 'Copyright © 2021 Designed by
-    <a href="https://www.themealmondb.com">themesalmondb.com</a>.  All rights reserved.';
+    <a href="https://www.themealmond.com">themesalmond.com</a>.  All rights reserved.';
 $string['block20moodle'] = 'Enable frontpage button';
 $string['block20moodledesc'] = 'Enable or disabled block 20 moodle original frontpage';
 // Frontpage HTML block  !DO NOT DELETE !DO NOT CHANGE.
