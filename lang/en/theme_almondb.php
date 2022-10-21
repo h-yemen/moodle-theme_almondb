@@ -463,6 +463,8 @@ $string['block09headerdefault'] = 'Available Categories';
 $string['block09caption'] = 'Block 9 Caption';
 $string['block09captiondesc'] = 'Block 9 captions';
 $string['block09captiondefault'] = "List of registered categories";
+$string['block09ctgid'] = 'Block 9 Category id';
+$string['block09ctgiddesc'] = 'Block 9 Category id select (exp:  id = 1  or id = 2 or id = 3 ........), empty all category.';
 // Frontpage HTML block 10.
 $string['block10info'] = '* '.'Block-10 TESTIMONIALS';
 $string['block10infodesc'] = 'TESTIMONIALS - Enter the settings for block 10';

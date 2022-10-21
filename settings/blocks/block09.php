@@ -88,3 +88,10 @@ $description = get_string('block09captiondesc', 'theme_almondb');
 $default = get_string('block09captiondefault', 'theme_almondb');
 $setting = new admin_setting_configtextarea($name, $title, $description, $default, PARAM_RAW, '1', '2');;
 $page->add($setting);
+// Block 09 category id select.
+$name = 'theme_almondb/block09ctgid';
+$title = get_string('block09ctgid', 'theme_almondb');
+$description = get_string('block09ctgiddesc', 'theme_almondb');
+$default = "";
+$setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_TEXT);
+$page->add($setting);

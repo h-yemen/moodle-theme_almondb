@@ -370,7 +370,7 @@ function theme_almondb_frontpageblock08() {
     return $templatecontext;
 }
 function theme_almondb_frontpageblock09() {
-    GLOBAL $CFG, $DB, $OUTPUT, $COURSE, $PAGE, $USER;
+    GLOBAL $CFG, $DB;
     require_once($CFG->libdir.'/formslib.php');
     $theme = theme_config::load('almondb');
     $templatecontext['block09enabled'] = $theme->settings->block09enabled;
@@ -383,10 +383,13 @@ function theme_almondb_frontpageblock09() {
     $templatecontext['block09header'] = $theme->settings->block09header;
     $templatecontext['block09caption'] = $theme->settings->block09caption;
     $templatecontext['block09background'] = $theme->settings->block09background;
-    $sql = "SELECT ca.id, ca.name, ca.parent, ca.coursecount, ca.visible, ca.depth, ca.path";
-    $sql = $sql." FROM {course_categories} ca";
-    $sql = $sql." WHERE ca.coursecount > 0";
-    $sql = $sql." ORDER BY ca.coursecount DESC";
+    $sql = "SELECT id, name, parent, coursecount, visible, depth, path";
+    $sql = $sql." FROM {course_categories}";
+    $sql = $sql." WHERE coursecount > 0";
+    if (!empty($theme->settings->block09ctgid)) {
+        $sql = $sql." and ". $theme->settings->block09ctgid;
+    }
+    $sql = $sql." ORDER BY coursecount DESC";
     $sql = $sql." LIMIT ". $count;
     $categorys = $DB->get_records_sql($sql, array());
     if (!empty($categorys)) {
