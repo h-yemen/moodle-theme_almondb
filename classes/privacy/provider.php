@@ -26,8 +26,6 @@ namespace theme_almondb\privacy;
 
 use \core_privacy\local\metadata\collection;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * The boost theme stores a user preference data.
  *
