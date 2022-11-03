@@ -14,116 +14,76 @@
     You should have received a copy of the GNU General Public License
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
-<div id="navnarhy_top" class=" {{{frontpagenavlightdark}}} bg-hynavbar">
-    <a href="{{{ config.wwwroot }}}" class="navbar-brand aabtn">
-        {{#output.get_compact_logo_url}}   
-            <span class="logo ml-4">
-                <img src="{{output.get_compact_logo_url}}" alt="{{sitename}}">
-            </span>
-        {{/output.get_compact_logo_url}}    
-        {{^output.get_compact_logo_url}}
-            <span class="site-name p-3">{{{ sitename }}}</span>
-        {{/output.get_compact_logo_url}}   
-    </a>
-    <div class="navbar-nav ml-auto  pr-2">
-        {{{ output.search_box }}}
-    </div>
-    <div id="langheader3" class="navbar-nav  pr-3">
-            {{{ output.render_lang_menu }}}
+<div class="bg-hynavbar">
+    <div id="navnarhy_top" class="pl-4 pr-4 {{{frontpagenavlightdark}}}">
+        <a href="{{{ config.wwwroot }}}" class="navbar-brand aabtn">
+            {{#output.get_compact_logo_url}}   
+                <span class="logo">
+                    <img src="{{output.get_compact_logo_url}}" class="logo mr-1" alt="{{sitename}}">
+                </span>
+            {{/output.get_compact_logo_url}}    
+            {{^output.get_compact_logo_url}}
+                <span class="site-name p-3">{{{ sitename }}}</span>
+            {{/output.get_compact_logo_url}}   
+        </a>
+        <ul>
+            <li>
+                <a href="{{h3_01_block_phone_link}}">
+                    <i class='fa fa-phone'> </i>
+                     Call : 012(345) 67 89
+                </a>
+            </li>
+            <li>
+                <a href="mailto:{{h3_01_block_email}}">
+                    <i class='fa fa-envelope'> </i>
+                     example@example.com
+                </a>
+            </li>
+        </ul>
     </div>
 </div>
+
 <div id="navbarhy">
-    <nav class="navbar header-area {{{frontpagenavlightdark}}} bg-hynavbar navbar-expand header-wrapper moodle-has-zindex" aria-label="{{#str}}sitemenubar, admin{{/str}}">
-        <div class="navbar-nav d-none d-md-flex">
+    <nav class="navbar header-area fixed-top {{{frontpagenavlightdark}}} bg-hynavbar navbar-expand header-wrapper moodle-has-zindex" aria-label="{{#str}}sitemenubar, admin{{/str}}">
+        <button class="navbar-toggler aabtn d-block d-lg-none px-1 my-1 border-0" data-toggler="drawers" 
+            data-action="toggle" data-target="theme_boost-drawers-primary">
+            <span class="navbar-toggler-icon"></span>
+            <span class="sr-only">{{#str}}sidepanel, core{{/str}}</span>
+        </button>
+        {{#primarymoremenu}}
+            <div class="primary-navigation">
+                {{!> core/moremenu }}
+            </div>
+        {{/primarymoremenu}}
+
+        <div class="navbar-nav d-none d-lg-flex my-1 px-1">
             <!-- page_heading_menu -->
             {{{ output.page_heading_menu }}}
             <div class="navbar-nav mr-auto">
                 {{{frontpagenavlink}}}
             </div>
         </div>
-        <div class= "d-md-none d-lg-none d-xl-none">
-            <div class="dropdown hydropdown">
-                <a class="btn">
-                {{#pix}}i/menubars{{/pix}}  
-                </a>
-                <div class="hynavbar-nav hydropdown-content dropright">
-                    {{{frontpagenavlink-m}}}
-                </div>
+        <div id="usernavigation" class="navbar-nav ml-auto">
+            {{# output.search_box }}
+                {{{ output.search_box }}}
+                <div class="divider border-left h-75 align-self-center mx-1"></div>
+            {{/output.search_box}}
+            {{#langmenu}}
+                {{> theme_boost/language_menu }}
+                <div class="divider border-left h-75 align-self-center mx-1"></div>
+            {{/langmenu}}
+
+            <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+                {{#usermenu}}
+                    {{> core/user_menu }}
+                {{/usermenu}}
             </div>
         </div>
-        <ul class="navbar-nav usernav ml-auto">
-            <!-- user_menu -->
-            <li class="nav-item align-items-center pl-2 ">
-                {{{ output.user_menu }}}
-            </li>
-        </ul>
+
     </nav>
+    {{> theme_boost/primary-drawer-mobile }}
 </div>
-<style>
-#navbarhy {
-    background-color: #555;
-    z-index : 999;
-}
-#navnarhy_top {
-    height: 70px;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 0rem;
-    opacity: .9;
-    z-index : 99999;
-}
-#navnarhy_top .logo img {
-    height: 45px;
-}
-.stickyhy {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-.stickyhy {
-    padding-top: 0px;
-}
-.navbar-light a { 
-    color: #160505 !important;
-}  
-.navbar-light .logo img { 
-    border-radius: 3px;
-    margin-left:5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}  
-#langheader3 .dropdown-menu{
-    right: 0;
-    left: auto;
-}
-@media only screen and (max-width: 991px) {
-    #navnarhy_top .logo img {
-        height: 40px;
-    }
-    #navnarhy_top{
-        height: 60px;
-    }
-    .simplesearchform .collapse.show,
-    .simplesearchform .collapsing {
-        height: 60px;
-    }
-}
-@media only screen and (max-width: 767px) {
-    #navnarhy_top .logo img {
-            height: 30px;
-        }
-    #navnarhy_top{
-        height: 55px;
-    }
-    .simplesearchform .collapse.show,
-    .simplesearchform .collapsing {
-        height: 55px;
-    }
-}  
-</style>
+
 {{#js}}
 window.onscroll = function() {hyOnscrollFunction()};
     var navbar = document.getElementById("navbarhy");

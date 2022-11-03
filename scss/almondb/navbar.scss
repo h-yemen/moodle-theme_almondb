@@ -174,6 +174,9 @@
 #navbarhy {
     background-color: #555;
     z-index : 999;
+    .fixed-top {
+        position: relative;
+    }
 }
 .stickyhy {
     position: fixed;
@@ -193,6 +196,15 @@
     z-index : 99999;
     .logo img {
         height: 45px;
+    }
+    ul {
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        text-align: right;
+    }
+    a {
+        text-decoration: none;
     }
 }
 #langheader3 {
@@ -229,5 +241,21 @@ nav.navbar .logo img {
     .simplesearchform .collapse.show,
     .simplesearchform .collapsing {
         height: 55px;
+    }
+}
+@include media-breakpoint-down(xs) {
+    #navnarhy_top .logo img {
+            height: 20px;
+        }
+    #navnarhy_top {
+        height: 45px;
+        justify-content: center;
+        ul {
+            display: none;
+        }
+    }
+    .simplesearchform .collapse.show,
+    .simplesearchform .collapsing {
+        height: 45px;
     }
 }

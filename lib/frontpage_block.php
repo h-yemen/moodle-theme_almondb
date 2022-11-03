@@ -64,7 +64,7 @@ function theme_almondb_frontpageblock02() {
         $templatecontext['block02'][$j]['icon'] = $newstr;
         $templatecontext['block02'][$j]['image'] = $image;
         $templatecontext['block02'][$j]['title'] = format_string($theme->settings->$block02title);
-        $templatecontext['block02'][$j]['caption'] = format_string($theme->settings->$block02caption);
+        $templatecontext['block02'][$j]['caption'] = $theme->settings->$block02caption;
         $templatecontext['block02'][$j]['button'] = format_string($theme->settings->$block02button);
         $templatecontext['block02'][$j]['buttonurl'] = format_string($theme->settings->$block02buttonlink);
     }
@@ -243,7 +243,7 @@ function theme_almondb_frontpageblock07() {
     }
     require_once( $CFG->libdir . '/filelib.php' );
     $count = $theme->settings->block07count + 1;
-    $sql = "SELECT  c.id, c.fullname, c.shortname, c.summary, c.timemodified, c.category";
+    $sql = "SELECT  c.id, c.fullname, c.shortname, c.summary, c.timemodified, c.category, c.visible";
     $sql = $sql." FROM {course} c";
     $sql = $sql." ORDER BY c.timemodified DESC";
     $sql = $sql." LIMIT ". $count;
@@ -385,7 +385,7 @@ function theme_almondb_frontpageblock09() {
     $templatecontext['block09background'] = $theme->settings->block09background;
     $sql = "SELECT id, name, parent, coursecount, visible, depth, path";
     $sql = $sql." FROM {course_categories}";
-    $sql = $sql." WHERE coursecount > 0";
+    $sql = $sql." WHERE coursecount > 0 and visible = 1";
     if (!empty($theme->settings->block09ctgid)) {
         $sql = $sql." and ". $theme->settings->block09ctgid;
     }
