@@ -49,6 +49,7 @@ $name = 'theme_almondb/frontpagenavlightdark';
 $title = get_string('frontpagenavlightdark', 'theme_almondb');
 $description = get_string('frontpagenavlightdarkdesc', 'theme_almondb');
 $default = "navbar-light";
+$options = array();
 $options = array(
     'navbar-light' => 'navbar-light',
     'navbar-dark' => 'navbar-dark',
@@ -74,6 +75,7 @@ $title = get_string('frontpagechoice', 'theme_almondb');
 $description = get_string('frontpagechoicedesc', 'theme_almondb');
 $default = 1;
 $options = array();
+$options = array();
 for ($i = 1; $i <= 1; $i++) {
     $options[$i] = $i;
 }
@@ -86,6 +88,7 @@ $name = 'theme_almondb/frontpagecolor';
 $title = get_string('frontpagecolor', 'theme_almondb');
 $description = get_string('frontpagecolordesc', 'theme_almondb');
 $default = '#4272d7';
+$options = array();
 $options = array(
     '#4272d7' => '1',
     '#f98012' => '2',
