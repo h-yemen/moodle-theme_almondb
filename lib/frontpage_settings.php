@@ -26,7 +26,6 @@
  * @return url
  */
 function theme_almondb_frontpage_section() {
-    global $CFG, $OUTPUT;
     $theme = theme_config::load('almondb');
     // Front page navbar frontpagenavlightdark?
     $templatecontext['frontpagenavchoice'.$theme->settings->frontpagenavchoice] = $theme->settings->frontpagenavchoice;
@@ -40,7 +39,6 @@ function theme_almondb_frontpage_section() {
     return $templatecontext;
 }
 function theme_almondb_frontpagecolor() {
-    global $OUTPUT;
     $theme = theme_config::load('almondb');
     $templatecontext['colorsetup'] = $theme->settings->frontpagecolor;
     if (empty($theme->settings->sitecolor)) {

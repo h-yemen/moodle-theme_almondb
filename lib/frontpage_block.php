@@ -511,7 +511,6 @@ function theme_almondb_frontpageblock11() {
     return $templatecontext;
 }
 function theme_almondb_frontpageblock18() {
-    global $OUTPUT;
     $theme = theme_config::load('almondb');
     $templatecontext['block18enabled'] = $theme->settings->block18enabled;
     if (empty($templatecontext['block18enabled'])) {

@@ -15,17 +15,21 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{#block19enabled}}
-{{#block19desing1}}
-    {{> theme_almondb/frontpage/block19_1 }}
-{{/block19desing1}}
-{{#block19desing2}}
-    {{> theme_almondb/frontpage/block19_2 }}
-{{/block19desing2}}
-<style>   
-@media only screen and (max-width: 576px) {
-    .block19desing2 .col-xs {
-        width: 50%;
-    }
-}  
-</style>
+    {{#block19desing1}}
+        <section id="section-19-1">
+            {{> theme_almondb/frontpage/block19_1 }}
+        </section>
+    {{/block19desing1}}
+    {{#block19desing2}}
+        <section id="section-19-2">
+            {{> theme_almondb/frontpage/block19_2 }}
+        </section>
+    {{/block19desing2}}
+    <style>   
+    @media only screen and (max-width: 576px) {
+        .block19desing2 .col-xs {
+            width: 50%;
+        }
+    }  
+    </style>
 {{/block19enabled}}
