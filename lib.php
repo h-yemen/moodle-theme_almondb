@@ -94,8 +94,6 @@ function theme_almondb_get_main_scss_content($theme) {
  * @return array
  */
 function theme_almondb_get_pre_scss($theme) {
-    global $CFG;
-
     $scss = '';
     $configurable = [
         // Config key => [variableName, ...].
