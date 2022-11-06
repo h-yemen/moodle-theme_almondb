@@ -147,7 +147,7 @@ function theme_almondb_header_links($links, $mobil ) {
                     $content .= "</div></div>";
                 }
                 $ltxt = trim($expset[0]);
-                $blank = "";
+                $blank = "_self";
                 if (isset($expset[2])) {
                     $blank = trim($expset[2]);
                 }
