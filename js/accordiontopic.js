@@ -1,5 +1,5 @@
 /*
-    accordiontopic.js
+    Accordiontopic.js
     Copyright: 2022 ThemesAlmond
 */
 var acc = document.getElementsByClassName("accordionalmondb");
