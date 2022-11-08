@@ -190,8 +190,25 @@ Pages
 Courses
 -All courses|/course/
 -Course search|/course/search.php|_blank
-Documentation|https://doc.themesalmond.com/|_blank';
+Smooth
+-Title box|#block01
+-Icon box|#block02
+-Features|#block03
+-Latest|#block04
+-WHY we|#block05
+-Working with us|#block06
+-Course|#block07
+-Teacher|#block08
+-Category|#block09
+-Testimonials|#block10|_self
+-Blog posts|#block11|_self
+-Block HTML|#block18|_self
+-Brands|#block19
+-Footer|#block20
+Teachers|#block08
+Documentation|https://doc.themesalmond.com/|_blank
 
+';
 // Frontpage choice HTML.
 $string['frontpageheading'] = '* Front Page Choice';
 $string['frontpagedesc'] = 'Select front page to display';
@@ -515,8 +532,8 @@ $string['block16info'] = '* '.'Block-16 Empty';
 // Frontpage block 17.
 $string['block17info'] = '* '.'Block-17 Empty';
 // Frontpage HTML block 18.
-$string['block18info'] = '* '.'Block-18 BLOG HTML';
-$string['block18infodesc'] = 'BLOG HTML - Enter the settings for block 11';
+$string['block18info'] = '* '.'Block-18 BLOCK HTML';
+$string['block18infodesc'] = 'BLOCK HTML - Enter the settings for block 11';
 $string['block18enabled'] = 'Enable block 18';
 $string['block18enableddesc'] = 'Enable or disabled block 18 at the your home page';
 $string['block18title'] = 'Block 18 Title';
