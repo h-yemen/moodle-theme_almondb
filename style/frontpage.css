@@ -13,7 +13,7 @@
       padding: 0;
    }
    label {
-      color: #333333;
+      color: #333;
       cursor: pointer;
       font-size: 14px;
       font-weight: 400;
@@ -34,25 +34,25 @@
       text-shadow: none; 
    }*/
    *::-moz-placeholder {
-      color: #555555;
+      color: #555;
       font-size: 14px;
       opacity: 1;
       filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
    }
    *::-webkit-input-placeholder {
-      color: #555555;
+      color: #555;
       font-size: 14px;
       opacity: 1;
       filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
    }
    *:-ms-input-placeholder {
-      color: #555555;
+      color: #555;
       font-size: 14px;
       opacity: 1;
       filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
    }
    *::placeholder {
-      color: #555555;
+      color: #555;
       font-size: 14px;
       opacity: 1;
       filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -114,12 +114,12 @@
     .hybtn.hybtn-inline {
         background: transparent none repeat scroll 0 0;
         border: 0 none;
-        color: #ffffff;
+        color: #fff;
         padding: 0;
         text-decoration: none;
     }
     .hybtn.hybtn-inline:hover {
-        color: #ffffff;
+        color: #fff;
         text-decoration: underline;
     }
     
@@ -151,7 +151,7 @@
     border-top: 5px solid #4272d7;
 }
 .main-menu li.search-trigger a {
-    border-left: 1px solid #666666;
+    border-left: 1px solid #666;
     padding-left: 30px;
 }
 
@@ -177,7 +177,7 @@
     height: 600px;
     background-size: cover;
     background-position: center;
-    background-color: #cccccc;
+    background-color: #ccc;
     display: table;
     width: 100%;
 }
@@ -195,7 +195,6 @@
     line-height: 1;
 }
 .slider-inner h3 {
-    font-weight: 700;
     font-size: 30px;
     text-transform: uppercase;
     color: #fff;
@@ -567,7 +566,7 @@
 .single-choose-item h6 {
     font-size: 16px;
     font-weight: 600;
-    color: #555555;
+    color: #555;
 }
 .single-choose-item h6 i {
     margin-right: 10px;
@@ -575,7 +574,7 @@
 .single-choose-item p {
     margin: 0;
     font-size: 15px;
-    color: #666666;
+    color: #666;
 }
 .single-choose-item {
     margin-bottom: 20px;
@@ -587,7 +586,7 @@
     font-size: 16px;
     font-weight: 600;
     letter-spacing: .05rem;
-    color: #555555;
+    color: #555;
 }
 .single-course-item h6 i {
     margin-right: 10px;
@@ -595,7 +594,7 @@
 .single-course-item p {
     margin: 0;
     font-size: 15px;
-    color: #666666;
+    color: #666;
 }
 .single-course-item {
     margin-bottom: 1px;
@@ -637,11 +636,11 @@
 .post-heading {
     font-size: 18px;
     font-weight: 600;
-    color: #555555;
+    color: #555;
 }
 .post-content-text {
     margin: 0;
-    color: #666666;
+    color: #666;
     font-size: 15px;
     text-align: justify;
 }
@@ -654,14 +653,14 @@
 }
 
 .blog-tags a {
-    color: #555555;
+    color: #555;
     font-weight: 600;
     -webkit-transition: .3s;
     transition: .3s;
 }
 
 .blog-btn .read-more-btn {
-    color: #555555;
+    color: #555;
     display: inline-block;
     margin-left: 20px;
 }
@@ -683,17 +682,17 @@
 }
 .testimonial-content i {
     font-size: 20px;
-    color: #666666;
+    color: #666;
     margin-right: 15px;
 }
 .testimonial-content p {
     font-size: 15px;
-    color: #666666;
+    color: #666;
     text-align: justify;
     margin: 0;
 }
 .testimonial-content p {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #ddd;
     padding-bottom: 15px;
     margin-bottom: 20px;
 }
@@ -711,7 +710,7 @@
     font-weight: 600;
     font-size: 13px;
     text-transform: uppercase;
-    color: #555555;
+    color: #555;
     -webkit-transition: .3s;
     transition: .3s;
 }

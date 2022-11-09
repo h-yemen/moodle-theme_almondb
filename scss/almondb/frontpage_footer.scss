@@ -3,7 +3,7 @@
 .footer-logo {
     margin-bottom: 35px;
 }
-.footer-logo img{
+.footer-logo img {
    max-height: 50px;
    width: auto;
 }
@@ -20,7 +20,7 @@
     font-weight: 600;
     color: #fff;
     position: relative;
-    float:none; 
+    float: none;
 }
 .footer-logo a img {
     position: absolute;
@@ -30,7 +30,7 @@
 .footer-dec p {
     font-size: 14px;
     font-weight: 400;
-    color: #999999;
+    color: #999;
     text-align: justify;
     margin-bottom: 25px;
     font-weight: 500;
@@ -49,8 +49,17 @@
     margin-bottom: 25px;
 }
 
-.footer-menu li:before {position: absolute;left: 0;top: 50%;-webkit-transform: translateY(-50%);transform: translateY(-50%);width: 0px;height: 0px;content:"";background: rgba(255,255,255,.2);}
-
+.footer-menu li:before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 0px;
+    height: 0px;
+    content:"";
+    background: rgba(255,255,255,.2);
+}
 .footer-widget ul {
     padding-left: 0rem;
 }
@@ -58,25 +67,26 @@
     display: block;
     margin-bottom: 15px;
     position: relative;
-
 }
 .footer-menu li a {
-    color: #cccccc;
+    color: #ccc;
     font-size: 14px;
     font-weight: 500;
 }
 .address-line p {
     margin-bottom: 15px;
-    color: #cccccc;
+    color: #ccc;
     font-size: 14px;
     font-weight: 500;
 }
 .address-line p a {
-    color: #cccccc;
+    color: #ccc;
     -webkit-transition: .3s;
     transition: .3s;
 }
-.address-line p a:hover {color: #4272d7;}
+.address-line p a:hover {
+    color: #4272d7;
+}
 .footer-area {
     border-bottom: 1px solid #9999;
 }
@@ -108,6 +118,6 @@
 .copyright-area {
     padding: 10px 0;
     display: block;
-    color: #cccccc;
+    color: #ccc;
 }
 /* End Footer Area */
