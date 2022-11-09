@@ -34,7 +34,7 @@
 {{#title}}
 <script>
 
-if ('{{title}}'.substring(0, 1) == '#' || '{{title}}'.substring(0, 1) == '*' ) {
+if ('{{title}}'.substring(0, 1) == ':' || '{{title}}'.substring(0, 1) == '!' ) {
     var randomnumber = Math.floor((Math.random() * 10000) + 1);
     var headingId ="heading" + randomnumber;
     var collapseId = "collapse" + randomnumber;
@@ -47,7 +47,7 @@ if ('{{title}}'.substring(0, 1) == '#' || '{{title}}'.substring(0, 1) == '*' ) {
         standart += '<div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordionHy">';
         standart += '<div class="card-body border rounded">';
 
-    if ('{{title}}'.substring(0, 1) == '#') {
+    if ('{{title}}'.substring(0, 1) == ':') {
         document.write('<div class="accordion" id="accordionHy">')
         document.write(standart);
         var randomnumber = Math.floor((Math.random() * 1000) + 1);

@@ -37,6 +37,18 @@ for ($i = 1; $i < 4; $i++) {
 $setting = new admin_setting_configselect($name, $title, $description, $default, $options);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
+// Frontpage header logo select.
+$name = 'theme_almondb/headerlogo';
+$title = get_string('headerlogo', 'theme_almondb');
+$description = get_string('headerlogodesc', 'theme_almondb');
+$default = "Logo";
+$options = array(
+    'Logo' => 'Logo',
+    'Compact logo' => 'Compact logo',
+);
+$setting = new admin_setting_configselect($name, $title, $description, $default, $options);
+$setting->set_updatedcallback('theme_reset_all_caches');
+$page->add($setting);
 // Navbar back color.
 $name = 'theme_almondb/navbarcolor';
 $title = get_string('navbarcolor', 'theme_almondb');

@@ -14,16 +14,54 @@
     You should have received a copy of the GNU General Public License
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
+{{!
 
-<nav id="navheader" class="navbar header-area navbar-static-top {{{frontpagenavlightdark}}} bg-hynavbar navbar-expand
-    fixed-top header-wrapper moodle-has-zindex educard-font" aria-label="{{#str}}sitemenubar, admin{{/str}}">
-    <button class="navbar-toggler aabtn d-block d-lg-none px-1 my-1 border-0" data-toggler="drawers" 
-        data-action="toggle" data-target="theme_boost-drawers-primary">
+    @template theme_boost/navbar
+
+    This template renders the top navbar.
+
+    Example context (json):
+    {
+        "output": {
+            "should_display_navbar_logo": true,
+            "get_compact_logo_url": "http://placekitten.com/50/50",
+            "custom_menu": "<li>..</li>",
+            "page_heading_menu": "<li>..</li>",
+            "search_box": "<div><input type='text'></div>",
+            "navbar_plugin_output": "<div class='dropdown'>Messaging</div>",
+            "user_menu": "<div class='dropdown'>John Doe</div>"
+        },
+        "config": {
+            "wwwroot": "#",
+            "homeurl": "/my/"
+        },
+        "sitename": "Moodle Site",
+        "mobileprimarynav": [
+            {
+                "text": "Dashboard",
+                "url": "/my",
+                "isactive": true
+            },
+            {
+                "text": "Site home",
+                "url": "/",
+                "isactive": false
+            },
+            {
+                "text": "My courses",
+                "url": "/course",
+                "isactive": false
+            }
+        ]
+    }
+}}
+<nav class="navbar fixed-top navbar-light bg-white navbar-expand" aria-label="{{#str}}sitemenubar, admin{{/str}}">
+
+    <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
         <span class="navbar-toggler-icon"></span>
         <span class="sr-only">{{#str}}sidepanel, core{{/str}}</span>
     </button>
     <a href="{{{ config.homeurl }}}" class="navbar-brand d-none d-xl-flex align-items-center m-0 mr-4 p-0 aabtn">
-
         {{# output.should_display_navbar_logo }}
             {{#headerlogocompact}}
                 <img src="{{output.get_compact_logo_url}}" class="logo mr-1" alt="{{sitename}}">
@@ -38,17 +76,14 @@
     </a>
     {{#primarymoremenu}}
         <div class="primary-navigation">
-            {{! > core/moremenu }}
+            {{> core/moremenu}}
         </div>
     {{/primarymoremenu}}
 
-    <div class="navbar-nav d-none d-lg-flex my-1 px-1">
+    <ul class="navbar-nav d-none d-md-flex my-1 px-1">
         <!-- page_heading_menu -->
         {{{ output.page_heading_menu }}}
-        <div class="navbar-nav mr-auto">
-            {{{frontpagenavlink}}}
-        </div>
-    </div>
+    </ul>
 
     <div id="usernavigation" class="navbar-nav ml-auto">
         {{# output.search_box }}
@@ -59,13 +94,14 @@
             {{> theme_boost/language_menu }}
             <div class="divider border-left h-75 align-self-center mx-1"></div>
         {{/langmenu}}
-
+        {{{ output.navbar_plugin_output }}}
         <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
             {{#usermenu}}
                 {{> core/user_menu }}
             {{/usermenu}}
         </div>
+        {{{ output.edit_switch }}}
     </div>
 </nav>
+
 {{> theme_boost/primary-drawer-mobile }}
-<div class="hy-pt-55"></div>

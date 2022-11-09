@@ -29,6 +29,15 @@ function theme_almondb_frontpage_section() {
     $theme = theme_config::load('almondb');
     // Front page navbar frontpagenavlightdark?
     $templatecontext['frontpagenavchoice'.$theme->settings->frontpagenavchoice] = $theme->settings->frontpagenavchoice;
+    // Front page navbar logo select.
+    switch ($theme->settings->headerlogo) {
+        case 'Logo':
+            $templatecontext['headerlogo'] = true;
+            break;
+        case 'Compact logo':
+            $templatecontext['headerlogocompact'] = true;
+            break;
+    }
     $templatecontext['frontpagenavlightdark'] = $theme->settings->frontpagenavlightdark;
     if (!empty($theme->settings->frontpagenavlink)) {
         $templatecontext['frontpagenavlink'] = theme_almondb_header_links($theme->settings->frontpagenavlink, false);

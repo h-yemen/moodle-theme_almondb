@@ -22,11 +22,14 @@
             <span class="navbar-toggler-icon"></span>
             <span class="sr-only">{{#str}}sidepanel, core{{/str}}</span>
         </button>
-
         <a href="{{{ config.homeurl }}}" class="navbar-brand d-none d-xl-flex align-items-center m-0 mr-4 p-0 aabtn">
-
             {{# output.should_display_navbar_logo }}
-                <img src="{{output.get_compact_logo_url}}" class="logo mr-1" alt="{{sitename}}">
+                {{#headerlogocompact}}
+                    <img src="{{output.get_compact_logo_url}}" class="logo mr-1" alt="{{sitename}}">
+                {{/headerlogocompact}}
+                {{#headerlogo}}
+                    <img src="{{output.get_logo_url}}" class="logo mr-1" alt="{{sitename}}">
+                {{/headerlogo}}
             {{/ output.should_display_navbar_logo }}
             {{^ output.should_display_navbar_logo }}
                 {{{ sitename }}}

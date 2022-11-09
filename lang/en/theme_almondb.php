@@ -70,7 +70,7 @@ $string['slideshowend'] = '--End--';
 $string['slideshowenddesc'] = '';
 // Slider.
 $string['slideshow'] = 'Slider';
-$string['slideshowheading'] = '# Home Page Slider';
+$string['slideshowheading'] = ': Home Page Slider';
 $string['slideshowheadingdesc'] = 'This creates a slide show of up to six slides for you to promote important elements of your site.  The show is responsive where image height is set according to screen size.If no image is selected for a slide, then the default images in the pix folder is used.';
 $string['sliderdesing'] = 'Slider Desing';
 $string['sliderdesingdesc'] = 'Select the slide desing you want to add';
@@ -78,7 +78,7 @@ $string['sliderenabled'] = 'Enable slider';
 $string['sliderenableddesc'] = 'Enable a slider at the top of your home page';
 $string['slidercount'] = 'Slider count';
 $string['slidercountdesc'] = 'Select how many slides you want to add <strong>then click SAVE</strong> to load the input fields.';
-$string['slideno'] = '* Slide-{$a->slide}';
+$string['slideno'] = '! Slide-{$a->slide}';
 $string['slidenodesc'] = 'Enter the settings for slide {$a->slide}.';
 $string['sliderimage'] = 'Slider picture';
 $string['sliderimagedesc'] = 'Add an image for your slide. Recommended size is 1500px x 500px or higher.';
@@ -102,13 +102,13 @@ $string['almondbpageend'] = '--End--';
 $string['almondbpageenddesc'] = '';
 // Almondbpage.
 $string['almondbpage'] = 'Info Pages';
-$string['almondbpageheading'] = '# Advanced Page Settings';
+$string['almondbpageheading'] = ': Advanced Page Settings';
 $string['almondbpageheadingdesc'] = 'This creates of up to six info page for you to promote important elements of your site.';
 $string['almondbpageenabled'] = 'Enable almondbpage';
 $string['almondbpageenableddesc'] = 'Enable a almondbpage at the top of your home page';
 $string['almondbpagecount'] = 'Page count';
 $string['almondbpagecountdesc'] = 'Select how many pages you want to add <strong>then click SAVE</strong> to load the input fields.';
-$string['almondbpageno'] = '* Page-{$a->almondbpage}';
+$string['almondbpageno'] = '! Page-{$a->almondbpage}';
 $string['almondbpagenodesc'] = 'Enter the settings for page {$a->almondbpage}. <b><i>PAGE LINK: www.yoursite/local/almondbpage/?id=a{$a->almondbpage}</i></b>';
 $string['almondbpagedesing'] = 'Page Desing';
 $string['almondbpagedesingdesc'] = 'Select the page desing you want to add. You can quickly create your pages using a simple design.
@@ -137,13 +137,13 @@ $string['almondbpagefooter'] = 'Page footer';
 $string['almondbpagefooterdesc'] = 'Add footer to info page';
 $string['almondbpagenotfound'] = 'Page not found, please check url';
 // Almondbpage simple.
-$string['almondbpageheadingsimple'] = '* Simple Page Settings';
+$string['almondbpageheadingsimple'] = '! Simple Page Settings';
 $string['almondbpageheadingsimpledesc'] = 'This creates of up to six info page for you to promote important elements of your site.';
 $string['almondbpageenabledsimple'] = 'Enable almondbpage';
 $string['almondbpageenabledsimpledesc'] = 'Enable a almondbpage at the top of your home page';
 $string['almondbpagecountsimple'] = 'Page count';
 $string['almondbpagecountsimpledesc'] = 'Select how many pages you want to add <strong>then click SAVE</strong> to load the input fields.';
-$string['almondbpagenosimple'] = '* '.'Page-{$a->almondbpage}';
+$string['almondbpagenosimple'] = '! '.'Page-{$a->almondbpage}';
 $string['almondbpagenosimpledesc'] = 'Enter the settings for page {$a->almondbpage}. <b><i>PAGE LINK: www.yoursite/local/almondbpage/?id=s{$a->almondbpage}</i></b>';
 $string['almondbpagetitlesimple'] = 'Page title';
 $string['almondbpagetitlesimpledesc'] = 'Add the page\'s title.';
@@ -170,10 +170,12 @@ $string['frontpagealmondb'] = 'Front Page';
 $string['dashboardnavchoice'] = 'Dashboard page nav';
 $string['dashboardnavchoicedesc'] = 'Select dashboard page nav to display';
 // Frontpage choice heading (nav).
-$string['frontpagenav'] = '# Front Page Header Choice';
+$string['frontpagenav'] = ': Front Page Header Choice';
 $string['frontpagenavdesc'] = 'Select front page header to display';
 $string['frontpagenavchoice'] = 'Front page nav';
 $string['frontpagenavchoicedesc'] = 'Select front page nav to display';
+$string['headerlogo'] = 'Select the navbar logo';
+$string['headerlogodesc'] = 'Select front page nav logo display';
 $string['frontpagenavlightdark'] = 'Front page light-dark';
 $string['frontpagenavlightdarkdesc'] = 'If you chose dark color above, choose "navbar-dark".';
 $string['frontpagenavlink'] = 'Front page nav link';
@@ -210,7 +212,7 @@ Documentation|https://doc.themesalmond.com/|_blank
 
 ';
 // Frontpage choice HTML.
-$string['frontpageheading'] = '* Front Page Choice';
+$string['frontpageheading'] = '! Front Page Choice';
 $string['frontpagedesc'] = 'Select front page to display';
 $string['frontpagechoice'] = 'Select Front Page';
 $string['frontpagechoicedesc'] = 'Select front page to display';
@@ -233,7 +235,7 @@ $string['sitecolor-4'] = '#c45e28';
 $string['sitecolor-5'] = '#63c76a';
 $string['sitecolor-6'] = '#024E64';
 // Color end.
-$string['frontpageheading1'] = '* Front page SECTION';
+$string['frontpageheading1'] = '! Front page SECTION';
 $string['frontpageheadingdesc1'] = 'front page section selection number one
 <br><a href="./../theme/almondb/pix/almondb/slide_01.jpg" target="_blank">Click to see blocks</a>';
 $string['frontpagesection1_1'] = 'Section 1';
@@ -261,7 +263,7 @@ $string['theme_almondb_frontpageblock'] = 'Block';
 $string['theme_almondb_frontpageblockheading'] = 'Front Page Blocks';
 $string['theme_almondb_frontpageblockdesc'] = 'Front Page HTML blocks settings';
 // Frontpage HTML block 1.
-$string['block01info'] = '# Block-1 TITLE BOX';
+$string['block01info'] = ': Block-1 TITLE BOX';
 $string['block01infodesc'] = 'TITLE BOX - Enter the settings for block 1';
 $string['block01enabled'] = 'Enable block 1';
 $string['block01enableddesc'] = 'Enable or disabled block 1 at the your home page';
@@ -276,7 +278,7 @@ $string['block01buttonlinkdesc'] = 'Add a URL for your block 1';
 $string['block01color'] = 'Block 1 background color';
 $string['block01colordesc'] = 'Add a background color for your block 1';
 // Frontpage HTML block 2.
-$string['block02info'] = '* Block-2 ICON BOX';
+$string['block02info'] = '! Block-2 ICON BOX';
 $string['block02infodesc'] = 'ICON BOX - Enter the settings for block 2';
 $string['block02enabled'] = 'Enable block 2';
 $string['block02enableddesc'] = 'Enable or disabled block 2 at the your home page';
@@ -315,7 +317,7 @@ $string['block05icondefault1'] = 'core:i/settings';
 $string['block05icondefault2'] = 'core:i/hide';
 $string['block05icondefault3'] = 'core:i/bullhorn';
 // Frontpage HTML block 3.
-$string['block03info'] = '* Block-3 FEATURES';
+$string['block03info'] = '! Block-3 FEATURES';
 $string['block03infodesc'] = 'FEATURES - Enter the settings for block 3';
 $string['block03enabled'] = 'Enable block 3';
 $string['block03enableddesc'] = 'Enable or disabled block 3 at the your home page';
@@ -337,7 +339,7 @@ $string['block03captiondefault'] = 'Vestibulum non diam quis nisl dignissim posu
 $string['block03link'] = 'Block 3 URL {$a->block}';
 $string['block03linkdesc'] = 'Add a URL  for your block 3';
 // Frontpage HTML block 4.
-$string['block04info'] = '* Block-4 LATEST';
+$string['block04info'] = '! Block-4 LATEST';
 $string['block04infodesc'] = 'LATEST - Enter the settings for block 4';
 $string['block04enabled'] = 'Enable block 4';
 $string['block04enableddesc'] = 'Enable or disabled block 4 at the your home page';
@@ -361,7 +363,7 @@ $string['block04linkdesc'] = 'Add a URL  for your block 4';
 $string['block04imgdesc'] = 'Add a image  for your block ';
 $string['sliderimageblock04img'] = 'Block img {$a->block}';
 // Frontpage HTML block 5.
-$string['block05info'] = '* Block-5 WHY WE';
+$string['block05info'] = '! Block-5 WHY WE';
 $string['block05infodesc'] = 'WHY WE - Enter the settings for block 5';
 $string['block05enabled'] = 'Enable block 5';
 $string['block05enableddesc'] = 'Enable or disabled block 5 at the your home page';
@@ -382,7 +384,7 @@ $string['block05captiondesc'] = 'Add a caption  for your block 5';
 $string['block05link'] = 'Block 5 URL {$a->block}';
 $string['block05linkdesc'] = 'Add a URL  for your block 5';
 // Frontpage HTML block 6.
-$string['block06info'] = '* Block-6 WORKING WITH US';
+$string['block06info'] = '! Block-6 WORKING WITH US';
 $string['block06infodesc'] = 'WORKING WITH US - Enter the settings for block 6';
 $string['block06enabled'] = 'Enable block 6';
 $string['block06enableddesc'] = 'Enable or disabled block 6 at the your home page';
@@ -403,7 +405,7 @@ $string['block06buttondesc'] = 'Add a URL  for your block 6';
 $string['block06buttonlink'] = 'Block 6 URL ';
 $string['block06buttonlinkdesc'] = 'Add a URL  for your block 6';
 // Frontpage HTML block 7.
-$string['block07info'] = '* Block-7 AVAILABLE COURSES';
+$string['block07info'] = '! Block-7 AVAILABLE COURSES';
 $string['block07infodesc'] = 'AVAILABLE COURSES - Enter the settings for block 7';
 $string['block07enabled'] = 'Enable block 7';
 $string['block07enableddesc'] = 'Enable or disabled block 7 at the your home page';
@@ -435,7 +437,7 @@ $string['block07tooltipenrolled'] = 'Students Enrolled ';
 $string['block07tooltiplastdate'] = 'Last Modified Date';
 $string['block07enrol'] = 'Free';
 // Frontpage HTML block 8.
-$string['block08info'] = '* Block-8 TEACHER';
+$string['block08info'] = '! Block-8 TEACHER';
 $string['block08infodesc'] = 'TEACHERS - Enter the settings for block 8';
 $string['block08enabled'] = 'Enable block 8';
 $string['block08enableddesc'] = 'Enable or disabled block 8 at the your home page';
@@ -461,7 +463,7 @@ $string['block08captiondefault'] = 'We continue to serve with our distinguished 
 $string['block08tooltipcourse'] = "Teacher's total number of courses";
 $string['block08tooltipstudents'] = "Teacher's total number of students";
 // Frontpage HTML block 9.
-$string['block09info'] = '* Block-9 CATEGORIES';
+$string['block09info'] = '! Block-9 CATEGORIES';
 $string['block09infodesc'] = 'CATEGORIES - Enter the settings for block 9';
 $string['block09enabled'] = 'Enable block 9';
 $string['block09enableddesc'] = 'Enable or disabled block 9 at the your home page';
@@ -483,7 +485,7 @@ $string['block09captiondefault'] = "List of registered categories";
 $string['block09ctgid'] = 'Block 9 Category id';
 $string['block09ctgiddesc'] = 'Block 9 Category id select (exp:  id = 1  or id = 2 or id = 3 ........), empty all category.';
 // Frontpage HTML block 10.
-$string['block10info'] = '* Block-10 TESTIMONIALS';
+$string['block10info'] = '! Block-10 TESTIMONIALS';
 $string['block10infodesc'] = 'TESTIMONIALS - Enter the settings for block 10';
 $string['block10enabled'] = 'Enable block 10';
 $string['block10enableddesc'] = 'Enable or disabled block 10 at the your home page';
@@ -505,7 +507,7 @@ $string['block10linkdesc'] = 'Add a URL  for your block ';
 $string['block10imgdesc'] = 'Add a image  for your block ';
 $string['sliderimageblock10img'] = 'Block img {$a->block}';
 // Frontpage HTML block 11.
-$string['block11info'] = '* Block-11 BLOG POST';
+$string['block11info'] = '! Block-11 BLOG POST';
 $string['block11infodesc'] = 'BLOG POST - Enter the settings for block 11';
 $string['block11enabled'] = 'Enable block 11';
 $string['block11enableddesc'] = 'Enable or disabled block 11 at the your home page';
@@ -520,19 +522,19 @@ $string['block11caption'] = 'Block 11 caption';
 $string['block11captiondesc'] = 'Block 11 caption';
 $string['block11captiondefault'] = 'Welcome to Almondb blog posts.';
 // Frontpage block 12.
-$string['block12info'] = '* '.'Block-12 Empty';
+$string['block12info'] = '! '.'Block-12 Empty';
 // Frontpage block 13.
-$string['block13info'] = '* '.'Block-13 Empty';
+$string['block13info'] = '! '.'Block-13 Empty';
 // Frontpage block 14.
-$string['block14info'] = '* '.'Block-14 Empty';
+$string['block14info'] = '! '.'Block-14 Empty';
 // Frontpage block 15.
-$string['block15info'] = '* '.'Block-15 Empty';
+$string['block15info'] = '! '.'Block-15 Empty';
 // Frontpage block 16.
-$string['block16info'] = '* '.'Block-16 Empty';
+$string['block16info'] = '! '.'Block-16 Empty';
 // Frontpage block 17.
-$string['block17info'] = '* '.'Block-17 Empty';
+$string['block17info'] = '! '.'Block-17 Empty';
 // Frontpage HTML block 18.
-$string['block18info'] = '* '.'Block-18 BLOCK HTML';
+$string['block18info'] = '! '.'Block-18 BLOCK HTML';
 $string['block18infodesc'] = 'BLOCK HTML - Enter the settings for block 11';
 $string['block18enabled'] = 'Enable block 18';
 $string['block18enableddesc'] = 'Enable or disabled block 18 at the your home page';
@@ -545,7 +547,7 @@ $string['block18csslinkdesc'] = 'Block 18 add a css link for your block';
 $string['block18css'] = 'Block 18 css';
 $string['block18cssdesc'] = 'Block 18 add a css for your block';
 // Frontpage HTML block 19.
-$string['block19info'] = '* '.'Block-19 BRANDS';
+$string['block19info'] = '! '.'Block-19 BRANDS';
 $string['block19infodesc'] = 'BRANDS - Enter the settings for block 19';
 $string['block19enabled'] = 'Enable block 19';
 $string['block19enableddesc'] = 'Enable or disabled block 19 at the your home page';
@@ -565,7 +567,7 @@ $string['block19linkdesc'] = 'Add a img URL for your block 19';
 $string['block19imgdesc'] = 'Add a image for your block ';
 $string['sliderimageblock19img'] = 'Block 19 img {$a->block}';
 // Frontpage HTML block 20.
-$string['block20info'] = '* '.'Block-20 FOOTER';
+$string['block20info'] = '! '.'Block-20 FOOTER';
 $string['block20infodesc'] = 'FOOTER - Enter the settings for block 20';
 $string['block20enabled'] = 'Enable block 20';
 $string['block20enableddesc'] = 'Enable or disabled block 20 at the your home page';

@@ -17,14 +17,19 @@
 <div class="bg-hynavbar">
     <div id="navnarhy_top" class="pl-4 pr-4 {{{frontpagenavlightdark}}}">
         <a href="{{{ config.wwwroot }}}" class="navbar-brand aabtn">
-            {{#output.get_compact_logo_url}}   
+            {{# output.should_display_navbar_logo }}  
                 <span class="logo">
-                    <img src="{{output.get_compact_logo_url}}" class="logo mr-1" alt="{{sitename}}">
+                    {{#headerlogocompact}}
+                        <img src="{{output.get_compact_logo_url}}" class="logo mr-1" alt="{{sitename}}">
+                    {{/headerlogocompact}}
+                    {{#headerlogo}}
+                        <img src="{{output.get_logo_url}}" class="logo mr-1" alt="{{sitename}}">
+                    {{/headerlogo}}
                 </span>
-            {{/output.get_compact_logo_url}}    
-            {{^output.get_compact_logo_url}}
+            {{/ output.should_display_navbar_logo }}
+            {{^ output.should_display_navbar_logo }}
                 <span class="site-name p-3">{{{ sitename }}}</span>
-            {{/output.get_compact_logo_url}}   
+            {{/ output.should_display_navbar_logo }}
         </a>
         <ul>
             <li>
