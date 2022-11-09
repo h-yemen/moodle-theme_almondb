@@ -143,7 +143,7 @@ $string['almondbpageenabledsimple'] = 'Enable almondbpage';
 $string['almondbpageenabledsimpledesc'] = 'Enable a almondbpage at the top of your home page';
 $string['almondbpagecountsimple'] = 'Page count';
 $string['almondbpagecountsimpledesc'] = 'Select how many pages you want to add <strong>then click SAVE</strong> to load the input fields.';
-$string['almondbpagenosimple'] = '! '.'Page-{$a->almondbpage}';
+$string['almondbpagenosimple'] = '! Page-{$a->almondbpage}';
 $string['almondbpagenosimpledesc'] = 'Enter the settings for page {$a->almondbpage}. <b><i>PAGE LINK: www.yoursite/local/almondbpage/?id=s{$a->almondbpage}</i></b>';
 $string['almondbpagetitlesimple'] = 'Page title';
 $string['almondbpagetitlesimpledesc'] = 'Add the page\'s title.';
@@ -522,19 +522,19 @@ $string['block11caption'] = 'Block 11 caption';
 $string['block11captiondesc'] = 'Block 11 caption';
 $string['block11captiondefault'] = 'Welcome to Almondb blog posts.';
 // Frontpage block 12.
-$string['block12info'] = '! '.'Block-12 Empty';
+$string['block12info'] = '! Block-12 Empty';
 // Frontpage block 13.
-$string['block13info'] = '! '.'Block-13 Empty';
+$string['block13info'] = '! Block-13 Empty';
 // Frontpage block 14.
-$string['block14info'] = '! '.'Block-14 Empty';
+$string['block14info'] = '! Block-14 Empty';
 // Frontpage block 15.
-$string['block15info'] = '! '.'Block-15 Empty';
+$string['block15info'] = '! Block-15 Empty';
 // Frontpage block 16.
-$string['block16info'] = '! '.'Block-16 Empty';
+$string['block16info'] = '! Block-16 Empty';
 // Frontpage block 17.
-$string['block17info'] = '! '.'Block-17 Empty';
+$string['block17info'] = '! Block-17 Empty';
 // Frontpage HTML block 18.
-$string['block18info'] = '! '.'Block-18 BLOCK HTML';
+$string['block18info'] = '! Block-18 BLOCK HTML';
 $string['block18infodesc'] = 'BLOCK HTML - Enter the settings for block 11';
 $string['block18enabled'] = 'Enable block 18';
 $string['block18enableddesc'] = 'Enable or disabled block 18 at the your home page';
@@ -547,7 +547,7 @@ $string['block18csslinkdesc'] = 'Block 18 add a css link for your block';
 $string['block18css'] = 'Block 18 css';
 $string['block18cssdesc'] = 'Block 18 add a css for your block';
 // Frontpage HTML block 19.
-$string['block19info'] = '! '.'Block-19 BRANDS';
+$string['block19info'] = '! Block-19 BRANDS';
 $string['block19infodesc'] = 'BRANDS - Enter the settings for block 19';
 $string['block19enabled'] = 'Enable block 19';
 $string['block19enableddesc'] = 'Enable or disabled block 19 at the your home page';
@@ -567,7 +567,7 @@ $string['block19linkdesc'] = 'Add a img URL for your block 19';
 $string['block19imgdesc'] = 'Add a image for your block ';
 $string['sliderimageblock19img'] = 'Block 19 img {$a->block}';
 // Frontpage HTML block 20.
-$string['block20info'] = '! '.'Block-20 FOOTER';
+$string['block20info'] = '! Block-20 FOOTER';
 $string['block20infodesc'] = 'FOOTER - Enter the settings for block 20';
 $string['block20enabled'] = 'Enable block 20';
 $string['block20enableddesc'] = 'Enable or disabled block 20 at the your home page';
