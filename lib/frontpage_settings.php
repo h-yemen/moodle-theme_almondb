@@ -112,7 +112,6 @@ function theme_almondb_frontpageblockcategory($id) {
     return $categoryname;
 }
 function theme_almondb_links($links) {
-    $theme = theme_config::load('almondb');
     $weblink = $links;
     $content = "";
     $websettings = explode("\n", $weblink);
@@ -135,7 +134,6 @@ function theme_almondb_links($links) {
     return $content;
 }
 function theme_almondb_header_links($links, $mobil ) {
-    $theme = theme_config::load('almondb');
     $weblink = $links;
     $content = "";
     $lurl = "";
@@ -173,7 +171,7 @@ function theme_almondb_header_links($links, $mobil ) {
                             id='drop-down-menu-".$j."' aria-labelledby='drop-down-".$j."'>";
                 }
             } else {
-                $blank = "";
+                $blank = "_self";
                 if (isset($expset[2])) {
                     $blank = trim($expset[2]);
                 }
