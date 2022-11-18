@@ -243,10 +243,17 @@ function theme_almondb_frontpageblock07() {
     }
     require_once( $CFG->libdir . '/filelib.php' );
     $count = $theme->settings->block07count + 1;
-    $sql = "SELECT  c.id, c.fullname, c.shortname, c.summary, c.timemodified, c.category, c.visible";
+    // SQL Server.
+    if ($CFG->dbtype === 'sqlsrv') {
+        $sql = "SELECT TOP ". $count ." c.id, c.fullname, c.shortname, c.summary, c.timemodified, c.category, c.visible";
+    } else {
+        $sql = "SELECT  c.id, c.fullname, c.shortname, c.summary, c.timemodified, c.category, c.visible";
+    }
     $sql = $sql." FROM {course} c";
     $sql = $sql." ORDER BY c.timemodified DESC";
-    $sql = $sql." LIMIT ". $count;
+    if ($CFG->dbtype != 'sqlsrv') {
+        $sql = $sql." LIMIT ". $count;
+    }
     $courses = $DB->get_records_sql($sql);
     foreach ($courses as $id => $course) {
         $category = $DB->get_record('course_categories', array('id' => $course->category));
@@ -300,8 +307,7 @@ function theme_almondb_frontpageblock07() {
     return $templatecontext;
 }
 function theme_almondb_frontpageblock08() {
-    GLOBAL $DB, $OUTPUT, $PAGE;
-
+    GLOBAL $CFG, $DB, $OUTPUT, $PAGE;
     $theme = theme_config::load('almondb');
     $templatecontext['block08enabled'] = $theme->settings->block08enabled;
     if (empty($templatecontext['block08enabled'])) {
@@ -312,12 +318,18 @@ function theme_almondb_frontpageblock08() {
     $templatecontext['block08header'] = $theme->settings->block08header;
     $templatecontext['block08caption'] = $theme->settings->block08caption;
     $teacherrole = $theme->settings->block08showrole;
-    $sql = "SELECT  ra.userid, ra.roleid";
+    if ($CFG->dbtype === 'sqlsrv') {
+        $sql = "SELECT TOP ". $count ." ra.userid, ra.roleid";
+    } else {
+        $sql = "SELECT  ra.userid, ra.roleid";
+    }
     $sql = $sql." FROM {role_assignments} ra";
     $sql = $sql." JOIN {context} ctx on ra.contextid = ctx.id";
     $sql = $sql." WHERE ra.roleid = :roleid";
     $sql = $sql." GROUP by ra.userid, ra.roleid";
-    $sql = $sql." LIMIT ". $count;
+    if ($CFG->dbtype != 'sqlsrv') {
+        $sql = $sql." LIMIT ". $count;
+    }
     // And ctx.contextlevel = '50'?
     if (!empty($theme->settings->block08total)) {
         $courses = get_courses('all', 'c.timemodified DESC');
@@ -383,14 +395,20 @@ function theme_almondb_frontpageblock09() {
     $templatecontext['block09header'] = $theme->settings->block09header;
     $templatecontext['block09caption'] = $theme->settings->block09caption;
     $templatecontext['block09background'] = $theme->settings->block09background;
-    $sql = "SELECT id, name, parent, coursecount, visible, depth, path";
+    if ($CFG->dbtype === 'sqlsrv') {
+        $sql = "SELECT TOP ". $count ." id, name, parent, coursecount, visible, depth, path";
+    } else {
+        $sql = "SELECT id, name, parent, coursecount, visible, depth, path";
+    }
     $sql = $sql." FROM {course_categories}";
     $sql = $sql." WHERE coursecount > 0 and visible = 1";
     if (!empty($theme->settings->block09ctgid)) {
         $sql = $sql." and ". $theme->settings->block09ctgid;
     }
     $sql = $sql." ORDER BY coursecount DESC";
-    $sql = $sql." LIMIT ". $count;
+    if ($CFG->dbtype != 'sqlsrv') {
+        $sql = $sql." LIMIT ". $count;
+    }
     $categorys = $DB->get_records_sql($sql, array());
     if (!empty($categorys)) {
         $j = 0;
@@ -459,7 +477,7 @@ function theme_almondb_frontpageblock10() {
 }
 function theme_almondb_frontpageblock11() {
     // Site blog frontpage.
-    global $OUTPUT, $DB;
+    global $CFG, $OUTPUT, $DB;
     $theme = theme_config::load('almondb');
     $templatecontext['block11enabled'] = $theme->settings->block11enabled;
     if (empty($templatecontext['block11enabled'])) {
@@ -469,7 +487,11 @@ function theme_almondb_frontpageblock11() {
     $templatecontext['block11header'] = $theme->settings->block11header;
     $templatecontext['block11caption'] = $theme->settings->block11caption;
     $count = $theme->settings->block11count;
-    $sql = "SELECT *";
+    if ($CFG->dbtype === 'sqlsrv') {
+        $sql = "SELECT TOP ". $count ." *";
+    } else {
+        $sql = "SELECT *";
+    }
     $sql = $sql." FROM {post} pt";
     if (isloggedin()) {
         $sql = $sql." WHERE pt.publishstate = 'public' or pt.publishstate = 'site'";
@@ -477,7 +499,9 @@ function theme_almondb_frontpageblock11() {
         $sql = $sql." WHERE pt.publishstate = 'public'";
     }
     $sql = $sql." ORDER BY pt.created DESC";
-    $sql = $sql." LIMIT ". $count;
+    if ($CFG->dbtype != 'sqlsrv') {
+        $sql = $sql." LIMIT ". $count;
+    }
     $posts = $DB->get_records_sql($sql, array());
     if (!empty($posts)) {
         $j = 0;
