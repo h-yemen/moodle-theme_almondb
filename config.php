@@ -47,6 +47,7 @@ $THEME->layouts = [
 
 $THEME->parents = ['boost'];
 $THEME->enable_dock = false;
+$THEME->prescsscallback = 'theme_almondb_get_pre_scss';
 $THEME->yuicssmodules = array();
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->requiredblocks = '';

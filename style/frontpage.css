@@ -124,18 +124,21 @@
     }
     
     .breadcrumb > .active {
-      color: #888;
+        color: #888;
    }
    input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], input:focus[type="tel"], input:focus[type="button"], input:focus[type="submit"], input:focus[type="search"], button:focus[type="button"], button:focus[role="button"], button:focus, input:focus {
-      outline: none;
-      text-decoration: none;
+        outline: none;
+        text-decoration: none;
    }
    .btn:focus {
-     box-shadow: 0 0 0 0;
+        box-shadow: 0 0 0 0;
    }
    .btn .icon {
-    margin: 0;
-   } 
+        margin: 0;
+   }
+   .card {
+        border-radius: 0;
+   }
 /* Start Header Area
 ==================================================*/
 .main-menu li {
@@ -168,7 +171,6 @@
 .main-menu li.active a {
     color: #4272d7;
 }
-
 
 /* End Header Area */
 /* Start Slider Area

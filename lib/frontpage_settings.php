@@ -29,6 +29,7 @@ function theme_almondb_frontpage_section() {
     $theme = theme_config::load('almondb');
     // Front page navbar frontpagenavlightdark?
     $templatecontext['frontpagenavchoice'.$theme->settings->frontpagenavchoice] = $theme->settings->frontpagenavchoice;
+    $templatecontext['navbarcontainer'] = $theme->settings->navbarcontainer;
     // Front page navbar logo select.
     switch ($theme->settings->headerlogo) {
         case 'Logo':

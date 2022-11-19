@@ -37,6 +37,12 @@ for ($i = 1; $i < 4; $i++) {
 $setting = new admin_setting_configselect($name, $title, $description, $default, $options);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
+// Add container to navigation bar.
+$name = 'theme_almondb/navbarcontainer';
+$title = get_string('navbarcontainer', 'theme_almondb');
+$description = get_string('navbarcontainerdesc', 'theme_almondb');
+$setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+$page->add($setting);
 // Frontpage header logo select.
 $name = 'theme_almondb/headerlogo';
 $title = get_string('headerlogo', 'theme_almondb');
