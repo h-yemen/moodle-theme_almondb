@@ -20,13 +20,13 @@
             <h4>{{block11header}}</h4>
             <p> {{{block11caption}}}</p>
         </div>
-        <div class="mt-2 mb-2" style="position:relative">
-            <div class="slider_arrow_left">
+        <div class=" mb-2" >
+            <div class="slider_arrow_left float-left">
                 <a class="btn btn-sm rounded-circle" href="#carouselBlogpost1" role="button" data-slide="prev"> 
                     <i class="fa fa-chevron-left"></i> 
                 </a>
             </div>
-            <div class="slider_arrow_right">
+            <div class="slider_arrow_right float-right">
                 <a class="btn btn-sm rounded-circle" href="#carouselBlogpost1" role="button" data-slide="next"> 
                     <i class="fa fa-chevron-right" ></i> 
                 </a>
@@ -43,19 +43,16 @@
                         <div class="col-md-12">
                             <div class="carousel-inner">
                             {{#block11}}
-                                <div class="carousel-item {{#active}}active{{/active}}">
+                                <div class="carousel-item {{#active}}active{{/active}} pt-3">
                                     <div class="row">
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="tag-top">
-                                                {{{userpicture}}} {{{username}}}
-                                            </div> 
-                                            <img class="d-block w-100" src="{{{imgurl}}}" alt="First slide">
-                                            <div class="tag-top">
-                                                {{{userdate}}}
-                                            </div> 
+                                        <div class="col-lg-5 col-md-6">
+                                            <div class="p-2" style="position:absolute; top:1px; width:95%; font-size:13px; font-weight: 500;">
+                                                {{{tag}}}
+                                            </div>
+                                            <img class="d-block h-100" src="{{{imgurl}}}" alt="blog">
                                         </div>
                                         <!-- End of Col-md-4 -->
-                                        <div class="col-lg-8 col-md-6">
+                                        <div class="col-lg-7 col-md-6">
                                             <div class="d-none d-md-block d-lg-block d-xl-block">
                                                 <h5 class="post-heading">
                                                     <a href="{{postURL}}" class="text-decoration-none">
@@ -69,9 +66,12 @@
                                                         {{subject}}
                                                     </a>
                                                 </h5>
-                                            </div>       
+                                            </div>
+                                            <div class="p-2">
+                                                {{{userpicture}}} <strong>{{{username}}}</strong>
+                                            </div>      
                                             <div class="d-none d-xl-block pb-2">
-                                                <p class="card-text">{{#shortentext}} 600, {{{summary}}} {{/shortentext}}</p>
+                                                <p class="card-text">{{#shortentext}} 500, {{{summary}}} {{/shortentext}}</p>
                                             </div>
                                             <div class="d-none d-lg-block d-xl-none pb-2">
                                                 <p class="card-text">{{#shortentext}} 450, {{{summary}}} {{/shortentext}}</p>
@@ -82,8 +82,8 @@
                                             <div class="d-block d-md-none pb-2">
                                                 <p class="card-text">{{#shortentext}} 400, {{{summary}}} {{/shortentext}}</p>
                                             </div>
-                                            <div class=""  style="position:absolute; bottom:1px; width:95%; font-size:13px; font-weight: 500;">
-                                                {{{tag}}}
+                                            <div class="pt-1">
+                                                {{{userdate}}}
                                             </div>
                                         </div>
                                         <!-- End of Col-md-8 -->
@@ -115,13 +115,3 @@
         <!-- End of Row -->
     </div>
 </div>
-<style>
-.tag_list {
-    font-size: 12px;
-    color: {{sitecolor}};
-}
-.slider_arrow_right a, .slider_arrow_left a {
-   opacity: 0.6;
-   background-color: {{sitecolor}}; 
-}
-</style>

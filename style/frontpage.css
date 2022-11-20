@@ -218,6 +218,10 @@
 /* End Slider Area */
 /* Start Hire Us Area
 ==================================================*/
+.carousel-inner img {
+    width: 100%;
+    object-fit: cover;
+}
 .hire-us-content h6 {
     font-size: 18px;
     margin: 0;
