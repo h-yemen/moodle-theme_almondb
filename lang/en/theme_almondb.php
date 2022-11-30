@@ -271,8 +271,8 @@ $string['block01enabled'] = 'Enable block 1';
 $string['block01enableddesc'] = 'Enable or disabled block 1 at the your home page';
 $string['block01caption'] = 'Block 1 caption';
 $string['block01captiondesc'] = 'Add a caption for your block 1';
-$string['block01captiondefault'] = 'Enjoy our free online courses,
-wherever you are and whenever you want. Access course content on mobile, tablet or desktop';
+$string['block01captiondefault'] = '<h2 class="white">Featured Premium Themes</h2><br>
+<p class="white">Themes is built without disturbing the moodle layout, so it will make your work easier. Check out some of the main features of Themes.</p>';
 $string['block01button'] = 'Block 1 button';
 $string['block01buttondesc'] = 'Add a button for your block 1';
 $string['block01buttonlink'] = 'Block 1 URL';
