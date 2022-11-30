@@ -1,4 +1,12 @@
 /* Login Scss */
+.login-container .login-logo {
+    height: 100px;
+    background: #eeeeec;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
 .justify-content-center {
     justify-content: center !important;
 }

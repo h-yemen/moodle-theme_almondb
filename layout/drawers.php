@@ -108,17 +108,6 @@ $templatecontext = [
     'headercontent' => $headercontent,
     'addblockbutton' => $addblockbutton
 ];
-
-// Front page navbar logo select.
-$theme = theme_config::load('almondb');
-switch ($theme->settings->headerlogo) {
-    case 'Logo':
-        $templatecontext['headerlogo'] = true;
-        break;
-    case 'Compact logo':
-        $templatecontext['headerlogocompact'] = true;
-        break;
-}
 // Course page header img.
 $templatecontext = array_merge($templatecontext, $OUTPUT->almondb_courseheaderimg());
 // Footer.
