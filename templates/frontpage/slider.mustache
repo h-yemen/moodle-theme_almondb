@@ -110,6 +110,30 @@
             });
         })
     {{/js}}
-    {{/slider3}}  
+    {{/slider3}}
+    {{#slider4}}
+    <div id="slider4" class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+             <ol class="carousel-indicators">
+                {{#slides}}
+                    <li data-target="#header-carousel" data-slide-to="{{{ key }}}" {{#active}}class="active"{{/active}}></li>
+                {{/slides}}
+            </ol>
+            <div class="carousel-inner">
+                {{#slides}}
+                <div class="carousel-item {{#active}}active{{/active}}" style="min-height: 300px;">
+                    <img class="position-relative w-100" src="{{{ image }}}" style="min-height: 300px; object-fit: cover; height:{{{slidershowheight}}}px;">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            {{#title}}<h5 class="text-white text-uppercase mb-md-3">{{{ title }}}</h5>{{/title}}
+                            {{#caption}}<h1 class="display-3 text-white mb-md-4">{{{ caption }}}</h1>{{/caption}}
+                            {{#button}}<a href="" class="hybtn py-md-2 px-md-4 font-weight-semi-bold mt-2">{{{ button }}}</a>{{/button}}
+                        </div>
+                    </div>
+                </div>
+                {{/slides}}
+            </div>
+        </div>
+    </div>
+    {{/slider4}}
 {{/sliderenabled}}
-

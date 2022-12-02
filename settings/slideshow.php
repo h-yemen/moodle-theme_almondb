@@ -31,7 +31,7 @@ $title = get_string('sliderdesing', 'theme_almondb');
 $description = get_string('sliderdesingdesc', 'theme_almondb');
 $default = 1;
 $options = array();
-for ($i = 1; $i < 4; $i++) {
+for ($i = 1; $i < 5; $i++) {
     $options[$i] = $i;
 }
 $setting = new admin_setting_configselect($name, $title, $description, $default, $options);
