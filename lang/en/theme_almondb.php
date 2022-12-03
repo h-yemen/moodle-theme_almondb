@@ -620,7 +620,7 @@ $string['block20socialdefault'] = '<ul>
 </ul>';
 $string['block20copyright'] = 'Block 20 Copyright';
 $string['block20copyrightdesc'] = 'Block 20 Copyright';
-$string['block20copyrightdefault'] = 'Copyright © 2021 Designed by
+$string['block20copyrightdefault'] = 'Copyright © 2022 Designed by
     <a href="https://www.themealmond.com">themesalmond.com</a>.  All rights reserved.';
 $string['block20moodle'] = 'Enable frontpage button';
 $string['block20moodledesc'] = 'Enable or disabled block 20 moodle original frontpage';
