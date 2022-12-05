@@ -15,8 +15,8 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- *  Theme almondb frontpage.
- * 
+ * Theme almondb frontpage.
+ *
  * @package   theme_almondb
  * @copyright 2022 ThemesAlmond  - http://themesalmond.com
  * @author    ThemesAlmond - Developer Team

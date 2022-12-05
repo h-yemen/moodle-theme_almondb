@@ -65,7 +65,7 @@ function theme_almondb_frontpagecolor() {
 }
 /**
  * Frontpage course image.
- * 
+ *
  * @param int $id course id.
  * @return url
  */

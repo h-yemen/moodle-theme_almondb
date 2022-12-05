@@ -24,7 +24,7 @@
 
 /**
  * Footer select
- * 
+ *
  * @return url
  */
 function theme_almondb_footer_select() {
