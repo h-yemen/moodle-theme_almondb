@@ -14,6 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 /**
+ * Theme almondb footer select.
  *
  * @package   theme_almondb
  * @copyright 2022 ThemesAlmond  - http://themesalmond.com
@@ -22,6 +23,8 @@
  */
 
 /**
+ * Footer select
+ * 
  * @return url
  */
 function theme_almondb_footer_select() {

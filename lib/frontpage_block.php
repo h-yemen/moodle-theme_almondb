@@ -15,6 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
+ * Theme Almondb block lib.
  *
  * @package   theme_almondb
  * @copyright 2022 ThemesAlmond  - http://themesalmond.com
@@ -23,6 +24,7 @@
  */
 
 /**
+ * Frontpage block01.
  * @return url
  */
 function theme_almondb_frontpageblock01() {
@@ -38,6 +40,10 @@ function theme_almondb_frontpageblock01() {
 
     return $templatecontext;
 }
+/**
+ * Frontpage block02.
+ * @return url
+ */
 function theme_almondb_frontpageblock02() {
     global $OUTPUT;
 
@@ -77,6 +83,10 @@ function theme_almondb_frontpageblock02() {
     }
     return $templatecontext;
 }
+/**
+ * Frontpage block03.
+ * @return url
+ */
 function theme_almondb_frontpageblock03() {
     global $OUTPUT;
 
@@ -106,6 +116,10 @@ function theme_almondb_frontpageblock03() {
     }
     return $templatecontext;
 }
+/**
+ * Frontpage block04.
+ * @return url
+ */
 function theme_almondb_frontpageblock04() {
     global $OUTPUT;
     $theme = theme_config::load('almondb');
@@ -171,6 +185,10 @@ function theme_almondb_frontpageblock04() {
     }
     return $templatecontext;
 }
+/**
+ * Frontpage block05.
+ * @return url
+ */
 function theme_almondb_frontpageblock05() {
     global $OUTPUT;
 
@@ -201,6 +219,10 @@ function theme_almondb_frontpageblock05() {
     }
     return $templatecontext;
 }
+/**
+ * Frontpage block06.
+ * @return url
+ */
 function theme_almondb_frontpageblock06() {
     global $OUTPUT;
 
@@ -222,6 +244,10 @@ function theme_almondb_frontpageblock06() {
     $templatecontext['block06image'] = $image;
     return $templatecontext;
 }
+/**
+ * Frontpage block07.
+ * @return url
+ */
 function theme_almondb_frontpageblock07() {
     GLOBAL  $CFG, $DB, $OUTPUT;
     $theme = theme_config::load('almondb');
@@ -306,6 +332,10 @@ function theme_almondb_frontpageblock07() {
     };
     return $templatecontext;
 }
+/**
+ * Frontpage block08.
+ * @return url
+ */
 function theme_almondb_frontpageblock08() {
     GLOBAL $CFG, $DB, $OUTPUT, $PAGE;
     $theme = theme_config::load('almondb');
@@ -381,6 +411,10 @@ function theme_almondb_frontpageblock08() {
     }
     return $templatecontext;
 }
+/**
+ * Frontpage block09.
+ * @return url
+ */
 function theme_almondb_frontpageblock09() {
     GLOBAL $CFG, $DB;
     require_once($CFG->libdir.'/formslib.php');
@@ -441,6 +475,10 @@ function theme_almondb_frontpageblock09() {
     }
     return $templatecontext;
 }
+/**
+ * Frontpage block10.
+ * @return url
+ */
 function theme_almondb_frontpageblock10() {
     global $OUTPUT;
 
@@ -475,6 +513,10 @@ function theme_almondb_frontpageblock10() {
     }
     return $templatecontext;
 }
+/**
+ * Frontpage block11.
+ * @return url
+ */
 function theme_almondb_frontpageblock11() {
     // Site blog frontpage.
     global $CFG, $OUTPUT, $DB;
@@ -534,6 +576,10 @@ function theme_almondb_frontpageblock11() {
     }
     return $templatecontext;
 }
+/**
+ * Frontpage block18.
+ * @return url
+ */
 function theme_almondb_frontpageblock18() {
     $theme = theme_config::load('almondb');
     $templatecontext['block18enabled'] = $theme->settings->block18enabled;
@@ -546,6 +592,10 @@ function theme_almondb_frontpageblock18() {
     $templatecontext['block18css'] = $theme->settings->block18css;
     return $templatecontext;
 }
+/**
+ * Frontpage block19.
+ * @return url
+ */
 function theme_almondb_frontpageblock19() {
     global $OUTPUT;
     $theme = theme_config::load('almondb');
@@ -580,6 +630,10 @@ function theme_almondb_frontpageblock19() {
     }
     return $templatecontext;
 }
+/**
+ * Frontpage block20.
+ * @return url
+ */
 function theme_almondb_frontpageblock20() {
     global $OUTPUT;
 

@@ -14,6 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 /**
+ * Theme Almondb settings lib.
  *
  * @package   theme_almondb
  * @copyright 2022 ThemesAlmond  - http://themesalmond.com
@@ -21,8 +22,8 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-
 /**
+ * Frontpage section.
  * @return url
  */
 function theme_almondb_frontpage_section() {
@@ -48,6 +49,10 @@ function theme_almondb_frontpage_section() {
     }
     return $templatecontext;
 }
+/**
+ * Frontpage color.
+ * @return url
+ */
 function theme_almondb_frontpagecolor() {
     $theme = theme_config::load('almondb');
     $templatecontext['colorsetup'] = $theme->settings->frontpagecolor;
@@ -58,7 +63,12 @@ function theme_almondb_frontpagecolor() {
     }
     return $templatecontext;
 }
-
+/**
+ * Frontpage course image.
+ * 
+ * @param int $id course id.
+ * @return url
+ */
 function almondb_get_course_image($id) {
     global $CFG;
     $url = '';
@@ -74,6 +84,11 @@ function almondb_get_course_image($id) {
     }
     return $url;
 }
+/**
+ * Frontpage blog image.
+ * @param int $id blog post id.
+ * @return url
+ */
 function almondb_get_blog_post_image($id) {
     global $CFG;
     $url = '';
@@ -89,6 +104,11 @@ function almondb_get_blog_post_image($id) {
     }
     return $url;
 }
+/**
+ * Frontpage user image.
+ * @param int $id user id.
+ * @return url
+ */
 function almondb_get_user_image($id) {
     global $CFG;
     $url = '';
@@ -104,6 +124,11 @@ function almondb_get_user_image($id) {
     }
     return $url;
 }
+/**
+ * Frontpage category image.
+ * @param int $id category id.
+ * @return url
+ */
 function theme_almondb_frontpageblockcategory($id) {
     GLOBAL  $DB;
     $category = $DB->get_record('course_categories', array('id' => $id));
@@ -112,6 +137,11 @@ function theme_almondb_frontpageblockcategory($id) {
     }
     return $categoryname;
 }
+/**
+ * Frontpage links.
+ * @param string $links footer link.
+ * @return content.
+ */
 function theme_almondb_links($links) {
     $weblink = $links;
     $content = "";
@@ -134,6 +164,12 @@ function theme_almondb_links($links) {
     }
     return $content;
 }
+/**
+ * Frontpage header link.
+ * @param string $links header desktop nav links.
+ * @param string $mobil header mobil links.
+ * @return content.
+ */
 function theme_almondb_header_links($links, $mobil ) {
     $weblink = $links;
     $content = "";
@@ -193,6 +229,10 @@ function theme_almondb_header_links($links, $mobil ) {
     $content .= "</div>";
     return $content;
 }
+/**
+ * Frontpage random color.
+ * @return randcolor
+ */
 function theme_almondb_random_color() {
     /*
     * Any of the following methods can be used to find random color.

@@ -14,13 +14,16 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 /**
+ * Theme almondb frontpage iconlist.
  *
  * @package   theme_almondb
  * @copyright 2022 ThemesAlmond  - http://themesalmond.com
  * @author    ThemesAlmond - Developer Team
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
+/**
+ * Iconlist select.
+ */
 function theme_almondb_get_core_icon_list() {
     return [
         'core:docs' => 'fa-info-circle',

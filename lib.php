@@ -15,6 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
+ * Theme almondb lib.
  *
  * @package   theme_almondb
  * @copyright 2022 ThemesAlmond  - http://themesalmond.com
@@ -27,7 +28,7 @@ defined('MOODLE_INTERNAL') || die();
 /**
  * Load the migration files
  * Load the our theme js and css file
- * @param moodle_page $page.
+ * @param moodle_page $PAGE parameter.
  */
 function theme_almondb_page_init(moodle_page $PAGE) {
     $PAGE->requires->css('/theme/almondb/style/frontpage.css');
