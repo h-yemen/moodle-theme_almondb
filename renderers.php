@@ -15,6 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
+ * Theme almondb renderers.
  *
  * @package   theme_almondb
  * @copyright 2022 ThemesAlmond  - http://themesalmond.com
@@ -26,6 +27,9 @@ defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->dirroot . '/course/renderer.php');
 
+/**
+ *  Theme almond course render.
+ */
 class theme_almondb_core_course_renderer extends core_course_renderer {
     /**
      * Returns HTML to display course contacts.
@@ -119,9 +123,16 @@ class theme_almondb_core_course_renderer extends core_course_renderer {
 }
 
 require_once($CFG->dirroot . "/blog/renderer.php");
-
+/**
+ *  Theme almond blog render.
+ */
 class theme_almondb_core_blog_renderer extends core_blog_renderer {
-
+    /**
+     * Returns HTML to display blog overview files.
+     *
+     * @param blog_entry $entry parameter.
+     * @return string
+     */
     public function render_blog_entry(blog_entry $entry) {
 
         global $CFG;
@@ -296,11 +307,9 @@ class theme_almondb_core_blog_renderer extends core_blog_renderer {
      * Renders an entry attachment
      *
      * Print link for non-images and returns images as HTML
-     *
-     * @param blog_entry_attachment $attachment
+     * @param blog_entry_attachment $attachment parameter.
      * @return string List of attachments depending on the $return input
      */
-
     public function render_blog_entry_attachment(blog_entry_attachment $attachment) {
 
         $syscontext = context_system::instance();

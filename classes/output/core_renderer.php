@@ -28,7 +28,10 @@ use moodle_url;
 use html_writer;
 use stdClass;
 use get_string;
-
+/**
+ * Core render
+ *
+ */
 class core_renderer extends \core_renderer {
     /**
      * See if this is the first view of the current cm in the session if it has fake blocks.
