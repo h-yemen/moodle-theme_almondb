@@ -175,8 +175,10 @@
 .addbloglink {
     font-weight: 600;
 }
-#page.drawers div[role="main"] {
-    h2 {
-        display: none;
+.path-blog {
+    #page.drawers div[role="main"] {
+        h2 {
+            display: none;
+        }
     }
 }
