@@ -36,6 +36,8 @@ $string['choosereadme'] = 'almondb is a modern highly-customisable theme.';
 $string['currentinparentheses'] = '(current)';
 $string['configtitle'] = 'Almondb';
 $string['generalsettings'] = 'General settings';
+$string['loginbackgroundimage'] = 'Login page background image';
+$string['loginbackgroundimage_desc'] = 'The image to display as a background for the login page.';
 $string['themesettings'] = 'Theme settings';
 $string['nobootswatch'] = 'None';
 $string['pluginname'] = 'Almondb';
@@ -49,6 +51,8 @@ $string['rawscss_desc'] = 'Use this field to provide SCSS or CSS code which will
 $string['rawscsspre'] = 'Raw initial SCSS';
 $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
 $string['region-side-pre'] = 'Right';
+$string['unaddableblocks'] = 'Unneeded blocks';
+$string['unaddableblocks_desc'] = 'The blocks specified are not needed when using this theme and will not be listed in the \'Add a block\' menu.';
 $string['privacy:metadata:preference:draweropenblock'] = 'The user\'s preference for hiding or showing the drawer with blocks.';
 $string['privacy:metadata:preference:draweropenindex'] = 'The user\'s preference for hiding or showing the drawer with course index.';
 $string['privacy:metadata:preference:draweropennav'] = 'The user\'s preference for hiding or showing the drawer menu navigation.';
@@ -58,7 +62,6 @@ $string['privacy:drawerblockclosed'] = 'The current preference for the block dra
 $string['privacy:drawerblockopen'] = 'The current preference for the block drawer is open.';
 $string['privacy:drawernavclosed'] = 'The current preference for the navigation drawer is closed.';
 $string['privacy:drawernavopen'] = 'The current preference for the navigation drawer is open.';
-$string['totop'] = 'Go to top';
 $string['backcolor'] = 'Back colour';
 $string['backcolor_desc'] = 'Background colour';
 $string['navbarcolor'] = 'Navbar back colour';
@@ -638,3 +641,6 @@ $string['theme_almondb_frontpageblockenddesc'] = '';
 $string['coursesummary'] = 'Course Summary';
 // Flat navigation.
 $string['coursesection'] = 'Course Sections';
+
+// Deprecated since Moodle 4.0.
+$string['totop'] = 'Go to top';

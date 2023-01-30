@@ -276,6 +276,7 @@ function theme_almondb_frontpageblock07() {
         $sql = "SELECT  c.id, c.fullname, c.shortname, c.summary, c.timemodified, c.category, c.visible";
     }
     $sql = $sql." FROM {course} c";
+    $sql = $sql." WHERE c.visible = 1";
     $sql = $sql." ORDER BY c.timemodified DESC";
     if ($CFG->dbtype != 'sqlsrv') {
         $sql = $sql." LIMIT ". $count;

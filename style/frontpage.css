@@ -14,7 +14,14 @@ hr {
     margin: 30px 0;
     padding: 0;
 }
-
+/* Theme info */
+#theme-info {
+    position: relative;
+    color: transparent;
+    font-size: 9px;
+    z-index: -1;
+}
+/* Theme info end */
 label {
     color: #333;
     cursor: pointer;

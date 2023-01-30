@@ -34,6 +34,36 @@ function theme_almondb_page_init(moodle_page $PAGE) {
     $PAGE->requires->css('/theme/almondb/style/frontpage.css');
     $PAGE->requires->css('/theme/almondb/style/splide.min.css');
     $PAGE->requires->js('/theme/almondb/js/splide.min.js');
+    $PAGE->requires->js('/theme/almondb/js/main.js');
+}
+/**
+ * Inject additional SCSS.
+ *
+ * @param theme_config $theme The theme config object.
+ * @return string
+ */
+function theme_almond_get_extra_scss($theme) {
+    $content = '';
+    $imageurl = $theme->setting_file_url('backgroundimage', 'backgroundimage');
+
+    // Sets the background image, and its settings.
+    if (!empty($imageurl)) {
+        $content .= '@media (min-width: 768px) {';
+        $content .= 'body { ';
+        $content .= "background-image: url('$imageurl'); background-size: cover;";
+        $content .= ' } }';
+    }
+
+    // Sets the login background image.
+    $loginbackgroundimageurl = $theme->setting_file_url('loginbackgroundimage', 'loginbackgroundimage');
+    if (!empty($loginbackgroundimageurl)) {
+        $content .= 'body.pagelayout-login #page { ';
+        $content .= "background-image: url('$loginbackgroundimageurl'); background-size: cover;";
+        $content .= ' }';
+    }
+
+    // Always return the background image with the scss when we have it.
+    return !empty($theme->settings->scss) ? $theme->settings->scss . ' ' . $content : $content;
 }
 /**
  * Serves any files associated with the theme settings.
@@ -48,7 +78,7 @@ function theme_almondb_page_init(moodle_page $PAGE) {
  * @return bool
  */
 function theme_almondb_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
-    if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo' ||
+    if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo' || $filearea === 'loginbackgroundimage' ||
         $filearea === 'backgroundimage' || substr($filearea, 0, 11) === 'sliderimage' ||
         substr($filearea, 0, 5) === 'block' || substr($filearea, 0, 3) === 'img')) {
         $theme = theme_config::load('almondb');

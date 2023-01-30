@@ -22,6 +22,15 @@
  */
 
 defined('MOODLE_INTERNAL') || die();
+
+// Unaddable blocks.
+// Blocks to be excluded when this theme is enabled in the "Add a block" list: Administration, Navigation, Courses and
+// Section links.
+$default = 'navigation,settings,course_list,section_links';
+$setting = new admin_setting_configtext('theme_almondb/unaddableblocks',
+    get_string('unaddableblocks', 'theme_almondb'), get_string('unaddableblocks_desc', 'theme_almondb'), $default, PARAM_TEXT);
+$page->add($setting);
+
 // Preset.
 $name = 'theme_almondb/preset';
 $title = get_string('preset', 'theme_almondb');
@@ -58,6 +67,14 @@ $name = 'theme_almondb/backgroundimage';
 $title = get_string('backgroundimage', 'theme_almondb');
 $description = get_string('backgroundimage_desc', 'theme_almondb');
 $setting = new admin_setting_configstoredfile($name, $title, $description, 'backgroundimage');
+$setting->set_updatedcallback('theme_reset_all_caches');
+$page->add($setting);
+
+// Login Background image setting.
+$name = 'theme_almondb/loginbackgroundimage';
+$title = get_string('loginbackgroundimage', 'theme_almondb');
+$description = get_string('loginbackgroundimage_desc', 'theme_almondb');
+$setting = new admin_setting_configstoredfile($name, $title, $description, 'loginbackgroundimage');
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
