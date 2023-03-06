@@ -616,12 +616,7 @@ function theme_almondb_frontpageblock19() {
         $block19link = "block19link{$i}";
         $image = $theme->setting_file_url($block19img, $block19img);
         if (empty($image)) {
-            $filename = $OUTPUT->image_url('almondb/block19/'.$i, 'theme');
-            if (@getimagesize($filename)) {
-                $image = $OUTPUT->image_url('almondb/block19/'.$i, 'theme');
-            } else {
-                $image = "";
-            }
+            $image = $OUTPUT->image_url('almondb/block19/'.$i, 'theme');
         }
         if (!empty($image)) {
             $templatecontext['block19'][$j]['image19'] = $image;
