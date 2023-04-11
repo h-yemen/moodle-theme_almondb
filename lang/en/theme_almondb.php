@@ -73,6 +73,7 @@ $string['loginpositiondesc'] = 'Select the login form screen position';
 $string['loggedinnot'] = 'log in.';
 $string['footerselect'] = 'Dashboard footer';
 $string['footerselectdesc'] = 'Select the dashboard form footer style';
+$string['over'] = 'Over';
 // Slider start !DO NOT DELETE !DO NOT CHANGE.
 $string['slideshowstart'] = 'Home Page Slider Settings';
 $string['slideshowstartdesc'] = '';
@@ -220,9 +221,9 @@ Smooth
 -Brands|#block19
 -Footer|#block20
 Teachers|#block08
-Documentation|https://doc.themesalmond.com/|_blank
-
-';
+Documentation|https://doc.themesalmond.com/|_blank';
+$string['header3phone'] = 'Phone Number';
+$string['header3phonedesc'] = 'Contact phone number to show in the navigation bar.';
 // Frontpage choice HTML.
 $string['frontpageheading'] = '! Front Page Choice';
 $string['frontpagedesc'] = 'Select front page to display';
@@ -547,11 +548,11 @@ $string['block16info'] = '! Block-16 Empty';
 $string['block17info'] = '! Block-17 Empty';
 // Frontpage HTML block 18.
 $string['block18info'] = '! Block-18 BLOCK HTML';
-$string['block18infodesc'] = 'BLOCK HTML - Enter the settings for block 11';
+$string['block18infodesc'] = 'BLOCK HTML - Enter the settings for block 18';
 $string['block18enabled'] = 'Enable block 18';
 $string['block18enableddesc'] = 'Enable or disabled block 18 at the your home page';
 $string['block18title'] = 'Block 18 Title';
-$string['block18titledesc'] = 'Select the block 11 desing you want to add';
+$string['block18titledesc'] = 'Select the block 18 desing you want to add';
 $string['block18caption'] = 'Block 18 caption';
 $string['block18captiondesc'] = 'Block 18 caption';
 $string['block18csslink'] = 'Block 18 css link';

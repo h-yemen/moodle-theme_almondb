@@ -21,11 +21,11 @@
       <div class="col-12 col-md-6 m-auto col-lg-4 pb-4">
         <a class="text-decoration-none" href="{{catagoryURL}}">
           <div class="fdb-box fdb-touch " 
-                    {{#imgurl}}  style="background-image: url({{{imgurl}}}); background-size: cover;"{{/imgurl}}
-                    {{#bgcolor}} style="background-color:{{bgcolor}};" {{/bgcolor}}>
+                    {{# imgurl }}style= "background-image: url({{{imgurl}}}); background-size: cover;" {{/ imgurl}}
+                    {{# bgcolor }}style="background-color: {{bgcolor}};" {{/ bgcolor }}>
             <div class="block-text-box text-center">
               <h6>{{#shortentext}} 37, {{catagoryname}} {{/shortentext}}</h6>
-              <h6>Over {{coursecount}} Courses</h6>
+              <h6>{{#str}} over, theme_almond {{/str}} {{coursecount}} {{#str}}courses, moodle {{/str}}</h6>
             </div>
           </div>
         </a>

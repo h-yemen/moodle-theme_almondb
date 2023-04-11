@@ -15,42 +15,40 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 
-    {{#navbarcontainer}}<div class="container" >{{/navbarcontainer}}
-    {{^navbarcontainer}}<div class="container-fluid" >{{/navbarcontainer}}
-        <div id="navnarhy_top" class="{{{frontpagenavlightdark}}}">
-            <a href="{{{ config.wwwroot }}}" class="navbar-brand aabtn">
-                {{# output.should_display_navbar_logo }}  
-                    <span class="logo">
-                        {{#headerlogocompact}}
-                            <img src="{{output.get_compact_logo_url}}" class="logo mr-1" alt="{{sitename}}">
-                        {{/headerlogocompact}}
-                        {{#headerlogo}}
-                            <img src="{{output.get_logo_url}}" class="logo mr-1" alt="{{sitename}}">
-                        {{/headerlogo}}
-                    </span>
-                {{/ output.should_display_navbar_logo }}
-                {{^ output.should_display_navbar_logo }}
-                    <span class="site-name p-3">{{{ sitename }}}</span>
-                {{/ output.should_display_navbar_logo }}
-            </a>
-            <ul>
-                <li>
-                    <a href="{{h3_01_block_phone_link}}">
-                        <i class='fa fa-phone'> </i>
-                        Call : 012(345) 67 89
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:{{h3_01_block_email}}">
-                        <i class='fa fa-envelope'> </i>
-                        example@example.com
-                    </a>
-                </li>
-            </ul>
-        </div>
+{{#navbarcontainer}}<div class="container" >{{/navbarcontainer}}
+{{^navbarcontainer}}<div class="container-fluid" >{{/navbarcontainer}}
+    <div id="navnarhy_top" class="{{{frontpagenavlightdark}}}">
+        <a href="{{{ config.wwwroot }}}" class="navbar-brand aabtn">
+            {{# output.should_display_navbar_logo }}  
+                <span class="logo">
+                    {{#headerlogocompact}}
+                        <img src="{{output.get_compact_logo_url}}" class="logo mr-1" alt="{{sitename}}">
+                    {{/headerlogocompact}}
+                    {{#headerlogo}}
+                        <img src="{{output.get_logo_url}}" class="logo mr-1" alt="{{sitename}}">
+                    {{/headerlogo}}
+                </span>
+            {{/ output.should_display_navbar_logo }}
+            {{^ output.should_display_navbar_logo }}
+                <span class="site-name p-3">{{{ sitename }}}</span>
+            {{/ output.should_display_navbar_logo }}
+        </a>
+        <ul>
+            <li>
+                <a href="tel:{{header3phone}}">
+                    <i class='fa fa-phone'> </i>
+                    {{#str}}phone, moodle{{/str}} : {{header3phone}}
+                </a>
+            </li>
+            <li>
+                <a href="user/contactsitesupport.php" class="p-0">
+                    <i class='fa fa-envelope'> </i>
+                    {{#str}}contacts, message{{/str}}
+                </a>
+            </li>
+        </ul>
     </div>
-
-
+</div>
 <div id="navbarhy">
     <nav class="navbar header-area fixed-top {{{frontpagenavlightdark}}} bg-hynavbar navbar-expand header-wrapper moodle-has-zindex" aria-label="{{#str}}sitemenubar, admin{{/str}}">
         {{#navbarcontainer}}<div class="container">{{/navbarcontainer}}

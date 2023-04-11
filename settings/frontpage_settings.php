@@ -84,7 +84,14 @@ $description = get_string('frontpagenavlinkdesc', 'theme_almondb');
 $default = get_string('frontpagenavlinkdefault', 'theme_almondb');
 $setting = new admin_setting_configtextarea($name, $title, $description, $default, PARAM_RAW, '1', '6');
 $page->add($setting);
-
+// Frontpage header 3 phone number.
+$name = 'theme_almondb/header3phone';
+$title = get_string('header3phone', 'theme_almondb');
+$description = get_string('header3phonedesc', 'theme_almondb');
+$default = "";
+$setting = new admin_setting_configtext($name, $title, $description, '', PARAM_TEXT);
+$page->add($setting);
+// Frontpage choice.
 $page->add(new admin_setting_heading('theme_almondb_frontpagehead', get_string('frontpageheading', 'theme_almondb'),
 format_text(get_string('frontpagedesc', 'theme_almondb'), FORMAT_MARKDOWN)));
 
