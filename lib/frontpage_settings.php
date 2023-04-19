@@ -184,47 +184,49 @@ function theme_almondb_header_links($links, $mobil ) {
         $content .= "<div class= 'navbar-nav'>";
     }
     foreach ($websettings as $key => $settingval) {
-        $expset = explode("|", $settingval);
-        $j = uniqid();
-        if (isset($expset[0]) && !empty($expset[0]) ) {
-            if (substr($expset[0], 0, 1) <> "-") {
-                if ($i != 0) {
-                    $content .= "</div></div>";
-                }
-                $ltxt = trim($expset[0]);
-                $blank = "_self";
-                if (isset($expset[2])) {
-                    $blank = trim($expset[2]);
-                }
-                if (isset($expset[1])) {
-                    $lurl = trim($expset[1]);
-                    $content .= "<div class='nav-item'>";
-                    $content .= "<a class='nav-item nav-link' href='".$lurl."' target='".$blank."'>".$ltxt."</a><div>";
+        if (!empty(trim($settingval))) {
+            $expset = explode("|", $settingval);
+            $j = uniqid();
+            if (isset($expset[0]) && !empty($expset[0]) ) {
+                if (substr($expset[0], 0, 1) <> "-") {
+                    if ($i != 0) {
+                        $content .= "</div></div>";
+                    }
+                    $ltxt = trim($expset[0]);
+                    $blank = "_self";
+                    if (isset($expset[2])) {
+                        $blank = trim($expset[2]);
+                    }
+                    if (isset($expset[1])) {
+                        $lurl = trim($expset[1]);
+                        $content .= "<div class='nav-item'>";
+                        $content .= "<a class='nav-item nav-link' href='".$lurl."' target='".$blank."'>".$ltxt."</a><div>";
+                    } else {
+                        $content .= "<div class='position-relative nav-item' id='dropdown-custom-".$j."'>";
+                        $content .= "<a class='dropdown-toggle nav-link' id='drop-down-".$j."' data-toggle='dropdown'";
+                        $content .= " aria-haspopup='true' aria-expanded='false' href='#' title='".$ltxt."'";
+                        $content .= " aria-controls='drop-down-menu-".$j."'>".$ltxt."</a>";
+                        $content .= "<div class='dropdown-menu' role='menu'
+                                id='drop-down-menu-".$j."' aria-labelledby='drop-down-".$j."'>";
+                    }
                 } else {
-                    $content .= "<div class='position-relative nav-item' id='dropdown-custom-".$j."'>";
-                    $content .= "<a class='dropdown-toggle nav-link' id='drop-down-".$j."' data-toggle='dropdown'";
-                    $content .= " aria-haspopup='true' aria-expanded='false' href='#' title='".$ltxt."'";
-                    $content .= " aria-controls='drop-down-menu-".$j."'>".$ltxt."</a>";
-                    $content .= "<div class='dropdown-menu' role='menu'
-                            id='drop-down-menu-".$j."' aria-labelledby='drop-down-".$j."'>";
+                    $blank = "_self";
+                    if (isset($expset[2])) {
+                        $blank = trim($expset[2]);
+                    }
+                    if (isset($expset[1])) {
+                        list($ltxt, $lurl) = $expset;
+                        $ltxt = trim(substr($ltxt, 1, strlen($ltxt)));
+                        $lurl = trim($lurl);
+                        $content .= "<a class='dropdown-item' role='menuitem'
+                                href='".$lurl."' target='".$blank."'  title='".$ltxt. "'>".$ltxt."</a>";
+                    }
                 }
             } else {
-                $blank = "_self";
-                if (isset($expset[2])) {
-                    $blank = trim($expset[2]);
-                }
-                if (isset($expset[1])) {
-                    list($ltxt, $lurl) = $expset;
-                    $ltxt = trim(substr($ltxt, 1, strlen($ltxt)));
-                    $lurl = trim($lurl);
-                    $content .= "<a class='dropdown-item' role='menuitem'
-                            href='".$lurl."' target='".$blank."'  title='".$ltxt. "'>".$ltxt."</a>";
-                }
+                $ltxt = $expset[0];
             }
-        } else {
-            $ltxt = $expset[0];
+            $i++;
         }
-        $i++;
     }
     $content .= "</div></div>";
     $content .= "</div>";
