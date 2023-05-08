@@ -281,6 +281,7 @@ function theme_almondb_frontpageblock07() {
     if ($CFG->dbtype != 'sqlsrv') {
         $sql = $sql." LIMIT ". $count;
     }
+    $allcourses = array();
     $courses = $DB->get_records_sql($sql);
     foreach ($courses as $id => $course) {
         $category = $DB->get_record('course_categories', array('id' => $course->category));
