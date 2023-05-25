@@ -114,7 +114,7 @@ $title = get_string('block20col4caption', 'theme_almondb');
 $description = get_string('block20col4captiondesc', 'theme_almondb');
 $description = $description.get_string('underline', 'theme_almondb');
 $default = get_string('block20col4captiondefault', 'theme_almondb');
-$setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+$setting = new admin_setting_configtextarea($name, $title, $description, $default, PARAM_RAW, '1', '3');
 $page->add($setting);
 // Block 20 social links.
 $name = 'theme_almondb/block20social';
@@ -122,14 +122,14 @@ $title = get_string('block20social', 'theme_almondb');
 $description = get_string('block20socialdesc', 'theme_almondb');
 $description = $description.get_string('underline', 'theme_almondb');
 $default = get_string('block20socialdefault', 'theme_almondb');
-$setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+$setting = new admin_setting_configtextarea($name, $title, $description, $default, PARAM_RAW, '1', '3');
 $page->add($setting);
 // Block 20 Copyright.
 $name = 'theme_almondb/block20copyright';
 $title = get_string('block20copyright', 'theme_almondb');
 $description = get_string('block20copyrightdesc', 'theme_almondb');
 $default = get_string('block20copyrightdefault', 'theme_almondb');
-$setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+$setting = new admin_setting_configtextarea($name, $title, $description, $default, PARAM_RAW, '1', '2');
 $page->add($setting);
 // Enable or disable moodle frontpage orjinal button.
 $name = 'theme_almondb/block20moodle';

@@ -77,7 +77,7 @@ $page->add($setting);
 $name = 'theme_almondb/block08studentrole';
 $title = get_string('block08studentrole', 'theme_almondb');
 $description = get_string('block08studentroledesc', 'theme_almondb');
-$default = 'editingteacher';
+$default = 'student';
 $options = array();
 $role = $DB->get_records('role');
 foreach ($role as $roles) {

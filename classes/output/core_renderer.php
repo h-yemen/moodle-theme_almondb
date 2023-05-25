@@ -23,11 +23,6 @@
  */
 
 namespace theme_almondb\output;
-
-use moodle_url;
-use html_writer;
-use stdClass;
-use get_string;
 /**
  * Core render
  *

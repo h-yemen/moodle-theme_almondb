@@ -49,18 +49,18 @@
 .course_category_tree {
     .category.with_children.collapsed > .info > .categoryname::after {
         color: $hythemecolor;
-        content: "\f055";
+        content: "\f0fe";
     }
     .category.with_children > .info > .categoryname::after {
         color: $hythemecolor;
-        content: "\f056";
+        content: "\f146";
     }
     .category > .info > .categoryname::after {
         color: $hythemecolor;
-        content: "\f056";
+        content: "\f146";
         position: absolute;
         right: 10px;
-        font-family: "FontAwesome";
+        font-family: "Font Awesome 6 Free";
         font-size: inherit;
     }
     .category:first-child > .info > .categoryname {
@@ -241,8 +241,8 @@ img.activityicon {
 }
 .accordioneducard {
     &:after {
-        font-family: "FontAwesome";  
-        content: '\f0fe';
+        font-family: "Font Awesome 6 Free";  
+        content: "\f0fe";
         color: $hythemecolor-obs-8;
         font-weight: bold;
         float: right;
@@ -253,7 +253,7 @@ img.activityicon {
     }
 }
 .educardactive:after {
-    font-family: "FontAwesome";
+    font-family: "Font Awesome 6 Free";
     content: "\f146";
 }
 
@@ -277,27 +277,27 @@ img.activityicon {
     }
 }
 .coursetopnavicon:after {
-    font-family: "FontAwesome";
-    content: '\f0fe';
+    font-family: "Font Awesome 6 Free";
+    content: "\f0fe";
     color: $hythemecolor;
     font-weight: bold;
     float:left;
     margin-left: 5px;
 }
 .coursetopnavactive:after{
-    font-family: "FontAwesome";
+    font-family: "Font Awesome 6 Free";
     content: "\f146";
 }
 .coursetopnavicon1:after {
-    font-family: "FontAwesome";
-    content: '\f0fe';
+    font-family: "Font Awesome 6 Free";
+    content: "\f0fe";
     color: $hythemecolor;
     font-weight: bold;
     float:left;
     margin-left: 5px;
 }
 .coursetopnavactive1:after{
-    font-family: "FontAwesome";
+    font-family: "Font Awesome 6 Free";
     content: "\f146";
 }
 .mycourse20 {
