@@ -28,7 +28,7 @@
             {{#slides}}
                 <div class="carousel-item sldcontainer {{#active}}active{{/active}}">
                     <img src="{{{image}}}" class="d-block w-100"  height="{{{slidershowheight}}}" alt="sld" >
-                    <div class="carousel-caption d-none d-md-block sldcontent">
+                    <div class="carousel-caption sldcontent">
                         {{#title}}<h1 class="text-light">{{{ title }}}{{{ sliderdesing }}}</h1>{{/title}}
                         {{#caption}}<p>{{{ caption }}}</p>{{/caption}}
                         {{#button}}<p><a class="hybtn get-started-btn p-8" href="{{{buttonurl}}}">{{{ button }}}</a></p>{{/button}}
@@ -60,7 +60,7 @@
                 <div class="carousel-item {{#active}}active{{/active}}">
                     <img src="{{{image}}}" class="d-block w-100" height="{{{slidershowheight}}}" alt="sld" style="filter: brightness(60%);" >
                     <div {{#slideropacity}}class="carousel-content-image"{{/slideropacity}}>
-                        <div class="slider-inner carousel-caption d-none d-sm-block">
+                        <div class="slider-inner carousel-caption">
                             {{#title}}<h1 class="text-light">{{{ title }}}</h1>{{/title}}
                             {{#caption}}<h5>{{{ caption }}}</h5>{{/caption}}
                             {{#button}}<p><a class="hybtn get-started-btn p-8" href="{{{buttonurl}}}">{{{ button }}}</a></p>{{/button}}
@@ -126,7 +126,7 @@
                     <div class="carousel-caption d-flex align-items-center justify-content-center">
                         <div class="p-6" style="width: 100%; max-width: 900px;">
                             {{#title}}<h5 class="text-uppercase mb-md-3">{{{ title }}}</h5>{{/title}}
-                            {{#caption}}<h1 class="display-3 mb-md-4">{{{ caption }}}</h1>{{/caption}}
+                            {{#caption}}<div class="h1 font-weight-bold display-3 mb-md-4">{{{ caption }}}</div>{{/caption}}
                             {{#button}}<a href="{{{buttonurl}}}" class="hybtn py-md-2 px-md-4 font-weight-semi-bold mt-2">{{{ button }}}</a>{{/button}}
                         </div>
                     </div>
