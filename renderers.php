@@ -38,7 +38,6 @@ class theme_almondb_core_course_renderer extends core_course_renderer {
      * @return string
      */
     protected function course_contacts(core_course_list_element $course) {
-        global $CFG;
         $content = '';
         if ($course->has_course_contacts()) {
             $content .= html_writer::start_tag('ul', ['class' => 'teachers']);
@@ -47,7 +46,9 @@ class theme_almondb_core_course_renderer extends core_course_renderer {
                     return $role->displayname;
                 }, $coursecontact['roles']);
                 $namesrole = implode(", ", $rolenames);
-                $picture = $CFG->wwwroot."/user/pix.php/".$coursecontact['user']->id."/f1.jpg";
+                $user = \core_user::get_user($coursecontact['user']->id);
+                $userpicture = new user_picture($user);
+                $picture = $userpicture->get_url($this->page)->out(false);
                 $name = " <div class='chip h6'><img src='{$picture}'";
                 $name .= " class='border border-secondary' title='{$namesrole}' data-toggle='tooltip'";
                 $name .= " alt='{$coursecontact['username']}'/>".html_writer::link(new moodle_url('/user/view.php',
