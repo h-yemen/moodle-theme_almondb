@@ -221,7 +221,7 @@ Smooth
 -Brands|#block19
 -Footer|#block20
 Teachers|#block08
-Documentation|https://doc.themesalmond.com/|_blank';
+Documentation|https://themesalmond.com/documents/|_blank';
 $string['header3phone'] = 'Phone Number';
 $string['header3phonedesc'] = 'Contact phone number to show in the navigation bar.';
 // Frontpage choice HTML.
