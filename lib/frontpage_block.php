@@ -33,8 +33,8 @@ function theme_almondb_frontpageblock01() {
     if (empty($templatecontext['block01enabled'])) {
         return $templatecontext;
     }
-    $templatecontext['block01caption'] = $theme->settings->block01caption;
-    $templatecontext['block01button'] = $theme->settings->block01button;
+    $templatecontext['block01caption'] = format_text($theme->settings->block01caption);
+    $templatecontext['block01button'] = format_string($theme->settings->block01button);
     $templatecontext['block01buttonlink'] = $theme->settings->block01buttonlink;
     $templatecontext['block01color'] = $theme->settings->block01color;
 
@@ -70,7 +70,7 @@ function theme_almondb_frontpageblock02() {
         $templatecontext['block02'][$j]['icon'] = $newstr;
         $templatecontext['block02'][$j]['image'] = $image;
         $templatecontext['block02'][$j]['title'] = format_string($theme->settings->$block02title);
-        $templatecontext['block02'][$j]['caption'] = $theme->settings->$block02caption;
+        $templatecontext['block02'][$j]['caption'] = format_text($theme->settings->$block02caption);
         $templatecontext['block02'][$j]['button'] = format_string($theme->settings->$block02button);
         $templatecontext['block02'][$j]['buttonurl'] = format_string($theme->settings->$block02buttonlink);
     }
@@ -96,7 +96,7 @@ function theme_almondb_frontpageblock03() {
         return $templatecontext;
     }
     $templatecontext['block03design'.$theme->settings->block03design] = $theme->settings->block03design;
-    $templatecontext['block03header'] = $theme->settings->block03header;
+    $templatecontext['block03header'] = format_string($theme->settings->block03header);
     $count = 6;
     if ($theme->settings->block03design == 2) {
         $count = 6;
@@ -111,7 +111,7 @@ function theme_almondb_frontpageblock03() {
         $newstr = substr(strstr($str, ":"), 1, (strlen(strstr($str, ":"))) - 1);
         $templatecontext['block03'][$j]['icon'] = $newstr;
         $templatecontext['block03'][$j]['title'] = format_string($theme->settings->$block03title);
-        $templatecontext['block03'][$j]['caption'] = format_string($theme->settings->$block03caption);
+        $templatecontext['block03'][$j]['caption'] = format_text($theme->settings->$block03caption);
         $templatecontext['block03'][$j]['link'] = format_string($theme->settings->$block03link);
     }
     return $templatecontext;
@@ -128,8 +128,8 @@ function theme_almondb_frontpageblock04() {
         return $templatecontext;
     }
     $templatecontext['block04design'.$theme->settings->block04design] = $theme->settings->block04design;
-    $templatecontext['block04header'] = $theme->settings->block04header;
-    $templatecontext['block04button'] = $theme->settings->block04button;
+    $templatecontext['block04header'] = format_string($theme->settings->block04header);
+    $templatecontext['block04button'] = format_string($theme->settings->block04button);
     $templatecontext['block04buttonlink'] = $theme->settings->block04buttonlink;
     $count = 8;
     if ($theme->settings->block04design == 1) {
@@ -198,7 +198,7 @@ function theme_almondb_frontpageblock05() {
         return $templatecontext;
     }
     $templatecontext['block05design'.$theme->settings->block05design] = $theme->settings->block05design;
-    $templatecontext['block05header'] = $theme->settings->block05header;
+    $templatecontext['block05header'] = format_string($theme->settings->block05header);
     $image = $theme->setting_file_url('sliderimageblock05img', 'sliderimageblock05img');
     if (empty($image)) {
         $image = $OUTPUT->image_url('almondb/block05/1', 'theme');
@@ -233,9 +233,9 @@ function theme_almondb_frontpageblock06() {
     }
     $templatecontext['block06color'] = $theme->settings->block06color;
     $templatecontext['block06design'.$theme->settings->block06design] = $theme->settings->block06design;
-    $templatecontext['block06header'] = $theme->settings->block06header;
-    $templatecontext['block06caption'] = $theme->settings->block06caption;
-    $templatecontext['block06button'] = $theme->settings->block06button;
+    $templatecontext['block06header'] = format_string($theme->settings->block06header);
+    $templatecontext['block06caption'] = format_text($theme->settings->block06caption);
+    $templatecontext['block06button'] = format_string($theme->settings->block06button);
     $templatecontext['block06buttonlink'] = $theme->settings->block06buttonlink;
     $image = $theme->setting_file_url('sliderimageblock06img', 'sliderimageblock06img');
     if (empty($image)) {
@@ -257,8 +257,8 @@ function theme_almondb_frontpageblock07() {
         return $templatecontext;
     }
     $templatecontext['block07design'.$theme->settings->block07design] = $theme->settings->block07design;
-    $templatecontext['block07header'] = $theme->settings->block07header;
-    $templatecontext['block07button'] = $theme->settings->block07button;
+    $templatecontext['block07header'] = format_string($theme->settings->block07header);
+    $templatecontext['block07button'] = format_string($theme->settings->block07button);
     $templatecontext['block07buttonlink'] = $theme->settings->block07buttonlink;
     $templatecontext['block07fullname'] = 0;
     $templatecontext['block07shortname'] = 0;
@@ -296,11 +296,11 @@ function theme_almondb_frontpageblock07() {
     $sql = $sql." WHERE en.courseid = :courseid and en.status = 0 and en.cost != 'NULL'";
     $templatecontext['block07priceshow'] = $theme->settings->block07priceshow;
     foreach ($allcourses as $id => $course) {
-        $templatecontext['block07'][$j]['fullname'] = $course->fullname;
-        $templatecontext['block07'][$j]['shortname'] = $course->shortname;
-        $templatecontext['block07'][$j]['summary'] = $course->summary;
+        $templatecontext['block07'][$j]['fullname'] = format_string($course->fullname);
+        $templatecontext['block07'][$j]['shortname'] = format_string($course->shortname);
+        $templatecontext['block07'][$j]['summary'] = format_string($course->summary);
         $templatecontext['block07'][$j]['update'] = gmdate("M d,Y", $course->timemodified);
-        $templatecontext['block07'][$j]['categoryName'] = $course->categoryName;
+        $templatecontext['block07'][$j]['categoryName'] = format_string($course->categoryName);
         $templatecontext['block07'][$j]['courselink'] = "course/view.php?id=".$id;
         $templatecontext['block07'][$j]['categorylink'] = "course/index.php?categoryid=".$course->categoryId;
         $templatecontext['block07'][$j]['imgurl'] = almondb_get_course_image($id);
@@ -321,7 +321,7 @@ function theme_almondb_frontpageblock07() {
         $teachers = get_role_users($role, $context);
         if (!empty($theme->settings->block07teacherenabled)) {
             foreach ($teachers as $id => $teacher) {
-                $templatecontext['block07'][$j]['teachername'] = fullname($teacher);
+                $templatecontext['block07'][$j]['teachername'] = format_string(fullname($teacher));
                 $teacher->imagealt = "teacher";
                 $templatecontext['block07'][$j]['userpicture'] = $OUTPUT->user_picture($teacher);
             }
@@ -346,8 +346,8 @@ function theme_almondb_frontpageblock08() {
     }
     $count = $theme->settings->block08count;
     $templatecontext['block08design'.$theme->settings->block08design] = $theme->settings->block08design;
-    $templatecontext['block08header'] = $theme->settings->block08header;
-    $templatecontext['block08caption'] = $theme->settings->block08caption;
+    $templatecontext['block08header'] = format_string($theme->settings->block08header);
+    $templatecontext['block08caption'] = format_text($theme->settings->block08caption);
     $teacherrole = $theme->settings->block08showrole;
     if ($CFG->dbtype === 'sqlsrv') {
         $sql = "SELECT TOP ". $count ." ra.userid, ra.roleid";
@@ -374,8 +374,8 @@ function theme_almondb_frontpageblock08() {
             $templatecontext['block08'][$j]['showdescription'] = $theme->settings->block08description;
             if ($user = $DB->get_record('user', array('id' => $roleassignment->userid))) {
                 $user->imagealt = "teacher";
-                $templatecontext['block08'][$j]['teachername'] = $user->firstname." ".$user->lastname;
-                $templatecontext['block08'][$j]['description'] = $user->description;
+                $templatecontext['block08'][$j]['teachername'] = format_string($user->firstname." ".$user->lastname);
+                $templatecontext['block08'][$j]['description'] = format_text($user->description);
                 $templatecontext['block08'][$j]['userpicture'] =
                     $OUTPUT->user_picture($user, array('class' => '', 'size' => '250'));
                 $templatecontext['block08'][$j]['userURL'] =
@@ -427,8 +427,8 @@ function theme_almondb_frontpageblock09() {
     $count = $theme->settings->block09count;
     $templatecontext['block09design'.$theme->settings->block09design] = $theme->settings->block09design;
     $templatecontext['block09boxshadow'] = $theme->settings->block09boxshadow;
-    $templatecontext['block09header'] = $theme->settings->block09header;
-    $templatecontext['block09caption'] = $theme->settings->block09caption;
+    $templatecontext['block09header'] = format_string($theme->settings->block09header);
+    $templatecontext['block09caption'] = format_string($theme->settings->block09caption);
     $templatecontext['block09background'] = $theme->settings->block09background;
     if ($CFG->dbtype === 'sqlsrv') {
         $sql = "SELECT TOP ". $count ." id, name, parent, coursecount, visible, depth, path";
@@ -448,7 +448,7 @@ function theme_almondb_frontpageblock09() {
     if (!empty($categorys)) {
         $j = 0;
         foreach ($categorys as $category) {
-            $templatecontext['block09'][$j]['catagoryname'] = $category->name;
+            $templatecontext['block09'][$j]['catagoryname'] = format_string($category->name);
             $templatecontext['block09'][$j]['coursecount'] = $category->coursecount;
             $templatecontext['block09'][$j]['catagoryURL'] = new moodle_url('/course/index.php?categoryid='. $category->id);
             $templatecontext['block09'][$j]['bgcolor'] = "";
@@ -489,7 +489,7 @@ function theme_almondb_frontpageblock10() {
         return $templatecontext;
     }
     $templatecontext['block10design'.$theme->settings->block10design] = $theme->settings->block10design;
-    $templatecontext['block10header'] = $theme->settings->block10header;
+    $templatecontext['block10header'] = format_string($theme->settings->block10header);
     $count = $theme->settings->block10count;
     for ($i = 1, $j = 0; $i <= $count; $i++, $j++) {
         $block10img = "sliderimageblock10img{$i}";
@@ -507,9 +507,9 @@ function theme_almondb_frontpageblock10() {
             $image = $OUTPUT->image_url('almondb/block10/'.$i, 'theme');
         }
         $templatecontext['block10'][$j]['block10image'] = $image;
-        $templatecontext['block10'][$j]['block10name'] = $theme->settings->$block10name;
-        $templatecontext['block10'][$j]['block10job'] = $theme->settings->$block10job;
-        $templatecontext['block10'][$j]['block10caption'] = format_string($theme->settings->$block10caption);
+        $templatecontext['block10'][$j]['block10name'] = format_string($theme->settings->$block10name);
+        $templatecontext['block10'][$j]['block10job'] = format_string($theme->settings->$block10job);
+        $templatecontext['block10'][$j]['block10caption'] = format_text($theme->settings->$block10caption);
         $templatecontext['block10'][$j]['block10linkurl'] = format_string($theme->settings->$block10link);
     }
     return $templatecontext;
@@ -527,8 +527,8 @@ function theme_almondb_frontpageblock11() {
         return $templatecontext;
     }
     $templatecontext['block11design'.$theme->settings->block11design] = $theme->settings->block11design;
-    $templatecontext['block11header'] = $theme->settings->block11header;
-    $templatecontext['block11caption'] = $theme->settings->block11caption;
+    $templatecontext['block11header'] = format_string($theme->settings->block11header);
+    $templatecontext['block11caption'] = format_text($theme->settings->block11caption);
     $count = $theme->settings->block11count;
     if ($CFG->dbtype === 'sqlsrv') {
         $sql = "SELECT TOP ". $count ." *";
@@ -549,8 +549,8 @@ function theme_almondb_frontpageblock11() {
     if (!empty($posts)) {
         $j = 0;
         foreach ($posts as $post) {
-            $templatecontext['block11'][$j]['subject'] = $post->subject;
-            $templatecontext['block11'][$j]['summary'] = $post->summary;
+            $templatecontext['block11'][$j]['subject'] = format_string($post->subject);
+            $templatecontext['block11'][$j]['summary'] = format_string($post->summary);
             $templatecontext['block11'][$j]['created'] = gmdate("d,m,Y", $post->created);
             $templatecontext['block11'][$j]['lastmodified'] = gmdate("d/m/Y", $post->lastmodified);
             $templatecontext['block11'][$j]['postURL'] = new moodle_url('/blog/index.php?entryid='. $post->id);
@@ -561,7 +561,7 @@ function theme_almondb_frontpageblock11() {
                     $OUTPUT->user_picture($user, array('size' => '25'));
                 $templatecontext['block11'][$j]['userURL'] =
                     new moodle_url('/user/profile.php', array('id' => $post->userid ));
-                $templatecontext['block11'][$j]['username'] = fullname($user);
+                $templatecontext['block11'][$j]['username'] = format_string(fullname($user));
             }
             if ($j == 0) {
                 $templatecontext['block11'][$j]['active'] = "1";
@@ -587,8 +587,8 @@ function theme_almondb_frontpageblock18() {
     if (empty($templatecontext['block18enabled'])) {
         return $templatecontext;
     }
-    $templatecontext['block18title'] = $theme->settings->block18title;
-    $templatecontext['block18caption'] = $theme->settings->block18caption;
+    $templatecontext['block18title'] = format_string($theme->settings->block18title);
+    $templatecontext['block18caption'] = format_text($theme->settings->block18caption);
     $templatecontext['block18csslink'] = $theme->settings->block18csslink;
     $templatecontext['block18css'] = $theme->settings->block18css;
     return $templatecontext;
@@ -607,8 +607,8 @@ function theme_almondb_frontpageblock19() {
     $templatecontext['block19design'.$theme->settings->block19design] = $theme->settings->block19design;
     $templatecontext['block19headerenabled'] = $theme->settings->block19headerenabled;
     if (!empty($templatecontext['block19headerenabled'])) {
-        $templatecontext['block19header'] = $theme->settings->block19header;
-        $templatecontext['block19caption'] = $theme->settings->block19caption;
+        $templatecontext['block19header'] = format_string($theme->settings->block19header);
+        $templatecontext['block19caption'] = format_text($theme->settings->block19caption);
     }
     $j = 0;
     for ($i = 1; $i <= 6; $i++) {
@@ -648,15 +648,15 @@ function theme_almondb_frontpageblock20() {
             $templatecontext['block20logosmall'] = true;
             break;
     }
-    $templatecontext['block20col1header'] = $theme->settings->block20col1header;
-    $templatecontext['block20col1caption'] = $theme->settings->block20col1caption;
-    $templatecontext['block20col2header'] = $theme->settings->block20col2header;
+    $templatecontext['block20col1header'] = format_string($theme->settings->block20col1header);
+    $templatecontext['block20col1caption'] = format_string($theme->settings->block20col1caption);
+    $templatecontext['block20col2header'] = format_string($theme->settings->block20col2header);
     $templatecontext['block20col2links'] = theme_almondb_links($theme->settings->block20col2link);
-    $templatecontext['block20col3header'] = $theme->settings->block20col3header;
+    $templatecontext['block20col3header'] = format_string($theme->settings->block20col3header);
     $templatecontext['block20col3links'] = theme_almondb_links($theme->settings->block20col3link);
-    $templatecontext['block20col4header'] = $theme->settings->block20col4header;
-    $templatecontext['block20col4caption'] = $theme->settings->block20col4caption;
-    $templatecontext['block20social'] = $theme->settings->block20social;
-    $templatecontext['block20copyright'] = $theme->settings->block20copyright;
+    $templatecontext['block20col4header'] = format_string($theme->settings->block20col4header);
+    $templatecontext['block20col4caption'] = format_text($theme->settings->block20col4caption);
+    $templatecontext['block20social'] = format_text($theme->settings->block20social);
+    $templatecontext['block20copyright'] = format_text($theme->settings->block20copyright);
     return $templatecontext;
 }
