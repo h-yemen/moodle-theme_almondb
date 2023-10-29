@@ -95,7 +95,7 @@ $page->add($setting);
 $page->add(new admin_setting_heading('theme_almondb_frontpagehead', get_string('frontpageheading', 'theme_almondb'),
 format_text(get_string('frontpagedesc', 'theme_almondb'), FORMAT_MARKDOWN)));
 
-// Frontpage desing select.
+// Frontpage design select.
 $name = 'theme_almondb/frontpagechoice';
 $title = get_string('frontpagechoice', 'theme_almondb');
 $description = get_string('frontpagechoicedesc', 'theme_almondb');

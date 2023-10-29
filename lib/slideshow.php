@@ -36,7 +36,7 @@ function theme_almondb_slideshow() {
         return $templatecontext;
     }
     $templatecontext['slideropacity'] = $theme->settings->slideropacity;
-    $templatecontext['slider'.$theme->settings->sliderdesing] = $theme->settings->sliderdesing;
+    $templatecontext['slider'.$theme->settings->sliderdesign] = $theme->settings->sliderdesign;
     $templatecontext['slidershowheight'] = $theme->settings->slidershowheight;
     $slidercount = $theme->settings->slidercount;
     for ($i = 1, $j = 0; $i <= $slidercount; $i++, $j++) {

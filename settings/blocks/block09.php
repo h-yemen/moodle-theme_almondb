@@ -36,10 +36,10 @@ $title = get_string('block09enabled', 'theme_almondb');
 $description = get_string('block09enableddesc', 'theme_almondb');
 $setting = new admin_setting_configcheckbox($name, $title, $description, 1);
 $page->add($setting);
-// Block 09 desing select.
-$name = 'theme_almondb/block09desing';
-$title = get_string('block09desing', 'theme_almondb');
-$description = get_string('block09desingdesc', 'theme_almondb');
+// Block 09 design select.
+$name = 'theme_almondb/block09design';
+$title = get_string('block09design', 'theme_almondb');
+$description = get_string('block09designdesc', 'theme_almondb');
 $default = 1;
 $options = array();
 for ($i = 1; $i < 4; $i++) {

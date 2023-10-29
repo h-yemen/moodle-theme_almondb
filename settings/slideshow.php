@@ -26,10 +26,10 @@ defined('MOODLE_INTERNAL') || die();
 $page = new admin_settingpage('theme_almondb_slide', get_string('slideshow', 'theme_almondb'));
 $page->add(new admin_setting_heading('theme_almondb_slideshow', get_string('slideshowheading', 'theme_almondb'),
 format_text(get_string('slideshowheadingdesc', 'theme_almondb'), FORMAT_MARKDOWN)));
-// Slideshow desing select.
-$name = 'theme_almondb/sliderdesing';
-$title = get_string('sliderdesing', 'theme_almondb');
-$description = get_string('sliderdesingdesc', 'theme_almondb');
+// Slideshow design select.
+$name = 'theme_almondb/sliderdesign';
+$title = get_string('sliderdesign', 'theme_almondb');
+$description = get_string('sliderdesigndesc', 'theme_almondb');
 $default = 1;
 $options = array();
 for ($i = 1; $i < 5; $i++) {

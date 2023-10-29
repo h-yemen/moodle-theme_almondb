@@ -35,10 +35,10 @@ $title = get_string('block05enabled', 'theme_almondb');
 $description = get_string('block05enableddesc', 'theme_almondb');
 $setting = new admin_setting_configcheckbox($name, $title, $description, 1);
 $page->add($setting);
-// Block 5 desing select.
-$name = 'theme_almondb/block05desing';
-$title = get_string('block05desing', 'theme_almondb');
-$description = get_string('block05desingdesc', 'theme_almondb');
+// Block 5 design select.
+$name = 'theme_almondb/block05design';
+$title = get_string('block05design', 'theme_almondb');
+$description = get_string('block05designdesc', 'theme_almondb');
 $default = 1;
 $options = array();
 for ($i = 1; $i < 2; $i++) {

@@ -121,16 +121,18 @@
             img {
                 max-width: 100%;
                 max-height: $course-category-img-height;
-                border-radius: 4px;
+                /* border-radius: 4px; */
             }
         }
-
         .teachers {
-            position: absolute;
-            margin-top: -220px !important;
+            position: relative;
+            margin-top: 15px !important;
             width: 90%;
             font-weight: 500;
-            z-index: 999;
+            display: inline-flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         
     }

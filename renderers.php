@@ -32,35 +32,6 @@ require_once($CFG->dirroot . '/course/renderer.php');
  */
 class theme_almondb_core_course_renderer extends core_course_renderer {
     /**
-     * Returns HTML to display course contacts.
-     *
-     * @param core_course_list_element $course
-     * @return string
-     */
-    protected function course_contacts(core_course_list_element $course) {
-        $content = '';
-        if ($course->has_course_contacts()) {
-            $content .= html_writer::start_tag('ul', ['class' => 'teachers']);
-            foreach ($course->get_course_contacts() as $coursecontact) {
-                $rolenames = array_map(function ($role) {
-                    return $role->displayname;
-                }, $coursecontact['roles']);
-                $namesrole = implode(", ", $rolenames);
-                $user = \core_user::get_user($coursecontact['user']->id);
-                $userpicture = new user_picture($user);
-                $picture = $userpicture->get_url($this->page)->out(false);
-                $name = " <div class='chip h6'><img src='{$picture}'";
-                $name .= " class='border border-secondary' title='{$namesrole}' data-toggle='tooltip'";
-                $name .= " alt='{$coursecontact['username']}'/>".html_writer::link(new moodle_url('/user/view.php',
-                    ['id' => $coursecontact['user']->id, 'course' => SITEID]),
-                    " ".$coursecontact['username'])."</div>";
-                $content .= html_writer::tag('li', $name);
-            }
-            $content .= html_writer::end_tag('ul');
-        }
-        return $content;
-    }
-    /**
      * Returns HTML to display course content (summary, course contacts and optionally category name)
      *
      * This method is called from coursecat_coursebox() and may be re-used in AJAX
@@ -80,7 +51,6 @@ class theme_almondb_core_course_renderer extends core_course_renderer {
 
         $content .= \html_writer::start_tag('div', ['class' => 'col-md-6 col-lg-5 col-sm-12']);
         $content .= $this->course_overview_files($course);
-        $content .= $this->course_contacts($course);
         $content .= \html_writer::end_tag('div');
 
         $content .= \html_writer::start_tag('div', ['class' => 'col-md-6 col-lg-7']);
@@ -109,15 +79,54 @@ class theme_almondb_core_course_renderer extends core_course_renderer {
             if ($isimage) {
                 $contentimages .= html_writer::start_tag('div',
                     ['class' => 'courseimage single-course', 'style' => 'background-image: url('.$url.');']);
+                // Teacher img.
+                $contentimages .= html_writer::start_tag('ul', ['class' => 'teachers']);
+                foreach ($course->get_course_contacts() as $coursecontact) {
+                    $rolenames = array_map(function ($role) {
+                        return $role->displayname;
+                    }, $coursecontact['roles']);
+                    $namesrole = implode(", ", $rolenames);
+                    $user = \core_user::get_user($coursecontact['user']->id);
+                    $userpicture = new user_picture($user);
+                    $picture = $userpicture->get_url($this->page)->out(false);
+                    $name = " <div class='chip h6'><img src='{$picture}'";
+                    $name .= " class='border border-secondary' title='{$namesrole}' data-toggle='tooltip'";
+                    $name .= " alt='{$coursecontact['username']}'/>".html_writer::link(new moodle_url('/user/view.php',
+                            ['id' => $coursecontact['user']->id, 'course' => SITEID]),
+                            " ".$coursecontact['username'])."</div>";
+                    $contentimages .= html_writer::tag('li', $name);
+                }
+                $contentimages .= html_writer::end_tag('ul');
+
                 $contentimages .= html_writer::end_tag('div');
             } else {
-                $image = $this->output->pix_icon(file_file_icon($file, 24), $file->get_filename(), 'moodle');
+                $image = $this->output->pix_icon(file_file_icon($file), $file->get_filename(), 'moodle');
                 $filename = html_writer::tag('span', $image, ['class' => 'fp-icon']).
                     html_writer::tag('span', $file->get_filename(), ['class' => 'fp-filename']);
                 $contentfiles .= html_writer::tag('span',
                     html_writer::link($url, $filename),
-                    ['class' => 'coursefile fp-filename-icon']);
+                    ['class' => 'coursefile fp-filename-icon text-break']);
             }
+        }
+        // If the course image is empty, add a teacher image.
+        if (empty($contentimages)) {
+            $contentimages .= html_writer::start_tag('ul', ['class' => 'teachers']);
+            foreach ($course->get_course_contacts() as $coursecontact) {
+                $rolenames = array_map(function ($role) {
+                    return $role->displayname;
+                }, $coursecontact['roles']);
+                $namesrole = implode(", ", $rolenames);
+                $user = \core_user::get_user($coursecontact['user']->id);
+                $userpicture = new user_picture($user);
+                $picture = $userpicture->get_url($this->page)->out(false);
+                $name = " <div class='chip h6'><img src='{$picture}'";
+                $name .= " class='border border-secondary' title='{$namesrole}' data-toggle='tooltip'";
+                $name .= " alt='{$coursecontact['username']}'/>".html_writer::link(new moodle_url('/user/view.php',
+                        ['id' => $coursecontact['user']->id, 'course' => SITEID]),
+                        " ".$coursecontact['username'])."</div>";
+                $contentimages .= html_writer::tag('li', $name);
+            }
+            $contentimages .= html_writer::end_tag('ul');
         }
         return $contentimages . $contentfiles;
     }

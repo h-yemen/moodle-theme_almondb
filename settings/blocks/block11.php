@@ -35,10 +35,10 @@ $title = get_string('block11enabled', 'theme_almondb');
 $description = get_string('block11enableddesc', 'theme_almondb');
 $setting = new admin_setting_configcheckbox($name, $title, $description, 1);
 $page->add($setting);
-// Block 11 desing select.
-$name = 'theme_almondb/block11desing';
-$title = get_string('block11desing', 'theme_almondb');
-$description = get_string('block11desingdesc', 'theme_almondb');
+// Block 11 design select.
+$name = 'theme_almondb/block11design';
+$title = get_string('block11design', 'theme_almondb');
+$description = get_string('block11designdesc', 'theme_almondb');
 $default = 1;
 $options = array();
 for ($i = 1; $i <= 2; $i++) {

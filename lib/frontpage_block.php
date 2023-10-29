@@ -95,10 +95,10 @@ function theme_almondb_frontpageblock03() {
     if (empty($templatecontext['block03enabled'])) {
         return $templatecontext;
     }
-    $templatecontext['block03desing'.$theme->settings->block03desing] = $theme->settings->block03desing;
+    $templatecontext['block03design'.$theme->settings->block03design] = $theme->settings->block03design;
     $templatecontext['block03header'] = $theme->settings->block03header;
     $count = 6;
-    if ($theme->settings->block03desing == 2) {
+    if ($theme->settings->block03design == 2) {
         $count = 6;
     }
     for ($i = 1, $j = 0; $i <= $count; $i++, $j++) {
@@ -127,12 +127,12 @@ function theme_almondb_frontpageblock04() {
     if (empty($templatecontext['block04enabled'])) {
         return $templatecontext;
     }
-    $templatecontext['block04desing'.$theme->settings->block04desing] = $theme->settings->block04desing;
+    $templatecontext['block04design'.$theme->settings->block04design] = $theme->settings->block04design;
     $templatecontext['block04header'] = $theme->settings->block04header;
     $templatecontext['block04button'] = $theme->settings->block04button;
     $templatecontext['block04buttonlink'] = $theme->settings->block04buttonlink;
     $count = 8;
-    if ($theme->settings->block04desing == 1) {
+    if ($theme->settings->block04design == 1) {
         $count = 8;
     }
     for ($i = 1, $j = 0; $i <= $count; $i++, $j++) {
@@ -197,7 +197,7 @@ function theme_almondb_frontpageblock05() {
     if (empty($templatecontext['block05enabled'])) {
         return $templatecontext;
     }
-    $templatecontext['block05desing'.$theme->settings->block05desing] = $theme->settings->block05desing;
+    $templatecontext['block05design'.$theme->settings->block05design] = $theme->settings->block05design;
     $templatecontext['block05header'] = $theme->settings->block05header;
     $image = $theme->setting_file_url('sliderimageblock05img', 'sliderimageblock05img');
     if (empty($image)) {
@@ -232,7 +232,7 @@ function theme_almondb_frontpageblock06() {
         return $templatecontext;
     }
     $templatecontext['block06color'] = $theme->settings->block06color;
-    $templatecontext['block06desing'.$theme->settings->block06desing] = $theme->settings->block06desing;
+    $templatecontext['block06design'.$theme->settings->block06design] = $theme->settings->block06design;
     $templatecontext['block06header'] = $theme->settings->block06header;
     $templatecontext['block06caption'] = $theme->settings->block06caption;
     $templatecontext['block06button'] = $theme->settings->block06button;
@@ -256,7 +256,7 @@ function theme_almondb_frontpageblock07() {
     if (empty($templatecontext['block07enabled'])) {
         return $templatecontext;
     }
-    $templatecontext['block07desing'.$theme->settings->block07desing] = $theme->settings->block07desing;
+    $templatecontext['block07design'.$theme->settings->block07design] = $theme->settings->block07design;
     $templatecontext['block07header'] = $theme->settings->block07header;
     $templatecontext['block07button'] = $theme->settings->block07button;
     $templatecontext['block07buttonlink'] = $theme->settings->block07buttonlink;
@@ -345,7 +345,7 @@ function theme_almondb_frontpageblock08() {
         return $templatecontext;
     }
     $count = $theme->settings->block08count;
-    $templatecontext['block08desing'.$theme->settings->block08desing] = $theme->settings->block08desing;
+    $templatecontext['block08design'.$theme->settings->block08design] = $theme->settings->block08design;
     $templatecontext['block08header'] = $theme->settings->block08header;
     $templatecontext['block08caption'] = $theme->settings->block08caption;
     $teacherrole = $theme->settings->block08showrole;
@@ -425,7 +425,7 @@ function theme_almondb_frontpageblock09() {
          return $templatecontext;
     }
     $count = $theme->settings->block09count;
-    $templatecontext['block09desing'.$theme->settings->block09desing] = $theme->settings->block09desing;
+    $templatecontext['block09design'.$theme->settings->block09design] = $theme->settings->block09design;
     $templatecontext['block09boxshadow'] = $theme->settings->block09boxshadow;
     $templatecontext['block09header'] = $theme->settings->block09header;
     $templatecontext['block09caption'] = $theme->settings->block09caption;
@@ -488,7 +488,7 @@ function theme_almondb_frontpageblock10() {
     if (empty($templatecontext['block10enabled'])) {
         return $templatecontext;
     }
-    $templatecontext['block10desing'.$theme->settings->block10desing] = $theme->settings->block10desing;
+    $templatecontext['block10design'.$theme->settings->block10design] = $theme->settings->block10design;
     $templatecontext['block10header'] = $theme->settings->block10header;
     $count = $theme->settings->block10count;
     for ($i = 1, $j = 0; $i <= $count; $i++, $j++) {
@@ -526,7 +526,7 @@ function theme_almondb_frontpageblock11() {
     if (empty($templatecontext['block11enabled'])) {
         return $templatecontext;
     }
-    $templatecontext['block11desing'.$theme->settings->block11desing] = $theme->settings->block11desing;
+    $templatecontext['block11design'.$theme->settings->block11design] = $theme->settings->block11design;
     $templatecontext['block11header'] = $theme->settings->block11header;
     $templatecontext['block11caption'] = $theme->settings->block11caption;
     $count = $theme->settings->block11count;
@@ -604,7 +604,7 @@ function theme_almondb_frontpageblock19() {
     if (empty($templatecontext['block19enabled'])) {
         return $templatecontext;
     }
-    $templatecontext['block19desing'.$theme->settings->block19desing] = $theme->settings->block19desing;
+    $templatecontext['block19design'.$theme->settings->block19design] = $theme->settings->block19design;
     $templatecontext['block19headerenabled'] = $theme->settings->block19headerenabled;
     if (!empty($templatecontext['block19headerenabled'])) {
         $templatecontext['block19header'] = $theme->settings->block19header;
