@@ -41,7 +41,7 @@ $name = 'theme_almondb/block08design';
 $title = get_string('block08design', 'theme_almondb');
 $description = get_string('block08designdesc', 'theme_almondb');
 $default = 1;
-$options = array();
+$options = [];
 for ($i = 1; $i <= 5; $i++) {
      $options[$i] = $i;
 }
@@ -65,7 +65,7 @@ $name = 'theme_almondb/block08showrole';
 $title = get_string('block08showrole', 'theme_almondb');
 $description = get_string('block08showroledesc', 'theme_almondb');
 $default = 'editingteacher';
-$options = array();
+$options = [];
 $role = $DB->get_records('role');
 foreach ($role as $roles) {
      $options[$roles->id] = $roles->shortname;
@@ -78,7 +78,7 @@ $name = 'theme_almondb/block08studentrole';
 $title = get_string('block08studentrole', 'theme_almondb');
 $description = get_string('block08studentroledesc', 'theme_almondb');
 $default = 'student';
-$options = array();
+$options = [];
 $role = $DB->get_records('role');
 foreach ($role as $roles) {
      $options[$roles->id] = $roles->shortname;

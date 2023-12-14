@@ -59,7 +59,7 @@ $title = get_string('presetfiles', 'theme_almondb');
 $description = get_string('presetfiles_desc', 'theme_almondb');
 
 $setting = new admin_setting_configstoredfile($name, $title, $description, 'preset', 0,
-    array('maxfiles' => 20, 'accepted_types' => array('.scss')));
+    ['maxfiles' => 20, 'accepted_types' => ['.scss']]);
 $page->add($setting);
 
 // Background image setting.

@@ -31,7 +31,7 @@ $name = 'theme_almondb/frontpagenavchoice';
 $title = get_string('frontpagenavchoice', 'theme_almondb');
 $description = get_string('frontpagenavchoicedesc', 'theme_almondb');
 $default = 1;
-$options = array();
+$options = [];
 for ($i = 1; $i < 4; $i++) {
     $options[$i] = $i;
 }
@@ -49,10 +49,10 @@ $name = 'theme_almondb/headerlogo';
 $title = get_string('headerlogo', 'theme_almondb');
 $description = get_string('headerlogodesc', 'theme_almondb');
 $default = "Logo";
-$options = array(
+$options = [
     'Logo' => 'Logo',
     'Compact logo' => 'Compact logo',
-);
+];
 $setting = new admin_setting_configselect($name, $title, $description, $default, $options);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
@@ -68,11 +68,11 @@ $name = 'theme_almondb/frontpagenavlightdark';
 $title = get_string('frontpagenavlightdark', 'theme_almondb');
 $description = get_string('frontpagenavlightdarkdesc', 'theme_almondb');
 $default = "navbar-light";
-$options = array();
-$options = array(
+$options = [];
+$options = [
     'navbar-light' => 'navbar-light',
     'navbar-dark' => 'navbar-dark',
-);
+];
 $setting = new admin_setting_configselect($name, $title, $description, $default, $options);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
@@ -100,8 +100,8 @@ $name = 'theme_almondb/frontpagechoice';
 $title = get_string('frontpagechoice', 'theme_almondb');
 $description = get_string('frontpagechoicedesc', 'theme_almondb');
 $default = 1;
-$options = array();
-$options = array();
+$options = [];
+$options = [];
 for ($i = 1; $i <= 1; $i++) {
     $options[$i] = $i;
 }
@@ -114,15 +114,15 @@ $name = 'theme_almondb/frontpagecolor';
 $title = get_string('frontpagecolor', 'theme_almondb');
 $description = get_string('frontpagecolordesc', 'theme_almondb');
 $default = '#4272d7';
-$options = array();
-$options = array(
+$options = [];
+$options = [
     '#4272d7' => '1',
     '#f98012' => '2',
     '#fa4251' => '3',
     '#c45e28' => '4',
     '#63c76a' => '5',
     '#024E64' => '6',
-);
+];
 $setting = new admin_setting_configselect($name, $title, $description, $default, $options);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);

@@ -38,7 +38,7 @@ $name = 'theme_almondb/almondbpagecount';
 $title = get_string('almondbpagecount', 'theme_almondb');
 $description = get_string('almondbpagecountdesc', 'theme_almondb');
 $default = 1;
-$options = array();
+$options = [];
 for ($i = 1; $i <= 10; $i++) {
     $options[$i] = $i;
 }
@@ -52,8 +52,8 @@ if (!$almondbpagecount) {
 }
 for ($count = 1; $count <= $almondbpagecount; $count++) {
     $name = 'theme_almondb/almondbpage' . $count . 'info';
-    $heading = get_string('almondbpageno', 'theme_almondb', array('almondbpage' => $count));
-    $information = get_string('almondbpagenodesc', 'theme_almondb', array('almondbpage' => $count));
+    $heading = get_string('almondbpageno', 'theme_almondb', ['almondbpage' => $count]);
+    $information = get_string('almondbpagenodesc', 'theme_almondb', ['almondbpage' => $count]);
     $setting = new admin_setting_heading($name, $heading, $information);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
@@ -137,7 +137,7 @@ $name = 'theme_almondb/almondbpagecountsimple';
 $title = get_string('almondbpagecountsimple', 'theme_almondb');
 $description = get_string('almondbpagecountsimpledesc', 'theme_almondb');
 $default = 1;
-$options = array();
+$options = [];
 for ($i = 1; $i <= 10; $i++) {
     $options[$i] = $i;
 }
@@ -151,8 +151,8 @@ if (!$almondbpagecount) {
 }
 for ($count = 1; $count <= $almondbpagecount; $count++) {
     $name = 'theme_almondb/almondbpagesimple' . $count . 'info';
-    $heading = get_string('almondbpagenosimple', 'theme_almondb', array('almondbpage' => $count));
-    $information = get_string('almondbpagenosimpledesc', 'theme_almondb', array('almondbpage' => $count));
+    $heading = get_string('almondbpagenosimple', 'theme_almondb', ['almondbpage' => $count]);
+    $information = get_string('almondbpagenosimpledesc', 'theme_almondb', ['almondbpage' => $count]);
     $setting = new admin_setting_heading($name, $heading, $information);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
@@ -168,7 +168,7 @@ for ($count = 1; $count <= $almondbpagecount; $count++) {
     $name = 'theme_almondb/sliderimagealmondbpagesimple'.$count;
     $title = get_string('almondbpageimagesimple', 'theme_almondb');
     $description = get_string('almondbpageimagesimpledesc', 'theme_almondb');
-    $opts = array('accepted_types' => array('.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'), 'maxfiles' => 1);
+    $opts = ['accepted_types' => ['.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'], 'maxfiles' => 1];
     $setting = new admin_setting_configstoredfile($name, $title, $description, $fileid,  0, $opts);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
@@ -177,13 +177,13 @@ for ($count = 1; $count <= $almondbpagecount; $count++) {
     $title = get_string('almondbpageimgpositionsimple', 'theme_almondb');
     $description = get_string('almondbpageimgpositionsimpledesc', 'theme_almondb');
     $default = 1;
-    $options = array(
+    $options = [
         "1" => "Background",
         "2" => "Top",
         "21" => "Full Top",
         "3" => "Left",
-        "4" => "Right"
-    );
+        "4" => "Right",
+    ];
     $setting = new admin_setting_configselect($name, $title, $description, $default, $options);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);

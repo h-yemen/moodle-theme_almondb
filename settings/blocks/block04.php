@@ -40,7 +40,7 @@ $name = 'theme_almondb/block04design';
 $title = get_string('block04design', 'theme_almondb');
 $description = get_string('block04designdesc', 'theme_almondb');
 $default = 1;
-$options = array();
+$options = [];
 for ($i = 1; $i < 3; $i++) {
      $options[$i] = $i;
 }
@@ -75,28 +75,28 @@ $page->add($setting);
 for ($i = 1; $i <= 8; $i++) {
      // Block 04 title.
      $name = 'theme_almondb/block04title'.$i;
-     $title = get_string('block04title', 'theme_almondb', array('block' => $i));
+     $title = get_string('block04title', 'theme_almondb', ['block' => $i]);
      $description = get_string('block04titledesc', 'theme_almondb');
      $default = 'Latest '.$i;
      $setting = new admin_setting_configtext($name, $title, $description, $default);
      $page->add($setting);
      // Block 04 caption.
      $name = 'theme_almondb/block04caption'.$i;
-     $title = get_string('block04caption', 'theme_almondb', array('block' => $i));
+     $title = get_string('block04caption', 'theme_almondb', ['block' => $i]);
      $description = get_string('block04captiondesc', 'theme_almondb');
      $default = 'Latest caption'.$i;
      $setting = new admin_setting_configtextarea($name, $title, $description, $default, PARAM_RAW, '1', '2');
      $page->add($setting);
      // Block 04 img.
      $name = 'theme_almondb/sliderimageblock04img'.$i;
-     $title = get_string('sliderimageblock04img', 'theme_almondb', array('block' => $i));
+     $title = get_string('sliderimageblock04img', 'theme_almondb', ['block' => $i]);
      $description = get_string('block04imgdesc', 'theme_almondb');
      $setting = new admin_setting_configstoredfile($name, $title, $description, 'sliderimageblock04img'.$i);
      $setting->set_updatedcallback('theme_reset_all_caches');
      $page->add($setting);
      // Block 04 link.
      $name = 'theme_almondb/block04link'.$i;
-     $title = get_string('block04link', 'theme_almondb', array('block' => $i));
+     $title = get_string('block04link', 'theme_almondb', ['block' => $i]);
      $description = get_string('block04linkdesc', 'theme_almondb');
      $description = $description.get_string('underline', 'theme_almondb');
      $default = "https://moodle.org/";

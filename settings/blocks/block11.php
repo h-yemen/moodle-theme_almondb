@@ -40,7 +40,7 @@ $name = 'theme_almondb/block11design';
 $title = get_string('block11design', 'theme_almondb');
 $description = get_string('block11designdesc', 'theme_almondb');
 $default = 1;
-$options = array();
+$options = [];
 for ($i = 1; $i <= 2; $i++) {
      $options[$i] = $i;
 }
@@ -52,7 +52,7 @@ $name = 'theme_almondb/block11count';
 $title = get_string('block11count', 'theme_almondb');
 $description = get_string('block11countdesc', 'theme_almondb');
 $default = 3;
-$options = array();
+$options = [];
 for ($i = 2; $i <= 10; $i++) {
      $options[$i] = $i;
 }

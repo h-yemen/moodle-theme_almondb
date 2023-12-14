@@ -185,7 +185,7 @@ class theme_almondb_core_blog_renderer extends core_blog_renderer {
         $o .= $this->output->container($blogtype, 'audience');
 
         // Attachments.
-        $attachmentsoutputs = array();
+        $attachmentsoutputs = [];
         if ($entry->renderable->attachments) {
             foreach ($entry->renderable->attachments as $attachment) {
                 $o .= $this->render($attachment, false);
@@ -201,13 +201,13 @@ class theme_almondb_core_blog_renderer extends core_blog_renderer {
         // Post by.
         $by = new stdClass();
         $fullname = fullname($entry->renderable->user, has_capability('moodle/site:viewfullnames', $syscontext));
-        $userurlparams = array('id' => $entry->renderable->user->id, 'course' => $this->page->course->id);
+        $userurlparams = ['id' => $entry->renderable->user->id, 'course' => $this->page->course->id];
         $by->name = html_writer::link(new moodle_url('/user/view.php', $userurlparams), $fullname);
         $by->date = userdate($entry->created);
         $o .= $this->output->container( $by->name ." - ".$by->date, 'author');
         // Title.
         $titlelink = html_writer::link(new moodle_url('/blog/index.php',
-                                                    array('entryid' => $entry->id)),
+                                                    ['entryid' => $entry->id]),
                                                     format_string($entry->subject));
         $o .= "<h4>";
         $o .= $this->output->container($titlelink, 'subject mt-2');
@@ -221,7 +221,7 @@ class theme_almondb_core_blog_renderer extends core_blog_renderer {
         $o .= $this->output->container_end();
 
         // Body.
-        $o .= format_text($entry->summary, $entry->summaryformat, array('overflowdiv' => true));
+        $o .= format_text($entry->summary, $entry->summaryformat, ['overflowdiv' => true]);
         if (!empty($entry->uniquehash)) {
             // Uniquehash is used as a link to an external blog.
             $url = clean_param($entry->uniquehash, PARAM_URL);
@@ -246,10 +246,10 @@ class theme_almondb_core_blog_renderer extends core_blog_renderer {
 
             // First find and show the associated course.
             $assocstr = '';
-            $coursesarray = array();
+            $coursesarray = [];
             foreach ($entry->renderable->blogassociations as $assocrec) {
                 if ($assocrec->contextlevel == CONTEXT_COURSE) {
-                    $coursesarray[] = $this->output->action_icon($assocrec->url, $assocrec->icon, null, array(), true);
+                    $coursesarray[] = $this->output->action_icon($assocrec->url, $assocrec->icon, null, [], true);
                 }
             }
             if (!empty($coursesarray)) {
@@ -257,11 +257,11 @@ class theme_almondb_core_blog_renderer extends core_blog_renderer {
             }
 
             // Now show mod association.
-            $modulesarray = array();
+            $modulesarray = [];
             foreach ($entry->renderable->blogassociations as $assocrec) {
                 if ($assocrec->contextlevel == CONTEXT_MODULE) {
                     $str = get_string('associated', 'blog', $assocrec->type) . ': ';
-                    $str .= $this->output->action_icon($assocrec->url, $assocrec->icon, null, array(), true);
+                    $str .= $this->output->action_icon($assocrec->url, $assocrec->icon, null, [], true);
                     $modulesarray[] = $str;
                 }
             }
@@ -287,16 +287,16 @@ class theme_almondb_core_blog_renderer extends core_blog_renderer {
             // External blog entries should not be edited.
             if (empty($entry->uniquehash)) {
                 $o .= html_writer::link(new moodle_url('/blog/edit.php',
-                                                        array('action' => 'edit', 'entryid' => $entry->id)),
-                                                        $stredit, array('class' => 'btn btn-info btn-sm'));
+                                                        ['action' => 'edit', 'entryid' => $entry->id]),
+                                                        $stredit, ['class' => 'btn btn-info btn-sm']);
             }
             $o .= html_writer::link(new moodle_url('/blog/edit.php',
-                                                    array('action' => 'delete', 'entryid' => $entry->id)),
-                                                    $strdelete, array('class' => 'btn btn-danger btn-sm'));
+                                                    ['action' => 'delete', 'entryid' => $entry->id]),
+                                                    $strdelete, ['class' => 'btn btn-danger btn-sm']);
         }
 
-        $entryurl = new moodle_url('/blog/index.php', array('entryid' => $entry->id));
-        $o .= html_writer::link($entryurl, get_string('permalink', 'blog'), array('class' => 'btn btn-primary btn-sm'));
+        $entryurl = new moodle_url('/blog/index.php', ['entryid' => $entry->id]);
+        $o .= html_writer::link($entryurl, get_string('permalink', 'blog'), ['class' => 'btn btn-primary btn-sm']);
         $o .= $this->output->container_end();
 
         // Comments.
@@ -326,18 +326,18 @@ class theme_almondb_core_blog_renderer extends core_blog_renderer {
 
         // Image attachments don't get printed as links.
         if (file_mimetype_in_typegroup($attachment->file->get_mimetype(), 'web_image')) {
-            $attrs = array('src' => $attachment->url, 'alt' => '');
+            $attrs = ['src' => $attachment->url, 'alt' => ''];
             $o = html_writer::empty_tag('img', $attrs);
             $class = 'almond-blog-img attachedimages';
         } else {
             $image = $this->output->pix_icon(file_file_icon($attachment->file),
                                              $attachment->filename,
                                              'moodle',
-                                             array('class' => 'icon'));
+                                             ['class' => 'icon']);
             $o = html_writer::link($attachment->url, $image);
             $o .= format_text(html_writer::link($attachment->url, $attachment->filename),
                               FORMAT_HTML,
-                              array('context' => $syscontext));
+                              ['context' => $syscontext]);
             $class = 'attachments';
         }
 

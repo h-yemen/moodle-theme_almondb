@@ -283,7 +283,7 @@ function theme_almondb_frontpageblock07() {
     }
     $courses = $DB->get_records_sql($sql);
     foreach ($courses as $id => $course) {
-        $category = $DB->get_record('course_categories', array('id' => $course->category));
+        $category = $DB->get_record('course_categories', ['id' => $course->category]);
         if (!empty($category)) {
             $course->categoryName = $category->name;
             $course->categoryId = $category->id;
@@ -304,7 +304,7 @@ function theme_almondb_frontpageblock07() {
         $templatecontext['block07'][$j]['courselink'] = "course/view.php?id=".$id;
         $templatecontext['block07'][$j]['categorylink'] = "course/index.php?categoryid=".$course->categoryId;
         $templatecontext['block07'][$j]['imgurl'] = almondb_get_course_image($id);
-        $enrol = $DB->get_records_sql($sql, array('courseid' => $id));
+        $enrol = $DB->get_records_sql($sql, ['courseid' => $id]);
         if (empty($enrol)) {
             $templatecontext['block07'][$j]['currency'] = get_string('block07enrol', 'theme_almondb');
         } else {
@@ -365,21 +365,21 @@ function theme_almondb_frontpageblock08() {
     if (!empty($theme->settings->block08total)) {
         $courses = get_courses('all', 'c.timemodified DESC');
     }
-    $roleassignments = $DB->get_records_sql($sql, array('roleid' => $teacherrole));
+    $roleassignments = $DB->get_records_sql($sql, ['roleid' => $teacherrole]);
     if (!empty($roleassignments)) {
         $j = 0;
         $coursecount = 0;
         $studentscount = 0;
         foreach ($roleassignments as $roleassignment) {
             $templatecontext['block08'][$j]['showdescription'] = $theme->settings->block08description;
-            if ($user = $DB->get_record('user', array('id' => $roleassignment->userid))) {
+            if ($user = $DB->get_record('user', ['id' => $roleassignment->userid])) {
                 $user->imagealt = "teacher";
                 $templatecontext['block08'][$j]['teachername'] = format_string($user->firstname." ".$user->lastname);
                 $templatecontext['block08'][$j]['description'] = format_text($user->description);
                 $templatecontext['block08'][$j]['userpicture'] =
-                    $OUTPUT->user_picture($user, array('class' => '', 'size' => '250'));
+                    $OUTPUT->user_picture($user, ['class' => '', 'size' => '250']);
                 $templatecontext['block08'][$j]['userURL'] =
-                    new moodle_url('/user/profile.php', array('id' => $roleassignment->userid ));
+                    new moodle_url('/user/profile.php', ['id' => $roleassignment->userid ]);
                 $userpicture = new user_picture($user);
                 $userpicture->size = 512;
                 $url = $userpicture->get_url($PAGE)->out(false);
@@ -393,7 +393,7 @@ function theme_almondb_frontpageblock08() {
                     foreach ($teachers as $id => $teacher) {
                         if ($teacher->username == $user->username) {
                             $coursecount++;
-                            $role = $DB->get_field('role', 'id', array('id' => $theme->settings->block08studentrole));
+                            $role = $DB->get_field('role', 'id', ['id' => $theme->settings->block08studentrole]);
                             $students = get_role_users($role, $context);
                             $studentscount = $studentscount + count($students);
                         }
@@ -444,7 +444,7 @@ function theme_almondb_frontpageblock09() {
     if ($CFG->dbtype != 'sqlsrv') {
         $sql = $sql." LIMIT ". $count;
     }
-    $categorys = $DB->get_records_sql($sql, array());
+    $categorys = $DB->get_records_sql($sql, []);
     if (!empty($categorys)) {
         $j = 0;
         foreach ($categorys as $category) {
@@ -545,7 +545,7 @@ function theme_almondb_frontpageblock11() {
     if ($CFG->dbtype != 'sqlsrv') {
         $sql = $sql." LIMIT ". $count;
     }
-    $posts = $DB->get_records_sql($sql, array());
+    $posts = $DB->get_records_sql($sql, []);
     if (!empty($posts)) {
         $j = 0;
         foreach ($posts as $post) {
@@ -556,11 +556,11 @@ function theme_almondb_frontpageblock11() {
             $templatecontext['block11'][$j]['postURL'] = new moodle_url('/blog/index.php?entryid='. $post->id);
             $templatecontext['block11'][$j]['imgurl'] = almondb_get_blog_post_image($post->id);
             $templatecontext['block11'][$j]['tag'] = $OUTPUT->tag_list(core_tag_tag::get_item_tags('core', 'post', $post->id));
-            if ($user = $DB->get_record('user', array('id' => $post->userid))) {
+            if ($user = $DB->get_record('user', ['id' => $post->userid])) {
                 $templatecontext['block11'][$j]['userpicture'] =
-                    $OUTPUT->user_picture($user, array('size' => '25'));
+                    $OUTPUT->user_picture($user, ['size' => '25']);
                 $templatecontext['block11'][$j]['userURL'] =
-                    new moodle_url('/user/profile.php', array('id' => $post->userid ));
+                    new moodle_url('/user/profile.php', ['id' => $post->userid ]);
                 $templatecontext['block11'][$j]['username'] = format_string(fullname($user));
             }
             if ($j == 0) {

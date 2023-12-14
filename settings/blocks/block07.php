@@ -40,7 +40,7 @@ $name = 'theme_almondb/block07design';
 $title = get_string('block07design', 'theme_almondb');
 $description = get_string('block07designdesc', 'theme_almondb');
 $default = 1;
-$options = array();
+$options = [];
 for ($i = 1; $i <= 5; $i++) {
      $options[$i] = $i;
 }
@@ -55,7 +55,7 @@ $default = get_string('block07countdefault', 'theme_almondb');
 $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_TEXT, '2');
 $page->add($setting);
 // Block 07 teacher role.
-$options = array();
+$options = [];
 $role = $DB->get_records('role');
 foreach ($role as $roles) {
      $options[$roles->id] = $roles->shortname;
@@ -93,10 +93,10 @@ $name = 'theme_almondb/block07title';
 $title = get_string('block07title', 'theme_almondb');
 $description = get_string('block07titledesc', 'theme_almondb');
 $default = "shortname";
-$options = array(
+$options = [
 'shortname' => 'shortname',
 'fullname' => 'fullname',
-);
+];
 $setting = new admin_setting_configselect($name, $title, $description, $default, $options);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);

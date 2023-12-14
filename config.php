@@ -36,12 +36,12 @@ $THEME->scss = function($theme) {
 
 $THEME->layouts = [
     // The site home page.
-    'frontpage' => array(
+    'frontpage' => [
         'file' => 'frontpage.php',
-        'regions' => array('side-pre'),
+        'regions' => ['side-pre'],
         'defaultregion' => 'side-pre',
-        'options' => array('nonavbar' => true),
-    ),
+        'options' => ['nonavbar' => true],
+    ],
 
 ];
 
@@ -49,7 +49,7 @@ $THEME->parents = ['boost'];
 $THEME->enable_dock = false;
 $THEME->extrascsscallback = 'theme_almondb_get_extra_scss';
 $THEME->prescsscallback = 'theme_almondb_get_pre_scss';
-$THEME->yuicssmodules = array();
+$THEME->yuicssmodules = [];
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->requiredblocks = '';
 $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
@@ -58,5 +58,5 @@ $THEME->haseditswitch = true;
 $THEME->usescourseindex = true;
 // By default, all boost theme do not need their titles displayed.
 $THEME->activityheaderconfig = [
-    'notitle' => true
+    'notitle' => true,
 ];

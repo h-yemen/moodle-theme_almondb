@@ -39,11 +39,11 @@ $name = 'theme_almondb/loginposition';
 $title = get_string('loginposition', 'theme_almondb');
 $description = get_string('loginpositiondesc', 'theme_almondb');
 $default = "center";
-$options = array(
+$options = [
     'Center' => 'Center',
     'flex-start' => 'Left',
     'flex-end' => 'Right',
-);
+];
 $setting = new admin_setting_configselect($name, $title, $description, $default, $options);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
@@ -52,11 +52,11 @@ $name = 'theme_almondb/footerselect';
 $title = get_string('footerselect', 'theme_almondb');
 $description = get_string('footerselectdesc', 'theme_almondb');
 $default = "3";
-$options = array(
+$options = [
     '1' => 'Moodle footer',
     '2' => 'Frontpage footer',
     '3' => 'Social media footer',
-);
+];
 $setting = new admin_setting_configselect($name, $title, $description, $default, $options);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);

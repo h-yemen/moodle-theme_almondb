@@ -31,7 +31,7 @@ $name = 'theme_almondb/sliderdesign';
 $title = get_string('sliderdesign', 'theme_almondb');
 $description = get_string('sliderdesigndesc', 'theme_almondb');
 $default = 1;
-$options = array();
+$options = [];
 for ($i = 1; $i < 5; $i++) {
     $options[$i] = $i;
 }
@@ -51,7 +51,7 @@ $name = 'theme_almondb/slidercount';
 $title = get_string('slidercount', 'theme_almondb');
 $description = get_string('slidercountdesc', 'theme_almondb');
 $default = 4;
-$options = array();
+$options = [];
 for ($i = 0; $i < 7; $i++) {
     $options[$i] = $i;
 }
@@ -69,23 +69,23 @@ $name = 'theme_almondb/slidershowheight';
 $title = get_string('slidershowheight', 'theme_almondb');
 $description = get_string('slidershowheight_desc', 'theme_almondb');
 $default = '550';
-$options = array(
-        '250' => '250',
-        '275' => '275',
-        '300' => '300',
-        '325' => '325',
-        '350' => '350',
-        '375' => '375',
-        '400' => '400',
-        '425' => '425',
-        '450' => '450',
-        '475' => '475',
-        '500' => '500',
-        '525' => '525',
-        '550' => '550',
-        '575' => '575',
-        '600' => '600',
-    );
+$options = [
+    '250' => '250',
+    '275' => '275',
+    '300' => '300',
+    '325' => '325',
+    '350' => '350',
+    '375' => '375',
+    '400' => '400',
+    '425' => '425',
+    '450' => '450',
+    '475' => '475',
+    '500' => '500',
+    '525' => '525',
+    '550' => '550',
+    '575' => '575',
+    '600' => '600',
+];
 $setting = new admin_setting_configselect($name, $title, $description, $default, $options);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
@@ -99,8 +99,8 @@ $page->add($setting);
 
 for ($count = 1; $count <= $slidercount; $count++) {
     $name = 'theme_almondb/slide' . $count . 'info';
-    $heading = get_string('slideno', 'theme_almondb', array('slide' => $count));
-    $information = get_string('slidenodesc', 'theme_almondb', array('slide' => $count));
+    $heading = get_string('slideno', 'theme_almondb', ['slide' => $count]);
+    $information = get_string('slidenodesc', 'theme_almondb', ['slide' => $count]);
     $setting = new admin_setting_heading($name, $heading, $information);
     $page->add($setting);
     // Slider image.
@@ -108,7 +108,7 @@ for ($count = 1; $count <= $slidercount; $count++) {
     $name = 'theme_almondb/sliderimage'.$count;
     $title = get_string('sliderimage', 'theme_almondb');
     $description = get_string('sliderimagedesc', 'theme_almondb');
-    $opts = array('accepted_types' => array('.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'), 'maxfiles' => 1);
+    $opts = ['accepted_types' => ['.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'], 'maxfiles' => 1];
     $setting = new admin_setting_configstoredfile($name, $title, $description, $fileid,  0, $opts);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);

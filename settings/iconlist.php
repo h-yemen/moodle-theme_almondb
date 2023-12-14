@@ -238,7 +238,6 @@ function theme_almondb_get_core_icon_list() {
         'core:i/loading' => 'fa-circle-o-notch fa-spin',
         'core:i/loading_small' => 'fa-circle-o-notch fa-spin',
         'core:i/location' => 'fa-map-marker',
-        'core:i/lock' => 'fa-lock',
         'core:i/log' => 'fa-list-alt',
         'core:i/mahara_host' => 'fa-id-badge',
         'core:i/manual_item' => 'fa-square-o',

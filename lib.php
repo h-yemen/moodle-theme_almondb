@@ -77,7 +77,7 @@ function theme_almond_get_extra_scss($theme) {
  * @param array $options
  * @return bool
  */
-function theme_almondb_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
+function theme_almondb_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = []) {
     if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo' || $filearea === 'loginbackgroundimage' ||
         $filearea === 'backgroundimage' || substr($filearea, 0, 11) === 'sliderimage' ||
         substr($filearea, 0, 5) === 'block' || substr($filearea, 0, 3) === 'img')) {
@@ -131,7 +131,7 @@ function theme_almondb_get_pre_scss($theme) {
         'brandcolor' => ['primary'],
         'backcolor' => ['white'],
         'navbarcolor' => ['hynavbar'],
-        'sitecolor' => ['hythemecolor']
+        'sitecolor' => ['hythemecolor'],
      ];
 
     // Prepend variables first.

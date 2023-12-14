@@ -40,7 +40,7 @@ $name = 'theme_almondb/block06design';
 $title = get_string('block06design', 'theme_almondb');
 $description = get_string('block06designdesc', 'theme_almondb');
 $default = 1;
-$options = array();
+$options = [];
 for ($i = 1; $i < 3; $i++) {
      $options[$i] = $i;
 }

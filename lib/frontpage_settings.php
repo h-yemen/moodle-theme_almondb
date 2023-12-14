@@ -132,7 +132,7 @@ function almondb_get_user_image($id) {
  */
 function theme_almondb_frontpageblockcategory($id) {
     GLOBAL  $DB;
-    $category = $DB->get_record('course_categories', array('id' => $id));
+    $category = $DB->get_record('course_categories', ['id' => $id]);
     if (!empty($category)) {
         $categoryname = $category->name;
     }

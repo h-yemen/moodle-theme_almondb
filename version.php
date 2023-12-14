@@ -29,4 +29,4 @@ $plugin->component = 'theme_almondb';
 $plugin->version = 2023111800;
 $plugin->requires  = 2023100400;
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = '430.23.111';
+$plugin->release = '431.23.121';

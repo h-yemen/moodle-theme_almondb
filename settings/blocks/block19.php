@@ -40,7 +40,7 @@ $name = 'theme_almondb/block19design';
 $title = get_string('block19design', 'theme_almondb');
 $description = get_string('block19designdesc', 'theme_almondb');
 $default = 1;
-$options = array();
+$options = [];
 for ($i = 1; $i < 3; $i++) {
      $options[$i] = $i;
 }
@@ -73,14 +73,14 @@ $page->add($setting);
 for ($i = 1; $i <= 6; $i++) {
      // Block 19 img.
      $name = 'theme_almondb/sliderimageblock19img'.$i;
-     $title = get_string('sliderimageblock19img', 'theme_almondb', array('block' => $i));
+     $title = get_string('sliderimageblock19img', 'theme_almondb', ['block' => $i]);
      $description = get_string('block19imgdesc', 'theme_almondb');
      $setting = new admin_setting_configstoredfile($name, $title, $description, 'sliderimageblock19img'.$i);
      $setting->set_updatedcallback('theme_reset_all_caches');
      $page->add($setting);
      // Block 19 link .
      $name = 'theme_almondb/block19link'.$i;
-     $title = get_string('block19link', 'theme_almondb', array('block' => $i));
+     $title = get_string('block19link', 'theme_almondb', ['block' => $i]);
      $description = get_string('block19linkdesc', 'theme_almondb');
      $description = $description.get_string('underline', 'theme_almondb');
      $default = get_string('buttonlink', 'theme_almondb');

@@ -41,7 +41,7 @@ $name = 'theme_almondb/block09design';
 $title = get_string('block09design', 'theme_almondb');
 $description = get_string('block09designdesc', 'theme_almondb');
 $default = 1;
-$options = array();
+$options = [];
 for ($i = 1; $i < 4; $i++) {
      $options[$i] = $i;
 }
@@ -53,11 +53,11 @@ $name = 'theme_almondb/block09background';
 $title = get_string('block09background', 'theme_almondb');
 $description = get_string('block09backgrounddesc', 'theme_almondb');
 $default = "0";
-$options = array(
+$options = [
      '0' => 'none',
      '1' => 'color',
      '2' => 'picture',
-);
+];
 $setting = new admin_setting_configselect($name, $title, $description, $default, $options);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
