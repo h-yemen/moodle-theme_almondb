@@ -28,70 +28,53 @@ label {
     font-size: 14px;
     font-weight: 400;
 }
-
 *::-moz-selection {
     background: #d6b161;
     color: #fff;
     text-shadow: none;
 }
-
 ::-moz-selection {
     background: #444;
     color: #fff;
     text-shadow: none;
 }
-
-/* ::selection {
-      background: #444;
-      color: #fff;
-      text-shadow: none; 
-   }*/
 *::-moz-placeholder {
     color: #555;
     font-size: 14px;
     opacity: 1;
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
-
 *::-webkit-input-placeholder {
     color: #555;
     font-size: 14px;
     opacity: 1;
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
-
 *:-ms-input-placeholder {
     color: #555;
     font-size: 14px;
     opacity: 1;
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-}
 
+}
 *::placeholder {
     color: #555;
     font-size: 14px;
     opacity: 1;
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
-
 .theme-overlay {
-    position: relative
+    position: relative;
 }
-
 .theme-overlay:before {
     background: #4272d7 none repeat scroll 0 0;
     content: "";
     height: 100%;
     left: 0;
     opacity: 0.6;
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
     position: absolute;
     top: 0;
     width: 100%;
 }
 
 .separator {
-    border-top: 1px solid #f2f2f2
+    border-top: 1px solid #f2f2f2;
 }
 
 .hybtn {
@@ -122,7 +105,7 @@ label {
 
 .hybtn:hover {
     background: transparent;
-    color: #4272d7
+    color: #4272d7;
 }
 
 .hybtn.hybtn-lg {
@@ -155,15 +138,12 @@ input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], in
     outline: none;
     text-decoration: none;
 }
-
 .btn:focus {
     box-shadow: 0 0 0 0;
 }
-
 .btn .icon {
     margin: 0;
 }
-
 .card {
     border-radius: 0;
 }
@@ -174,21 +154,17 @@ input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], in
     display: inline-block;
     margin-left: 20px;
 }
-
 .main-menu li a {
     display: block;
-    padding: 0px 10px;
+    padding: 0 10px;
 }
-
 .header-area {
     border-top: 5px solid #4272d7;
 }
-
 .main-menu li.search-trigger a {
     border-left: 1px solid #666;
     padding-left: 30px;
 }
-
 .main-menu {
     margin-top: 5px;
 }
@@ -318,7 +294,6 @@ input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], in
     height: 100%;
     background: #4272d7;
     opacity: .9;
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
     color: #fff;
     z-index: -1;
     padding: 20px 30px 30px 30px;
@@ -336,7 +311,7 @@ input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], in
     font-weight: 600;
     font-style: normal;
     margin: 0 0 15px;
-    text-transform: normal;
+    text-transform: capitalize;
     font-size: 16px;
     color: #fff;
     display: -webkit-box;
@@ -356,7 +331,6 @@ input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], in
     margin-right: 0px;
     margin-left: 15px;
 }
-
 .iconbox-content-body p {
     color: #f6f6f6;
     font-size: 14px;
@@ -453,7 +427,6 @@ input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], in
     position: relative;
     visibility: hidden;
     opacity: 0;
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     -webkit-transition: .3s;
     transition: .3s;
 }
@@ -471,7 +444,6 @@ input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], in
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     opacity: 0;
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     visibility: hidden;
     -webkit-transition: .5s;
     transition: .5s;
@@ -513,7 +485,7 @@ input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], in
 }
 
 .courseall a:hover {
-    color: theme-bg;
+    color: #ccc;
 }
 
 .single-project:hover .project-inner:after {
@@ -521,13 +493,11 @@ input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], in
     transform: scaleY(1);
     visibility: visible;
     opacity: .9;
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
 }
 
 .single-project:hover .project-inner {
     visibility: visible;
     opacity: 1;
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
 /* End Latest Project Area */
@@ -539,7 +509,6 @@ input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], in
     position: relative;
     visibility: hidden;
     opacity: 0;
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     -webkit-transition: .3s;
     transition: .3s;
 }
@@ -557,7 +526,6 @@ input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], in
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     opacity: 0;
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     visibility: hidden;
     -webkit-transition: .5s;
     transition: .5s;
@@ -614,13 +582,11 @@ input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], in
     transform: scaleY(1);
     visibility: visible;
     opacity: .5;
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 }
 
 .course-project:hover .course-inner {
     visibility: visible;
     opacity: 8;
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 }
 
 /* End Course Area */

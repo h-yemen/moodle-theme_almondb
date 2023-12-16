@@ -115,14 +115,14 @@ $spacers: (
 
 // Template color.
 $hythemecolor:   #4272d7 !default;
-$hybackcolor:    $white !default;      
+$hybackcolor:    $white !default;
 $hynavbar:       $white !default;
 // Custom control size.
 $dropdown-link-hover-bg    : $hythemecolor !default; //$primary;
 $component-active-bg       : $hythemecolor !default;
 
 // stylelint-disable.
-$theme-colors: map-merge((
+$theme-colors: map-merge ((
     primary: $primary,
     secondary: $secondary,
     success: $success,
@@ -131,8 +131,8 @@ $theme-colors: map-merge((
     danger: $danger,
     hynavbar:$hynavbar,
     hybackcolor: $hybackcolor,
-
-), $theme-colors);
+),
+$theme-colors);
 
 // Theme opasite color.
 
@@ -150,7 +150,7 @@ $single-course-img-height   : 550px !default;
 $single-blog-img-height     : 550px !default;
 $course-category-img-height : 300px !default;
 $dashboard-card-img-height  : 11.25rem !default; // orj 7rem
-// Boost moodle varaibles.scss file. 
+// Boost moodle varaibles.scss file.
 $course-content-maxwidth: 1280px !default;
 
 $input-btn-focus-width:       .1rem !default;

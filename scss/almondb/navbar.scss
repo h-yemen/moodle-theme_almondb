@@ -19,16 +19,16 @@
         border-left: none !important;
     }
     .divider {
-        width: 0px;
+        width: 0;
     }
 }
 
 #navheader.navbar-scrolled {
     background: rgba($hynavbar, 0.9);
-    box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
     height: 100px;
     animation-name: slide-in-top;
-    animation-duration: .3s;
+    animation-duration: 0.3s;
     animation-fill-mode: both;
     .divider {
         width: 1px;
@@ -44,11 +44,11 @@
 .hydropdown {
     position: relative;
     right: 0;
-    .icon{
+    .icon {
         margin: 0;
     }
     .hydropbtn {
-        font-size: 16px;  
+        font-size: 16px;
         border: none;
         outline: none;
         color: white;
@@ -70,7 +70,7 @@
     border-radius: 0.3rem;
     box-shadow: 0 50px 100px rgb(50 50 93 / 10%), 0 15px 35px rgb(50 50 93 / 15%), 0 5px 15px rgb(0 0 0 / 10%);
     border: 1px solid rgba(0, 0, 0, 0.15);
-    z-index : 99999;
+    z-index: 99999;
     a {
         float: none;
         //color: black;
@@ -81,11 +81,13 @@
     }
 }
 .dashboard-header-area .hydropdown .hydropdown-content {
-    right:0;
+    right: 0;
 }
-.navbar-light { 
+.navbar-light {
     /* Header 4  */
-    .nav-link, .langbutton, .dropdown-toggle::after {
+    .nav-link,
+    .langbutton,
+    .dropdown-toggle::after {
         color: $navbar-light-color !important;
     }
     .nav-link.active {
@@ -93,12 +95,16 @@
         border-color: transparent;
         border-bottom-color: transparent;
         color: rgba(247, 195, 46) !important;
-        &:focus, &:hover {
+        &:focus,
+        &:hover {
             background-color: transparent;
             border-bottom-color: transparent;
         }
     }
-    .nav-link:hover, .nav-link:focus, .langbutton:hover, .langbutton:focus {
+    .nav-link:hover,
+    .nav-link:focus,
+    .langbutton:hover,
+    .langbutton:focus {
         color: rgba(247, 195, 46) !important;
         border-color: transparent;
         background-color: transparent;
@@ -106,10 +112,10 @@
     .btn-close .icon {
         color: rgba(243, 123, 123, 0.8) !important;
     }
-    
+
     /* Header 4 end */
-}  
-.navbar-dark { 
+}
+.navbar-dark {
     /* Header 4  */
     .nav-link {
         color: $navbar-dark-color !important;
@@ -124,7 +130,10 @@
             border-bottom-color: transparent;
         }
     }
-    .nav-link:hover, .nav-link:focus, .langbutton:hover, .langbutton:focus {
+    .nav-link:hover,
+    .nav-link:focus,
+    .langbutton:hover,
+    .langbutton:focus {
         color: rgba(247, 195, 46) !important;
         border-color: transparent;
         background-color: transparent;
@@ -138,27 +147,28 @@
     .btn-close .icon {
         color: rgba(243, 123, 123, 0.8) !important;
     }
-    .simplesearchform .collapse.show, .simplesearchform .collapsing {
+    .simplesearchform .collapse.show,
+    .simplesearchform .collapsing {
         background-color: $hynavbar;
     }
     /* Header 4 end */
 
     button {
-        color :$navbar-dark-color;
+        color: $navbar-dark-color;
     }
     .hydropdown-content a:hover {
-        background-color: $dropdown-link-hover-bg ;
+        background-color: $dropdown-link-hover-bg;
     }
     .dropdown-menu {
-        background-color: $hynavbar;   
+        background-color: $hynavbar;
     }
     .dropdown-item {
         color: $navbar-dark-color;
     }
-    .usertext { 
+    .usertext {
         color: $navbar-dark-color;
     }
-    .usertext:hover{ 
+    .usertext:hover {
         color: $navbar-dark-hover-color;
     }
     .hydropdown-content {
@@ -173,7 +183,7 @@
 }
 #navbarhy {
     background-color: #555;
-    z-index : 999;
+    z-index: 999;
     .fixed-top {
         position: relative;
     }
@@ -182,7 +192,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    padding-top: 0px;
+    padding-top: 0;
 }
 #navnarhy_top {
     height: 70px;
@@ -191,9 +201,9 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 0rem;
+    padding: 0.5rem 0;
     opacity: .9;
-    z-index : 99999;
+    z-index: 99999;
     .logo img {
         height: 45px;
     }
@@ -223,7 +233,7 @@ nav.navbar .logo img {
     #navnarhy_top .logo img {
         height: 40px;
     }
-    #navnarhy_top{
+    #navnarhy_top {
         height: 60px;
     }
     .simplesearchform .collapse.show,
@@ -235,7 +245,7 @@ nav.navbar .logo img {
     #navnarhy_top .logo img {
             height: 30px;
         }
-    #navnarhy_top{
+    #navnarhy_top {
         height: 55px;
     }
     .simplesearchform .collapse.show,
