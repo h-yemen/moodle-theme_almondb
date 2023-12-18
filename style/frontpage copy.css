@@ -130,21 +130,11 @@ label {
     text-decoration: underline;
 }
 
-.breadcrumb > .active {
+.breadcrumb>.active {
     color: #888;
 }
 
-input:focus[type="url"],
-input:focus[type="text"],
-input:focus[type="email"],
-input:focus[type="tel"],
-input:focus[type="button"],
-input:focus[type="submit"],
-input:focus[type="search"],
-button:focus[type="button"],
-button:focus[role="button"],
-button:focus,
-input:focus {
+input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], input:focus[type="tel"], input:focus[type="button"], input:focus[type="submit"], input:focus[type="search"], button:focus[type="button"], button:focus[role="button"], button:focus, input:focus {
     outline: none;
     text-decoration: none;
 }
@@ -324,7 +314,11 @@ input:focus {
     text-transform: capitalize;
     font-size: 16px;
     color: #fff;
+    display: -webkit-box-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -334,7 +328,7 @@ input:focus {
 }
 
 [dir="rtl"] .iconbox-content-heading i {
-    margin-right: 0;
+    margin-right: 0px;
     margin-left: 15px;
 }
 .iconbox-content-body p {
@@ -913,7 +907,7 @@ body.scrolled .scrollUp {
     }
 
     .section-title-fp {
-        margin-bottom: 0;
+        margin-bottom: 0px;
     }
 
     .single-choose-item {

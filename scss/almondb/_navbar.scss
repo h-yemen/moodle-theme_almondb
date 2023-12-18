@@ -27,7 +27,7 @@
     background: rgba($hynavbar, 0.9);
     box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
     height: 100px;
-    animation-name: slide-in-top;
+    animation-name: bounce;
     animation-duration: 0.3s;
     animation-fill-mode: both;
     .divider {
@@ -66,7 +66,6 @@
     position: absolute;
     background-color: #dee2e6;
     min-width: 160px;
-    z-index: 1;
     border-radius: 0.3rem;
     box-shadow: 0 50px 100px rgb(50 50 93 / 10%), 0 15px 35px rgb(50 50 93 / 15%), 0 5px 15px rgb(0 0 0 / 10%);
     border: 1px solid rgba(0, 0, 0, 0.15);
@@ -125,7 +124,8 @@
         border-color: transparent;
         border-bottom-color: transparent;
         color: rgba(247, 195, 46) !important;
-        &:focus, &:hover {
+        &:focus,
+        &:hover {
             background-color: transparent;
             border-bottom-color: transparent;
         }
@@ -229,6 +229,7 @@
 nav.navbar .logo img {
     max-height: unset;
 }
+
 @include media-breakpoint-down(lg) {
     #navnarhy_top .logo img {
         height: 40px;
@@ -241,10 +242,11 @@ nav.navbar .logo img {
         height: 60px;
     }
 }
+
 @include media-breakpoint-down(sm) {
     #navnarhy_top .logo img {
-            height: 30px;
-        }
+        height: 30px;
+    }
     #navnarhy_top {
         height: 55px;
     }
@@ -253,10 +255,11 @@ nav.navbar .logo img {
         height: 55px;
     }
 }
+
 @include media-breakpoint-down(xs) {
     #navnarhy_top .logo img {
-            height: 20px;
-        }
+        height: 20px;
+    }
     #navnarhy_top {
         height: 45px;
         justify-content: center;
