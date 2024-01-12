@@ -295,42 +295,44 @@ function theme_almondb_frontpageblock07() {
     $sql = $sql." FROM {enrol} en";
     $sql = $sql." WHERE en.courseid = :courseid and en.status = 0 and en.cost != 'NULL'";
     $templatecontext['block07priceshow'] = $theme->settings->block07priceshow;
-    foreach ($allcourses as $id => $course) {
-        $templatecontext['block07'][$j]['fullname'] = format_string($course->fullname);
-        $templatecontext['block07'][$j]['shortname'] = format_string($course->shortname);
-        $templatecontext['block07'][$j]['summary'] = format_string($course->summary);
-        $templatecontext['block07'][$j]['update'] = gmdate("M d,Y", $course->timemodified);
-        $templatecontext['block07'][$j]['categoryName'] = format_string($course->categoryName);
-        $templatecontext['block07'][$j]['courselink'] = "course/view.php?id=".$id;
-        $templatecontext['block07'][$j]['categorylink'] = "course/index.php?categoryid=".$course->categoryId;
-        $templatecontext['block07'][$j]['imgurl'] = almondb_get_course_image($id);
-        $enrol = $DB->get_records_sql($sql, ['courseid' => $id]);
-        if (empty($enrol)) {
-            $templatecontext['block07'][$j]['currency'] = get_string('block07enrol', 'theme_almondb');
-        } else {
-            foreach ($enrol as $enrols) {
-                $templatecontext['block07'][$j]['cost'] = $enrols->cost;
-                $templatecontext['block07'][$j]['currency'] = $enrols->currency;
-            };
-        }
-        $context = context_course::instance($id);
-        $role = $theme->settings->block07studentrole;
-        $students = get_role_users($role, $context);
-        $templatecontext['block07'][$j]['studentscount'] = count($students);
-        $role = $theme->settings->block07teacherrole;
-        $teachers = get_role_users($role, $context);
-        if (!empty($theme->settings->block07teacherenabled)) {
-            foreach ($teachers as $id => $teacher) {
-                $templatecontext['block07'][$j]['teachername'] = format_string(fullname($teacher));
-                $teacher->imagealt = "teacher";
-                $templatecontext['block07'][$j]['userpicture'] = $OUTPUT->user_picture($teacher);
+    if (!empty($allcourses)) {
+        foreach ($allcourses as $id => $course) {
+            $templatecontext['block07'][$j]['fullname'] = format_string($course->fullname);
+            $templatecontext['block07'][$j]['shortname'] = format_string($course->shortname);
+            $templatecontext['block07'][$j]['summary'] = format_string($course->summary);
+            $templatecontext['block07'][$j]['update'] = gmdate("M d,Y", $course->timemodified);
+            $templatecontext['block07'][$j]['categoryName'] = format_string($course->categoryName);
+            $templatecontext['block07'][$j]['courselink'] = "course/view.php?id=".$id;
+            $templatecontext['block07'][$j]['categorylink'] = "course/index.php?categoryid=".$course->categoryId;
+            $templatecontext['block07'][$j]['imgurl'] = almondb_get_course_image($id);
+            $enrol = $DB->get_records_sql($sql, ['courseid' => $id]);
+            if (empty($enrol)) {
+                $templatecontext['block07'][$j]['currency'] = get_string('block07enrol', 'theme_almondb');
+            } else {
+                foreach ($enrol as $enrols) {
+                    $templatecontext['block07'][$j]['cost'] = $enrols->cost;
+                    $templatecontext['block07'][$j]['currency'] = $enrols->currency;
+                };
             }
-        }
-        $j++;
-        if ($j > $count) {
-            break;
-        }
-    };
+            $context = context_course::instance($id);
+            $role = $theme->settings->block07studentrole;
+            $students = get_role_users($role, $context);
+            $templatecontext['block07'][$j]['studentscount'] = count($students);
+            $role = $theme->settings->block07teacherrole;
+            $teachers = get_role_users($role, $context);
+            if (!empty($theme->settings->block07teacherenabled)) {
+                foreach ($teachers as $id => $teacher) {
+                    $templatecontext['block07'][$j]['teachername'] = format_string(fullname($teacher));
+                    $teacher->imagealt = "teacher";
+                    $templatecontext['block07'][$j]['userpicture'] = $OUTPUT->user_picture($teacher);
+                }
+            }
+            $j++;
+            if ($j > $count) {
+                break;
+            }
+        };
+    }
     return $templatecontext;
 }
 /**
