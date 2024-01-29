@@ -254,6 +254,9 @@ nav.navbar .logo img {
     .simplesearchform .collapsing {
         height: 55px;
     }
+    .course-header-bg #page-navbar {
+        display: none;
+    }
 }
 
 @include media-breakpoint-down(xs) {

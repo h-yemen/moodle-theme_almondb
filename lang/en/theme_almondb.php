@@ -77,7 +77,7 @@ $string['over'] = 'Over';
 // Slider start !DO NOT DELETE !DO NOT CHANGE.
 $string['slideshowstart'] = 'Home Page Slider Settings';
 $string['slideshowstartdesc'] = '';
-$string['slideshowend'] = '--End--';
+$string['slideshowend'] = '--*/*--';
 $string['slideshowenddesc'] = '';
 // Slider.
 $string['slideshow'] = 'Slider';
@@ -109,7 +109,7 @@ $string['slideropacitydesc'] = 'Frontpage color opacity to slider';
 // Almondbpage start !DO NOT DELETE !DO NOT CHANGE.
 $string['almondbpagestart'] = 'Info Page Settings';
 $string['almondbpagestartdesc'] = '';
-$string['almondbpageend'] = '--End--';
+$string['almondbpageend'] = '--*/*--';
 $string['almondbpageenddesc'] = '';
 // Almondbpage.
 $string['almondbpage'] = 'Info Pages';
@@ -174,7 +174,7 @@ $string['buttonlink'] = 'https://themesalmond.com/';
 // Theme almondb settings !DO NOT DELETE !DO NOT CHANGE.
 $string['divdiv'] = '</div></div></div>';
 $string['div'] = '</div>';
-$string['frontpageend'] = '--End--';
+$string['frontpageend'] = '--*/*--';
 $string['frontpageenddesc'] = '';
 $string['frontpagealmondb'] = 'Front Page';
 // Dashboard choice heading (nav).
@@ -636,7 +636,7 @@ $string['block20copyrightdefault'] = 'Copyright © 2022 Designed by
 $string['block20moodle'] = 'Enable frontpage button';
 $string['block20moodledesc'] = 'Enable or disabled block 20 moodle original frontpage';
 // Frontpage HTML block  !DO NOT DELETE !DO NOT CHANGE.
-$string['theme_almondb_frontpageblockend'] = '--End--';
+$string['theme_almondb_frontpageblockend'] = '--*/*--';
 $string['theme_almondb_frontpageblockenddesc'] = '';
 // Course single page.
 $string['coursesummary'] = 'Course Summary';
