@@ -34,7 +34,7 @@
 {{#title}}
 <script>
 
-if ('{{title}}'.substring(0, 1) == ':' || '{{title}}'.substring(0, 1) == '!' ) {
+if ("{{title}}".substring(0, 1) == ":" || "{{title}}".substring(0, 1) == "!" ) {
     var randomnumber = Math.floor((Math.random() * 10000) + 1);
     var headingId ="heading" + randomnumber;
     var collapseId = "collapse" + randomnumber;
@@ -42,12 +42,12 @@ if ('{{title}}'.substring(0, 1) == ':' || '{{title}}'.substring(0, 1) == '!' ) {
     var standart = '<div class="card border-0 pb-2 pt-2"> <div class="card-header border p-0 rounded" id="heading" > <h4 class="mb-0">'; 
         standart += '<button id="button" class="btn btn-link btn-block text-left text-decoration-none" type="button" data-toggle="collapse"';
         standart += 'data-target="#collapse" aria-expanded="false" aria-controls="collapse" >';
-        standart += '{{{title}}}';
+        standart += "{{{title}}}";
         standart += '</button></h4></div>';
         standart += '<div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordionHy">';
         standart += '<div class="card-body border rounded">';
 
-    if ('{{title}}'.substring(0, 1) == ':') {
+    if ("{{title}}".substring(0, 1) == ":") {
         document.write('<div class="accordion" id="accordionHy">')
         document.write(standart);
         var randomnumber = Math.floor((Math.random() * 1000) + 1);
@@ -62,7 +62,7 @@ if ('{{title}}'.substring(0, 1) == ':' || '{{title}}'.substring(0, 1) == '!' ) {
         document.getElementById(collapseId).setAttribute("aria-labelledby", headingId);
         document.getElementById(collapseId).setAttribute("data-parent", "#"+accordionHyId);
 
-    } else if ('{{title}}' == '--End--'){
+    } else if ("{{title}}" == "--*/*--"){
         document.write('{{#str}} div, theme_almondb {{/str}}')
     } else {
         document.write('{{#str}} divdiv, theme_almondb {{/str}}');
@@ -76,7 +76,7 @@ if ('{{title}}'.substring(0, 1) == ':' || '{{title}}'.substring(0, 1) == '!' ) {
         document.getElementById(collapseId).setAttribute("data-parent", "#"+accordionHyId);
     }
 } else {
-    document.write('<h3 class="main">{{{title}}}</h3>');
+    document.write("<h3 class='main'>{{{title}}}</h3>");
 }
 </script>
 {{/title}}
