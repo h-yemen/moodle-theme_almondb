@@ -119,4 +119,12 @@
     display: block;
     color: #ccc;
 }
+/* Twitter to X. Geçici çözüm. */
+.fa.fa-twitter{
+	font-family:sans-serif;
+}
+.fa.fa-twitter::before{
+	content:"𝕏";
+	font-size:1em;
+}
 /* End Footer Area */
