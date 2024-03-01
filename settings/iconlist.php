@@ -329,7 +329,7 @@ function theme_almondb_get_core_icon_list() {
         'core:t/block' => 'fa-ban',
         'core:t/block_to_dock_rtl' => 'fa-chevron-right',
         'core:t/block_to_dock' => 'fa-chevron-left',
-        'core:t/calc_off' => 'fa-calculator', // TODO: Change to better icon once we have stacked icon support or more icons.
+        'core:t/calc_off' => 'fa-calculator',
         'core:t/calc' => 'fa-calculator',
         'core:t/check' => 'fa-check',
         'core:t/cohort' => 'fa-users',
