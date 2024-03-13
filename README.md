@@ -1,3 +1,8 @@
+DOWNLOAD
+========
+Download the current version from the attached link.
+https://moodle.org/plugins/theme_almondb
+
 NOW BUY ALMOND PRO VERSION ! 
 ==================
 https://almondthemes.lemonsqueezy.com/
@@ -19,9 +24,4 @@ unlimited color<br>
 40+ customizable blocks<br>
 Hame page slider<br>
 Info page plugin<br>
-
-Version : 2022102200
-=====================
-- Categories to be displayed on the front page can be selected.
-- Bugs fixed.
 
