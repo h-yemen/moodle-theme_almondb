@@ -209,13 +209,14 @@ function theme_almondb_frontpageblock05() {
         $block05title = "block05title{$i}";
         $block05caption = "block05caption{$i}";
         $block05link = "block05link{$i}";
-
-        $str = $theme->settings->$block05icon;
-        $newstr = substr(strstr($str, ":"), 1, (strlen(strstr($str, ":"))) - 1 );
-        $templatecontext['block05'][$j]['icon'] = $newstr;
-        $templatecontext['block05'][$j]['title'] = format_string($theme->settings->$block05title);
-        $templatecontext['block05'][$j]['caption'] = format_string($theme->settings->$block05caption);
-        $templatecontext['block05'][$j]['link'] = format_string($theme->settings->$block05link);
+        if ( !empty($theme->settings->$block05title) && !empty($theme->settings->$block05caption) ) {
+            $str = $theme->settings->$block05icon;
+            $newstr = substr(strstr($str, ":"), 1, (strlen(strstr($str, ":"))) - 1 );
+            $templatecontext['block05'][$j]['icon'] = $newstr;
+            $templatecontext['block05'][$j]['title'] = format_string($theme->settings->$block05title);
+            $templatecontext['block05'][$j]['caption'] = format_string($theme->settings->$block05caption);
+            $templatecontext['block05'][$j]['link'] = format_string($theme->settings->$block05link);
+        }
     }
     return $templatecontext;
 }
@@ -525,6 +526,10 @@ function theme_almondb_frontpageblock11() {
     global $CFG, $OUTPUT, $DB;
     $theme = theme_config::load('almondb');
     $templatecontext['block11enabled'] = $theme->settings->block11enabled;
+    if ($CFG->bloglevel < BLOG_GLOBAL_LEVEL and (!isloggedin() or isguestuser())) {
+        $templatecontext['block11enabled'] = "false";
+        return $templatecontext;
+    }
     if (empty($templatecontext['block11enabled'])) {
         return $templatecontext;
     }
