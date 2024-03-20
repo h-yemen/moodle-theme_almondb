@@ -595,7 +595,7 @@ function theme_almondb_frontpageblock18() {
         return $templatecontext;
     }
     $templatecontext['block18title'] = format_string($theme->settings->block18title);
-    $templatecontext['block18caption'] = format_text($theme->settings->block18caption);
+    $templatecontext['block18caption'] = format_text($theme->settings->block18caption, FORMAT_HTML, ['noclean' => true]);
     $templatecontext['block18csslink'] = $theme->settings->block18csslink;
     $templatecontext['block18css'] = $theme->settings->block18css;
     return $templatecontext;
