@@ -526,7 +526,7 @@ function theme_almondb_frontpageblock11() {
     global $CFG, $OUTPUT, $DB;
     $theme = theme_config::load('almondb');
     $templatecontext['block11enabled'] = $theme->settings->block11enabled;
-    if ($CFG->bloglevel < BLOG_GLOBAL_LEVEL and (!isloggedin() or isguestuser())) {
+    if ($CFG->bloglevel < BLOG_GLOBAL_LEVEL && (!isloggedin() || isguestuser())) {
         $templatecontext['block11enabled'] = "false";
         return $templatecontext;
     }
