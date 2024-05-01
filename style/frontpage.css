@@ -154,7 +154,7 @@ input:focus {
 .btn .icon {
     margin: 0;
 }
-.card {
+.pagelayout-frontpage .card {
     border-radius: 0;
 }
 
@@ -380,6 +380,8 @@ input:focus {
 .item-icon i {
     width: 50px;
     height: 50px;
+    max-height: 50px;
+    max-width: 50px;
     background: #4272d7;
     color: #fff;
     font-size: 25px;
@@ -846,9 +848,11 @@ input:focus {
     visibility: hidden;
     opacity: 0;
     transition: opacity .7s ease 0s, visibility .1s ease .8s;
-    display: block;
+    display: flex;
     position: fixed;
     z-index: 10009;
+    justify-content: center;
+    align-items: center;
 }
 
 .scrollUp a {

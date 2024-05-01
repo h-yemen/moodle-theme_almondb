@@ -89,7 +89,6 @@ function theme_almondb_frontpageblock02() {
  */
 function theme_almondb_frontpageblock03() {
     global $OUTPUT;
-
     $theme = theme_config::load('almondb');
     $templatecontext['block03enabled'] = $theme->settings->block03enabled;
     if (empty($templatecontext['block03enabled'])) {
@@ -292,7 +291,7 @@ function theme_almondb_frontpageblock07() {
         }
     };
     $j = 0;
-    $sql = "SELECT  en.courseid, en.cost, en.currency";
+    $sql = "SELECT  en.id, en.courseid, en.cost, en.currency";
     $sql = $sql." FROM {enrol} en";
     $sql = $sql." WHERE en.courseid = :courseid and en.status = 0 and en.cost != 'NULL'";
     $templatecontext['block07priceshow'] = $theme->settings->block07priceshow;
