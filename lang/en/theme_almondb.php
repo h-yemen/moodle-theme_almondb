@@ -193,16 +193,7 @@ $string['frontpagenavlightdark'] = 'Front page light-dark';
 $string['frontpagenavlightdarkdesc'] = 'If you chose dark color above, choose "navbar-dark".';
 $string['frontpagenavlink'] = 'Front page nav link';
 $string['frontpagenavlinkdesc'] = 'Enter front page navigation bar links';
-$string['frontpagenavlinkdefault'] = 'Features
--Header
--Colors|/mod/page/view.php?id=113
--Blocks|/mod/page/view.php?id=114
--Easy and fast|/mod/page/view.php?id=115
--Use now|/mod/page/view.php?id=116
-Pages
--About|/mod/page/view.php?id=1
--Blog|/blog/
-Courses
+$string['frontpagenavlinkdefault'] = 'Courses
 -All courses|/course/
 -Course search|/course/search.php|_blank
 Smooth
@@ -221,6 +212,7 @@ Smooth
 -Brands|#block19
 -Footer|#block20
 Teachers|#block08
+Blog|/blog/
 Documentation|https://themesalmond.com/documents/|_blank';
 $string['header3phone'] = 'Phone Number';
 $string['header3phonedesc'] = 'Contact phone number to show in the navigation bar.';
