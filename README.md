@@ -1,3 +1,7 @@
+FOR THE LATEST VERSION, PLEASE DOWNLOAD FROM MOODLE OFFICIAL PAGE !!
+==================
+https://moodle.org/plugins/theme_almondb
+
 NOW BUY ALMOND PRO VERSION ! 
 ==================
 https://almondthemes.lemonsqueezy.com/
