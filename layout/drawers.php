@@ -105,7 +105,7 @@ $templatecontext = [
 ];
 // Course page header img.
 if ($COURSE->id != 1) {
-    $templatecontext['courseheaderimg'] = almondb_get_course_image($COURSE->id, false);
+    $templatecontext['courseheaderimg'] = almondb_get_course_image($COURSE->id);
 }
 // Footer.
 $templatecontext = array_merge($templatecontext, theme_almondb_frontpageblock20());
