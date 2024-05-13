@@ -1,9 +1,10 @@
 /* Course SCSS */
 .course-content {
     .course-section .course-section-header {
-        background-color: $hythemecolor-obs-3;
+        background-color: $hythemecolor-obs-1;
         padding: 15px;
-        border-radius: 5px;
+        border-radius: 1rem;
+        opacity: 0.8;
     }
     h3 {
         font-weight: 500;
@@ -30,8 +31,9 @@ h4 a {
     display: inline-block;
     top: 10%;
     padding: 10px;
-    background-color: cornsilk;
-    border-radius: 5px;
+    background-color: #e9ecef;
+    border-radius: 1rem;
+    opacity: 0.8;
 }
 .course-header-image {
     -webkit-background-size: cover;
@@ -195,6 +197,12 @@ img.activityicon {
 
 .frontpage-course-list-all h6 {
     font-weight: 500;
+}
+.course-card .card-img-top,
+.theme-card .card-img-top {
+    height: 9rem;
+    background-position: top center;
+    background-size: cover;
 }
 /* Small tablets and large phones font-size settings */
 /* Media max-width: 768px */
