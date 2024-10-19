@@ -24,7 +24,7 @@
 
 namespace theme_almondb\privacy;
 
-use \core_privacy\local\metadata\collection;
+use core_privacy\local\metadata\collection;
 
 defined('MOODLE_INTERNAL') || die();
 
