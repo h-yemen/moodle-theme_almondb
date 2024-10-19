@@ -122,7 +122,8 @@ $dropdown-link-hover-bg    : $hythemecolor !default; //$primary;
 $component-active-bg       : $hythemecolor !default;
 
 // stylelint-disable.
-$theme-colors: map-merge((
+$theme-colors: map-merge(
+(
     primary: $primary,
     secondary: $secondary,
     success: $success,
@@ -131,7 +132,8 @@ $theme-colors: map-merge((
     danger: $danger,
     hynavbar:$hynavbar,
     hybackcolor: $hybackcolor,
-), $theme-colors);
+), 
+$theme-colors);
 
 // Theme opasite color.
 
