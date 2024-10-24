@@ -16,8 +16,6 @@
 
 namespace theme_almondb\output;
 
-defined('MOODLE_INTERNAL') || die;
-
 /**
  * Renderers to align Moodle's HTML with that expected by Bootstrap
  *
@@ -26,6 +24,7 @@ defined('MOODLE_INTERNAL') || die;
  * @author    ThemesAlmond - Developer Team
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
 class core_renderer extends \core_renderer {
 
     /**
