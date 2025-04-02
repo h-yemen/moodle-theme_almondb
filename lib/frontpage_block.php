@@ -268,7 +268,7 @@ function theme_almondb_frontpageblock07() {
         $templatecontext['block07fullname'] = 1;
     }
     require_once( $CFG->libdir . '/filelib.php' );
-    $count = $theme->settings->block07count + 1;
+    $count = $theme->settings->block07count;
     // SQL Server.
     if ($CFG->dbtype === 'sqlsrv') {
         $sql = "SELECT TOP ". $count ." c.id, c.fullname, c.shortname, c.summary, c.timemodified, c.category, c.visible";

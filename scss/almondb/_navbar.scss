@@ -6,7 +6,7 @@
     .popover-region-container {
         top: calc(#{$navbar-height} - (#{$spacer} / 2));
     }
-    max-width: 1920px;
+    max-width: none;
     margin: auto;
 }
 .nav-link:focus {
@@ -228,7 +228,6 @@
 nav.navbar .logo img {
     max-height: unset;
 }
-
 @include media-breakpoint-down(lg) {
     #navnarhy_top .logo img {
         height: 40px;
@@ -241,7 +240,6 @@ nav.navbar .logo img {
         height: 60px;
     }
 }
-
 @include media-breakpoint-down(sm) {
     #navnarhy_top .logo img {
         height: 30px;

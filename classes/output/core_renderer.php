@@ -13,9 +13,7 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
 namespace theme_almondb\output;
-
 use moodle_url;
 use html_writer;
 use get_string;
