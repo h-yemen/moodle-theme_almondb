@@ -297,9 +297,12 @@ function theme_almondb_frontpageblock07() {
     $templatecontext['block07priceshow'] = $theme->settings->block07priceshow;
     if (!empty($allcourses)) {
         foreach ($allcourses as $id => $course) {
+            $context = context_course::instance($id);
+            $summary = file_rewrite_pluginfile_urls($course->summary, 'pluginfile.php',
+            $context->id, 'course', 'summary', false);
             $templatecontext['block07'][$j]['fullname'] = format_string($course->fullname);
             $templatecontext['block07'][$j]['shortname'] = format_string($course->shortname);
-            $templatecontext['block07'][$j]['summary'] = format_text($course->summary);
+            $templatecontext['block07'][$j]['summary'] = format_text($summary);
             $templatecontext['block07'][$j]['update'] = gmdate("M d,Y", $course->timemodified);
             $templatecontext['block07'][$j]['categoryName'] = format_string($course->categoryName);
             $templatecontext['block07'][$j]['courselink'] = "course/view.php?id=".$id;
