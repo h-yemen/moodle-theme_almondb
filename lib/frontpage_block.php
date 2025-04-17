@@ -378,9 +378,12 @@ function theme_almondb_frontpageblock08() {
         foreach ($roleassignments as $roleassignment) {
             $templatecontext['block08'][$j]['showdescription'] = $theme->settings->block08description;
             if ($user = $DB->get_record('user', ['id' => $roleassignment->userid])) {
+                $personcontext = context_user::instance($user->id);
+                $description = file_rewrite_pluginfile_urls($user->description, 'pluginfile.php',
+                $personcontext->id, 'user', 'profile', false);
                 $user->imagealt = "teacher";
                 $templatecontext['block08'][$j]['teachername'] = format_string($user->firstname." ".$user->lastname);
-                $templatecontext['block08'][$j]['description'] = format_text($user->description);
+                $templatecontext['block08'][$j]['description'] = format_text($description);
                 $templatecontext['block08'][$j]['userpicture'] =
                     $OUTPUT->user_picture($user, ['class' => '', 'size' => '250']);
                 $templatecontext['block08'][$j]['userURL'] =
