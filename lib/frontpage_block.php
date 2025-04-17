@@ -299,7 +299,7 @@ function theme_almondb_frontpageblock07() {
         foreach ($allcourses as $id => $course) {
             $templatecontext['block07'][$j]['fullname'] = format_string($course->fullname);
             $templatecontext['block07'][$j]['shortname'] = format_string($course->shortname);
-            $templatecontext['block07'][$j]['summary'] = format_string($course->summary);
+            $templatecontext['block07'][$j]['summary'] = format_text($course->summary);
             $templatecontext['block07'][$j]['update'] = gmdate("M d,Y", $course->timemodified);
             $templatecontext['block07'][$j]['categoryName'] = format_string($course->categoryName);
             $templatecontext['block07'][$j]['courselink'] = "course/view.php?id=".$id;
