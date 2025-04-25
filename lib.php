@@ -42,7 +42,7 @@ function theme_almondb_page_init(moodle_page $PAGE) {
  * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_almond_get_extra_scss($theme) {
+function theme_almondb_get_extra_scss($theme) {
     $content = '';
     $imageurl = $theme->setting_file_url('backgroundimage', 'backgroundimage');
 
