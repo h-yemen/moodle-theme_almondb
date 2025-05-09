@@ -204,7 +204,7 @@ function theme_almondb_header_links($links, $mobil ) {
                         $content .= "<a class='nav-item nav-link' href='".$lurl."' target='".$blank."'>".$ltxt."</a><div>";
                     } else {
                         $content .= "<div class='position-relative nav-item' id='dropdown-custom-".$j."'>";
-                        $content .= "<a class='dropdown-toggle nav-link' id='drop-down-".$j."' data-toggle='dropdown'";
+                        $content .= "<a class='dropdown-toggle nav-link' id='drop-down-".$j."' data-bs-toggle='dropdown'";
                         $content .= " aria-haspopup='true' aria-expanded='false' href='#' title='".$ltxt."'";
                         $content .= " aria-controls='drop-down-menu-".$j."'>".$ltxt."</a>";
                         $content .= "<div class='dropdown-menu' role='menu'

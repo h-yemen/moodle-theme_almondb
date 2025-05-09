@@ -194,6 +194,12 @@ input:focus {
 /* End Header Area */
 /* Start Slider Area
 ==================================================*/
+#slider1 .carousel-indicators,
+#slider2 .carousel-indicators,
+#slider3 .carousel-indicators,
+#slider4 .carousel-indicators {
+    list-style: none;
+}
 .single-slider {
     height: 600px;
     background-size: cover;
@@ -609,12 +615,12 @@ input:focus {
 }
 
 .video-img-thumbnail a {
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     font-size: 60px;
     color: #fff;
-    top: 50%;
+    top: 40%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     -webkit-transition: .5s;

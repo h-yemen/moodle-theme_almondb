@@ -24,31 +24,31 @@
             </div>
         </div>
         {{! This Code Block is For PC Edition }}
-        <div class="container text-center d-none d-sm-none d-md-block">
-            <div class="d-none d-sm-none d-md-block ml-auto pb-3">
+        <div class="text-center d-none d-sm-none d-md-block">
+            <div class="d-none d-sm-none d-md-block ms-auto pb-3">
                 <div>
-                    <a class="btn-sm float-sm-left block04design1__arrow text-decoration-none" href="#block04design1Carousel" role="button" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                    <a class="btn-sm float-sm-start block04design1__arrow text-decoration-none" href="#block04design1Carousel" role="button" data-bs-slide="prev"><i class="fa fa-chevron-left"></i></a>
                     <a class="hire-us-btn hybtn" href="{{block04buttonlink}}">{{block04button}}</a>
-                    <a class="btn-sm float-sm-right block04design1__arrow text-decoration-none" href="#block04design1Carousel" role="button" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                    <a class="btn-sm float-sm-end block04design1__arrow text-decoration-none" href="#block04design1Carousel" role="button" data-bs-slide="next"><i class="fa fa-chevron-right"></i></a>
                 </div>
             </div>
             <div id="block04design1Carousel" class="carousel slide w-100" data-ride="carousel">
                 <div class="carousel-inner w-100 " role="listbox">
-                    <div class="carousel-item row no-gutters active">
+                    <div class="carousel-item row active">
                         {{#block04_1}}
-                        <div class="col-md-3 float-left">
-                            <div class="single-project" style= "background-image: url({{{image}}});">
+                        <div class="col-md-3 float-start pe-2 ps-2">
+                            <div class="single-project" style="background-image: url({{{image}}});">
                                 <div class="project-inner">
                                     <h5><a class="text-decoration-none" href="{{link}}">{{title}}</a></h5>
                                     <p>{{caption}}</p>
                                 </div>
                             </div>
-                        </div>   
+                        </div>
                         {{/block04_1}} 
                     </div>
-                    <div class="carousel-item row no-gutters">
+                    <div class="carousel-item row">
                         {{#block04_2}}
-                        <div class="col-md-3 float-left">
+                        <div class="col-md-3 float-start pe-2 ps-2">
                             <div class="single-project" style= "background-image: url({{{image}}});">
                                 <div class="project-inner">
                                     <h5><a class="text-decoration-none" href="{{link}}">{{title}}</a></h5>
@@ -60,11 +60,11 @@
                     </div>
                 </div>
                 <div class="d-none d-sm-block d-md-none d-block d-sm-none">
-                    <a class="carousel-control-prev " href="#block04design1Carousel" data-slide="prev">
+                    <a class="carousel-control-prev " href="#block04design1Carousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#block04design1Carousel"  data-slide="next">
+                    <a class="carousel-control-next" href="#block04design1Carousel"  data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
@@ -73,14 +73,14 @@
         </div>
 
         {{! This Code Block is For Mobile Edition }}
-        <div class="container text-center my-3 d-md-none d-lg-none d-xl-none">
+        <div class="text-center my-3 d-md-none d-lg-none d-xl-none">
             <div class="blockbgcolor-b">
                 <a class="hire-us-btn hybtn" href="{{block04buttonlink}}">{{block04button}}</a>
             </div>  
             <div id="block04design1CarouselMobile" class="carousel slide w-100" data-ride="carousel">
                 <div class="carousel-inner w-100" >
                     {{#block04}}
-                    <div class="carousel-item col-md-3 float-left {{#active}}active{{/active}} ">
+                    <div class="carousel-item col-md-3 float-start {{#active}}active{{/active}} ">
                         <div class="single-project" style = "background-image: url({{{image}}});">
                             <div class="project-inner">
                                 <h5><a class="text-decoration-none" href="{{link}}">{{title}}</a></h5>
@@ -90,11 +90,11 @@
                     </div>    
                     {{/block04}}
                 </div>
-                <a class="carousel-control-prev " href="#block04design1CarouselMobile" data-slide="prev">
+                <a class="carousel-control-prev " href="#block04design1CarouselMobile" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#block04design1CarouselMobile"  data-slide="next">
+                <a class="carousel-control-next" href="#block04design1CarouselMobile"  data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>

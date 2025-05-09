@@ -40,8 +40,8 @@ if ("{{title}}".substring(0, 1) == ":" || "{{title}}".substring(0, 1) == "!" ) {
     var collapseId = "collapse" + randomnumber;
     var buttonId = "button" + randomnumber;
     var standart = '<div class="card border-0 pb-2 pt-2"> <div class="card-header border p-0 rounded" id="heading" > <h4 class="mb-0">'; 
-        standart += '<button id="button" class="btn btn-link btn-block text-left text-decoration-none" type="button" data-toggle="collapse"';
-        standart += 'data-target="#collapse" aria-expanded="false" aria-controls="collapse" >';
+        standart += '<button id="button" class="btn btn-link text-start text-decoration-none w-100" type="button" data-bs-toggle="collapse"';
+        standart += 'data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse" >';
         standart += "{{{title}}}";
         standart += '</button></h4></div>';
         standart += '<div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordionHy">';
@@ -58,7 +58,7 @@ if ("{{title}}".substring(0, 1) == ":" || "{{title}}".substring(0, 1) == "!" ) {
         document.getElementById('collapse').id = collapseId;
         document.getElementById('button').id = buttonId;
         document.getElementById(buttonId).setAttribute("aria-controls", collapseId);
-        document.getElementById(buttonId).setAttribute("data-target", "#"+collapseId);
+        document.getElementById(buttonId).setAttribute("data-bs-target", "#"+collapseId);
         document.getElementById(collapseId).setAttribute("aria-labelledby", headingId);
         document.getElementById(collapseId).setAttribute("data-parent", "#"+accordionHyId);
 
@@ -71,7 +71,7 @@ if ("{{title}}".substring(0, 1) == ":" || "{{title}}".substring(0, 1) == "!" ) {
         document.getElementById('collapse').id = collapseId;
         document.getElementById('button').id = buttonId;
         document.getElementById(buttonId).setAttribute("aria-controls", collapseId);
-        document.getElementById(buttonId).setAttribute("data-target", "#"+collapseId);
+        document.getElementById(buttonId).setAttribute("data-bs-target", "#"+collapseId);
         document.getElementById(collapseId).setAttribute("aria-labelledby", headingId);
         document.getElementById(collapseId).setAttribute("data-parent", "#"+accordionHyId);
     }

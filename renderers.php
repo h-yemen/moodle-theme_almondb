@@ -90,7 +90,7 @@ class theme_almondb_core_course_renderer extends core_course_renderer {
                     $userpicture = new user_picture($user);
                     $picture = $userpicture->get_url($this->page)->out(false);
                     $name = " <div class='chip h6'><img src='{$picture}'";
-                    $name .= " class='border border-secondary' title='{$namesrole}' data-toggle='tooltip'";
+                    $name .= " class='border border-secondary' title='{$namesrole}' data-bs-toggle='tooltip'";
                     $name .= " alt='{$coursecontact['username']}'/>".html_writer::link(new moodle_url('/user/view.php',
                             ['id' => $coursecontact['user']->id, 'course' => SITEID]),
                             " ".$coursecontact['username'])."</div>";
@@ -120,7 +120,7 @@ class theme_almondb_core_course_renderer extends core_course_renderer {
                 $userpicture = new user_picture($user);
                 $picture = $userpicture->get_url($this->page)->out(false);
                 $name = " <div class='chip h6'><img src='{$picture}'";
-                $name .= " class='border border-secondary' title='{$namesrole}' data-toggle='tooltip'";
+                $name .= " class='border border-secondary' title='{$namesrole}' data-bs-toggle='tooltip'";
                 $name .= " alt='{$coursecontact['username']}'/>".html_writer::link(new moodle_url('/user/view.php',
                         ['id' => $coursecontact['user']->id, 'course' => SITEID]),
                         " ".$coursecontact['username'])."</div>";
