@@ -22,8 +22,9 @@
     width: 100%;
 }
 .login-identityproviders a.login-identityprovider-btn {
-    width: 48%;
+    width: 48% !important;
     margin-right: 2%;
+    margin-bottom: 2%;
 }
 /* Help(?) button */
 .login-background .btn-footer-popover {
