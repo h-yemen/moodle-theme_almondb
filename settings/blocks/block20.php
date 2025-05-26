@@ -129,7 +129,8 @@ $page->add($setting);
 $name = 'theme_almondb/block20copyright';
 $title = get_string('block20copyright', 'theme_almondb');
 $description = get_string('block20copyrightdesc', 'theme_almondb');
-$default = 'Copyright © ' .date('Y'). ' Designed by <a href="https://wwwthemesalmond.com">themesalmond.com</a>. All rights reserved.';
+$default = 'Copyright © ' .date('Y'). ' Designed by <a href="https://wwwthemesalmond.com">themesalmond.com</a>.
+ All rights reserved.';
 $setting = new admin_setting_configtextarea($name, $title, $description, $default, PARAM_RAW, '1', '2');
 $page->add($setting);
 // Enable or disable moodle frontpage orjinal button.
