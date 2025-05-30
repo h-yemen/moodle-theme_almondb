@@ -100,7 +100,9 @@ a:not([class]):focus,
 .block_recentlyaccesseditems .card {
     margin-top: 5px;
 }
-
+.dropdown-item {
+    padding-left: 24px;
+}
 /* Frontpage Orj moodle page button */
 .setupbutton {
     position: relative;
