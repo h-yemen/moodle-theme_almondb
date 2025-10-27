@@ -65,7 +65,7 @@ function theme_almondb_frontpageblock02() {
         $newstr = substr(strstr($str, ":"), 1, (strlen(strstr($str, ":"))) - 1);
         $image = $theme->setting_file_url($block02img, $block02img);
         if (empty($image)) {
-            $image = $OUTPUT->image_url('almondb/block02/'.$i, 'theme');
+            $image = $OUTPUT->image_url('almondb/block02/' . $i, 'theme');
         }
         $templatecontext['block02'][$j]['icon'] = $newstr;
         $templatecontext['block02'][$j]['image'] = $image;
@@ -94,7 +94,7 @@ function theme_almondb_frontpageblock03() {
     if (empty($templatecontext['block03enabled'])) {
         return $templatecontext;
     }
-    $templatecontext['block03design'.$theme->settings->block03design] = $theme->settings->block03design;
+    $templatecontext['block03design' . $theme->settings->block03design] = $theme->settings->block03design;
     $templatecontext['block03header'] = format_string($theme->settings->block03header);
     $count = 6;
     if ($theme->settings->block03design == 2) {
