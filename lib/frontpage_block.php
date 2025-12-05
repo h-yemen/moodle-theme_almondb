@@ -72,7 +72,7 @@ function theme_almondb_frontpageblock02() {
         $templatecontext['block02'][$j]['title'] = format_string($theme->settings->$block02title);
         $templatecontext['block02'][$j]['caption'] = format_text($theme->settings->$block02caption);
         $templatecontext['block02'][$j]['button'] = format_string($theme->settings->$block02button);
-        $templatecontext['block02'][$j]['buttonurl'] = format_string($theme->settings->$block02buttonlink);
+        $templatecontext['block02'][$j]['buttonurl'] = $theme->settings->$block02buttonlink;
     }
     if ($count == 2) {
         $templatecontext['count'] = "col-lg-6";
@@ -111,7 +111,7 @@ function theme_almondb_frontpageblock03() {
         $templatecontext['block03'][$j]['icon'] = $newstr;
         $templatecontext['block03'][$j]['title'] = format_string($theme->settings->$block03title);
         $templatecontext['block03'][$j]['caption'] = format_text($theme->settings->$block03caption);
-        $templatecontext['block03'][$j]['link'] = format_string($theme->settings->$block03link);
+        $templatecontext['block03'][$j]['link'] = $theme->settings->$block03link;
     }
     return $templatecontext;
 }
@@ -151,7 +151,7 @@ function theme_almondb_frontpageblock04() {
         $templatecontext['block04'][$j]['image'] = $image;
         $templatecontext['block04'][$j]['title'] = format_string($theme->settings->$block04title);
         $templatecontext['block04'][$j]['caption'] = format_string($theme->settings->$block04caption);
-        $templatecontext['block04'][$j]['link'] = format_string($theme->settings->$block04link);
+        $templatecontext['block04'][$j]['link'] = $theme->settings->$block04link;
 
     }
     for ($i = 1, $j = 0; $i <= 4; $i++, $j++) {
@@ -166,7 +166,7 @@ function theme_almondb_frontpageblock04() {
         $templatecontext['block04_1'][$j]['image'] = $image;
         $templatecontext['block04_1'][$j]['title'] = format_string($theme->settings->$block04title);
         $templatecontext['block04_1'][$j]['caption'] = format_string($theme->settings->$block04caption);
-        $templatecontext['block04_1'][$j]['link'] = format_string($theme->settings->$block04link);
+        $templatecontext['block04_1'][$j]['link'] = $theme->settings->$block04link;
     }
     for ($i = 5, $j = 0; $i <= 8; $i++, $j++) {
         $block04img = "sliderimageblock04img{$i}";
@@ -180,7 +180,7 @@ function theme_almondb_frontpageblock04() {
         $templatecontext['block04_2'][$j]['image'] = $image;
         $templatecontext['block04_2'][$j]['title'] = format_string($theme->settings->$block04title);
         $templatecontext['block04_2'][$j]['caption'] = format_string($theme->settings->$block04caption);
-        $templatecontext['block04_2'][$j]['link'] = format_string($theme->settings->$block04link);
+        $templatecontext['block04_2'][$j]['link'] = $theme->settings->$block04link;
     }
     return $templatecontext;
 }
@@ -214,7 +214,7 @@ function theme_almondb_frontpageblock05() {
             $templatecontext['block05'][$j]['icon'] = $newstr;
             $templatecontext['block05'][$j]['title'] = format_string($theme->settings->$block05title);
             $templatecontext['block05'][$j]['caption'] = format_string($theme->settings->$block05caption);
-            $templatecontext['block05'][$j]['link'] = format_string($theme->settings->$block05link);
+            $templatecontext['block05'][$j]['link'] = $theme->settings->$block05link;
         }
     }
     return $templatecontext;
@@ -518,7 +518,7 @@ function theme_almondb_frontpageblock10() {
         $templatecontext['block10'][$j]['block10name'] = format_string($theme->settings->$block10name);
         $templatecontext['block10'][$j]['block10job'] = format_string($theme->settings->$block10job);
         $templatecontext['block10'][$j]['block10caption'] = format_text($theme->settings->$block10caption);
-        $templatecontext['block10'][$j]['block10linkurl'] = format_string($theme->settings->$block10link);
+        $templatecontext['block10'][$j]['block10linkurl'] = $theme->settings->$block10link;
     }
     return $templatecontext;
 }
@@ -632,7 +632,7 @@ function theme_almondb_frontpageblock19() {
         }
         if (!empty($image)) {
             $templatecontext['block19'][$j]['image19'] = $image;
-            $templatecontext['block19'][$j]['link'] = format_string($theme->settings->$block19link);
+            $templatecontext['block19'][$j]['link'] = $theme->settings->$block19link;
             $j++;
         }
     }
